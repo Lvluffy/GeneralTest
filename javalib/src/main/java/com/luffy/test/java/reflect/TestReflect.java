@@ -4,6 +4,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
+/**
+ * Created by lvlufei on 2020-06-08
+ *
+ * @name 反射
+ */
 public class TestReflect {
     public static void main(String[] args) {
         Student student = new Student("李四");

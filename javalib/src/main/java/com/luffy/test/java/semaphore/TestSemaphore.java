@@ -3,6 +3,11 @@ package com.luffy.test.java.semaphore;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Created by lvlufei on 2020-06-08
+ *
+ * @name 信号量
+ */
 public class TestSemaphore {
 
     private static Semaphore mSemaphore = new Semaphore(0);
