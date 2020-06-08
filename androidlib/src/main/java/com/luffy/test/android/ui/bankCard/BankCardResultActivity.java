@@ -22,6 +22,5 @@ public class BankCardResultActivity extends BaseActivity {
     @Override
     public void onBackPressed() {
         mBankCardResultFragment.handler();
-        super.onBackPressed();
     }
 }

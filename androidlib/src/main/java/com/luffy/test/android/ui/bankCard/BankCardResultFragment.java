@@ -23,23 +23,16 @@ public class BankCardResultFragment extends BaseFragment {
         return rootView;
     }
 
-    @Override
-    public void onStop() {
-        Intent intent = new Intent();
-        intent.putExtra("data", "我是传回来的数据");
-        getActivity().setResult(Activity.RESULT_OK, intent);
-        super.onStop();
-    }
-
     @OnClick(R2.id.btn)
     public void onViewClicked() {
-        getActivity().onBackPressed();
+        handler();
     }
 
     public void handler() {
         Intent intent = new Intent();
         intent.putExtra("data", "我是传回来的数据");
         getActivity().setResult(Activity.RESULT_OK, intent);
+        getActivity().finish();
     }
 
 }
