@@ -80,4 +80,9 @@ public class BaseFragment extends Fragment {
         super.onDetach();
         Log.v(TAG, "onDetach");
     }
+
+    protected boolean doBackPressed() {
+        getActivity().finish();
+        return true;
+    }
 }

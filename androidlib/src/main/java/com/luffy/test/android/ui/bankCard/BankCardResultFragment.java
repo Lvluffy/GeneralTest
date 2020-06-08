@@ -25,14 +25,15 @@ public class BankCardResultFragment extends BaseFragment {
 
     @OnClick(R2.id.btn)
     public void onViewClicked() {
-        handler();
+        doBackPressed();
     }
 
-    public void handler() {
+    @Override
+    protected boolean doBackPressed() {
         Intent intent = new Intent();
         intent.putExtra("data", "我是传回来的数据");
         getActivity().setResult(Activity.RESULT_OK, intent);
-        getActivity().finish();
+        return super.doBackPressed();
     }
 
 }
