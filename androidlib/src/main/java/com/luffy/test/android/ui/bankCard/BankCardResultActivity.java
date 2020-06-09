@@ -21,6 +21,6 @@ public class BankCardResultActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        mBankCardResultFragment.doBackPressed();
+        mBankCardResultFragment.doFinish();
     }
 }
