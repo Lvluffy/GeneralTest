@@ -1,6 +1,5 @@
 package com.luffy.generaltest;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import com.luffy.test.android.ui.bankCard.BankCardDetailActivity;
@@ -21,11 +20,6 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.btn)
     public void onViewClicked() {
-        IntentUtils.getInstance().startActivity(this, BankCardDetailActivity.class, new IntentUtils.IntentExtra() {
-            @Override
-            public Intent putExtra(Intent intent) {
-                return intent;
-            }
-        });
+        IntentUtils.getInstance().startActivity(this, BankCardDetailActivity.class);
     }
 }
