@@ -51,4 +51,6 @@ dependencies {
     /*butterknife*/
     implementation 'com.jakewharton:butterknife:9.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
+    /*通用工具*/
+    api rootProject.generalUtilsDepends['general']
 }

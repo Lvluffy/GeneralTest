@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.luffy.test.android.ui.bankCard.BankCardDetailActivity;
 import com.luffy.test.android.ui.base.BaseActivity;
+import com.luffy.utils.generallib.IntentUtils;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -20,7 +21,11 @@ public class MainActivity extends BaseActivity {
 
     @OnClick(R.id.btn)
     public void onViewClicked() {
-        Intent intent = new Intent(this, BankCardDetailActivity.class);
-        startActivity(intent);
+        IntentUtils.getInstance().startActivity(this, BankCardDetailActivity.class, new IntentUtils.IntentExtra() {
+            @Override
+            public Intent putExtra(Intent intent) {
+                return intent;
+            }
+        });
     }
 }
