@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.base;
+package com.luffy.test.android.base;
 
 import android.content.Context;
 import android.os.Bundle;

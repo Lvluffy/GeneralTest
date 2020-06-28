@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
-import com.luffy.test.android.ui.base.BaseFragment;
+import com.luffy.test.android.base.BaseFragment;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

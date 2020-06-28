@@ -3,8 +3,18 @@
     package="com.luffy.test.android">
 
     <application>
+        <activity android:name=".ui.ContentProviderActivity" />
         <activity android:name=".ui.bankCard.BankCardResultActivity" />
         <activity android:name=".ui.bankCard.BankCardDetailActivity" />
+
+        <service
+            android:name=".service.DaemonIntentService"
+            android:exported="false" />
+        <service
+            android:name=".service.DaemonService"
+            android:enabled="true"
+            android:exported="true" />
+
     </application>
 
 </manifest>

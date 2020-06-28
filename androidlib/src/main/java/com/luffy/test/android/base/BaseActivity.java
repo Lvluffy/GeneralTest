@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.base;
+package com.luffy.test.android.base;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,7 @@ import android.util.Log;
 
 public class BaseActivity extends AppCompatActivity {
 
-    private final String TAG = getClass().getSimpleName();
+    public String TAG = getClass().getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
