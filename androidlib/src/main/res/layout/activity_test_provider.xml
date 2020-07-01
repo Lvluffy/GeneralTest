@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,18 +9,13 @@
         android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="银行卡" />
+        android:text="调用接口" />
 
-    <Button
-        android:id="@+id/btn_content_provider"
+    <TextView
+        android:id="@+id/txt_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="内容提供者" />
-
-    <Button
-        android:id="@+id/btn_content_provider_test"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="内容提供者测试" />
+        android:padding="5dp"
+        tools:text="内容" />
 
 </LinearLayout>

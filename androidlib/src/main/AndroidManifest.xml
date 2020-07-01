@@ -3,6 +3,7 @@
     package="com.luffy.test.android">
 
     <application>
+        <activity android:name=".ui.TestProviderActivity" />
         <activity android:name=".ui.ContentProviderActivity" />
         <activity android:name=".ui.bankCard.BankCardResultActivity" />
         <activity android:name=".ui.bankCard.BankCardDetailActivity" />
@@ -15,6 +16,10 @@
             android:enabled="true"
             android:exported="true" />
 
+        <provider
+            android:name=".provider.TestProvider"
+            android:authorities="com.luffy.test.provider.feature"
+            android:exported="true" />
     </application>
 
 </manifest>

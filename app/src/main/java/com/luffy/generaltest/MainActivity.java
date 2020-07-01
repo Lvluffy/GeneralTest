@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.luffy.test.android.base.BaseActivity;
 import com.luffy.test.android.ui.ContentProviderActivity;
+import com.luffy.test.android.ui.TestProviderActivity;
 import com.luffy.test.android.ui.bankCard.BankCardDetailActivity;
 import com.luffy.utils.generallib.IntentUtils;
 
@@ -47,7 +48,10 @@ public class MainActivity extends BaseActivity {
         return 0;
     }
 
-    @OnClick({R.id.btn, R.id.btn_content_provider})
+    @OnClick({R.id.btn,
+            R.id.btn_content_provider,
+            R.id.btn_content_provider_test
+    })
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn:
@@ -56,6 +60,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn_content_provider:
                 IntentUtils.getInstance().startActivity(this, ContentProviderActivity.class);
+                break;
+            case R.id.btn_content_provider_test:
+                IntentUtils.getInstance().startActivity(this, TestProviderActivity.class);
                 break;
         }
     }
