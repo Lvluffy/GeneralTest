@@ -8,9 +8,10 @@ import android.util.Log;
 import android.view.View;
 
 import com.luffy.test.android.base.BaseActivity;
-import com.luffy.test.android.ui.ContentProviderActivity;
-import com.luffy.test.android.ui.TestProviderActivity;
 import com.luffy.test.android.ui.bankCard.BankCardDetailActivity;
+import com.luffy.test.android.ui.provider.ContentProviderActivity;
+import com.luffy.test.android.ui.provider.TestProviderActivity;
+import com.luffy.test.android.ui.swipingCard.SwipingCardActivity;
 import com.luffy.utils.generallib.IntentUtils;
 
 import butterknife.ButterKnife;
@@ -50,7 +51,8 @@ public class MainActivity extends BaseActivity {
 
     @OnClick({R.id.btn,
             R.id.btn_content_provider,
-            R.id.btn_content_provider_test
+            R.id.btn_content_provider_test,
+            R.id.btn_swiping_card
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -63,6 +65,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn_content_provider_test:
                 IntentUtils.getInstance().startActivity(this, TestProviderActivity.class);
+                break;
+            case R.id.btn_swiping_card:
+                IntentUtils.getInstance().startActivity(this, SwipingCardActivity.class);
                 break;
         }
     }

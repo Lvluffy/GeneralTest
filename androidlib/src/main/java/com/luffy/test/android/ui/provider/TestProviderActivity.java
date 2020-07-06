@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui;
+package com.luffy.test.android.ui.provider;
 
 import android.net.Uri;
 import android.os.Bundle;

@@ -2,9 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.luffy.test.android">
 
+    <uses-permission android:name="com.miui.tsmclient.permission.TSM_GROUP" />
+
     <application>
-        <activity android:name=".ui.TestProviderActivity" />
-        <activity android:name=".ui.ContentProviderActivity" />
+        <activity android:name=".ui.swipingCard.SwipingCardActivity" />
+        <activity android:name=".ui.provider.TestProviderActivity" />
+        <activity android:name=".ui.provider.ContentProviderActivity" />
         <activity android:name=".ui.bankCard.BankCardResultActivity" />
         <activity android:name=".ui.bankCard.BankCardDetailActivity" />
 

@@ -5,27 +5,21 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/btn"
+        android:id="@+id/btn_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="银行卡" />
+        android:text="主Aid" />
 
     <Button
-        android:id="@+id/btn_content_provider"
+        android:id="@+id/btn_member"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="内容提供者" />
+        android:text="子Aid" />
 
     <Button
-        android:id="@+id/btn_content_provider_test"
+        android:id="@+id/btn_other"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="内容提供者测试" />
-
-    <Button
-        android:id="@+id/btn_swiping_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="刷卡" />
+        android:text="其他Aid" />
 
 </LinearLayout>
