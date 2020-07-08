@@ -4,9 +4,14 @@ import android.app.IntentService;
 import android.content.Intent;
 import android.support.annotation.Nullable;
 
-public class DaemonIntentService extends IntentService {
+/**
+ * Created by lvlufei on 2020-07-08
+ *
+ * @name 测试-意图服务
+ */
+public class TestIntentService extends IntentService {
 
-    public DaemonIntentService(String name) {
+    public TestIntentService(String name) {
         super(name);
     }
 

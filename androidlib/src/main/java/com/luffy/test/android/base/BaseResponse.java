@@ -1,4 +1,4 @@
-package com.luffy.generaltest.bean;
+package com.luffy.test.android.base;
 
 public class BaseResponse {
 

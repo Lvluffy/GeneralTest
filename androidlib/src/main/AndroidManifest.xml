@@ -5,18 +5,20 @@
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
     <application>
-        <activity android:name=".ui.settings.SettingsActivity"></activity>
-        <activity android:name=".ui.swipingCard.SwipingCardActivity" />
-        <activity android:name=".ui.provider.TestProviderActivity" />
-        <activity android:name=".ui.provider.ContentProviderActivity" />
-        <activity android:name=".ui.bankCard.BankCardResultActivity" />
-        <activity android:name=".ui.bankCard.BankCardDetailActivity" />
+        <activity android:name=".ui.owner.rxjava.RxJavaActivity"></activity>
+        <activity android:name=".ui.owner.handler.HandlerActivity" />
+        <activity android:name=".ui.owner.settings.SettingsActivity" />
+        <activity android:name=".ui.owner.provider.ProviderActivity" />
+        <activity android:name=".ui.owner.activityForResult.BankCardResultActivity" />
+        <activity android:name=".ui.owner.activityForResult.BankCardDetailActivity" />
+        <activity android:name=".ui.tsm.multiCard.MultiCardActivity" />
+        <activity android:name=".ui.tsm.feature.FeatureActivity" />
 
         <service
-            android:name=".service.DaemonIntentService"
+            android:name=".service.TestIntentService"
             android:exported="false" />
         <service
-            android:name=".service.DaemonService"
+            android:name=".service.TestService"
             android:enabled="true"
             android:exported="true" />
 

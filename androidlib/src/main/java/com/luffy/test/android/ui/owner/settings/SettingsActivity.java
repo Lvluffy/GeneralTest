@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.settings;
+package com.luffy.test.android.ui.owner.settings;
 
 import android.Manifest;
 import android.os.Bundle;

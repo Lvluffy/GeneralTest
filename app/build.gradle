@@ -47,9 +47,6 @@ dependencies {
     implementation 'com.jakewharton:butterknife:9.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
 
-    /*rx*/
-    implementation rootProject.rx.values()
-
     /*project*/
     implementation project(path: ':javalib')
     implementation project(path: ':androidlib')

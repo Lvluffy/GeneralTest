@@ -6,8 +6,7 @@ public class Coder {
         byte[] buffer = new byte[length / 2];
 
         for (int i = 0; i < length; i += 2) {
-            buffer[i / 2] = (byte) ((toByte(hexString.charAt(i)) << 4) | toByte(
-                    hexString.charAt(i + 1)));
+            buffer[i / 2] = (byte) ((toByte(hexString.charAt(i)) << 4) | toByte(hexString.charAt(i + 1)));
         }
 
         return buffer;

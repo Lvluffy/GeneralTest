@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.provider;
+package com.luffy.test.android.ui.tsm.feature;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,7 +13,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class ContentProviderActivity extends BaseActivity {
+/**
+ * Created by lvlufei on 2020-07-08
+ *
+ * @name TSM功能
+ */
+public class FeatureActivity extends BaseActivity {
 
     private static final String TSM_CLIENT_PROVIDER_FEATURE = "content://com.miui.tsmclient.provider.feature";
     private static final String TSM_CLIENT_PROVIDER_FEATURE_METHOD = "feature";
@@ -33,7 +38,7 @@ public class ContentProviderActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_content_provider);
+        setContentView(R.layout.activity_feature);
         ButterKnife.bind(this);
     }
 

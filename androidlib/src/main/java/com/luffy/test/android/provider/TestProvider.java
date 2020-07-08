@@ -6,6 +6,11 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 
+/**
+ * Created by lvlufei on 2020-07-08
+ *
+ * @name 测试-内容提供者
+ */
 public class TestProvider extends ContentProvider {
 
     public static final String METHOD_KEY = "test";

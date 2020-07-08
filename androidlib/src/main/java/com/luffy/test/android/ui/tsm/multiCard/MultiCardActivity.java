@@ -1,12 +1,12 @@
-package com.luffy.test.android.ui.swipingCard;
+package com.luffy.test.android.ui.tsm.multiCard;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
+import com.luffy.test.android.base.BaseActivity;
 import com.luffy.test.android.utils.Coder;
 
 import butterknife.ButterKnife;
@@ -15,9 +15,9 @@ import butterknife.OnClick;
 /**
  * Created by lvlufei on 2020-07-03
  *
- * @name 刷卡
+ * @name 双标卡
  */
-public class SwipingCardActivity extends AppCompatActivity {
+public class MultiCardActivity extends BaseActivity {
 
     public static final String ACTION_TRANSACTION = "com.miui.nfc.action.TRANSACTION";
 
@@ -37,7 +37,7 @@ public class SwipingCardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_swiping_card);
+        setContentView(R.layout.activity_multi_card);
         ButterKnife.bind(this);
     }
 
@@ -63,6 +63,5 @@ public class SwipingCardActivity extends AppCompatActivity {
         intent.putExtra(EXTRAS_TRANSACTION_DATA, Coder.hexStringToBytes(data));
         startService(intent);
     }
-
 
 }

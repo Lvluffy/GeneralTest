@@ -55,4 +55,6 @@ dependencies {
     /*通用工具*/
     api rootProject.generalUtilsDepends['general']
     api rootProject.generalUtilsDepends['rx']
+    /*rx*/
+    api rootProject.rx.values()
 }

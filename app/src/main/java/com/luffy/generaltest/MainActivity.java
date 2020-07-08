@@ -1,30 +1,20 @@
 package com.luffy.generaltest;
 
-import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
-import com.luffy.generaltest.bean.BaseResponse;
-import com.luffy.generaltest.bean.ErrorCode;
 import com.luffy.test.android.base.BaseActivity;
-import com.luffy.test.android.ui.bankCard.BankCardDetailActivity;
-import com.luffy.test.android.ui.provider.ContentProviderActivity;
-import com.luffy.test.android.ui.provider.TestProviderActivity;
-import com.luffy.test.android.ui.settings.SettingsActivity;
-import com.luffy.test.android.ui.swipingCard.SwipingCardActivity;
+import com.luffy.test.android.ui.owner.activityForResult.BankCardDetailActivity;
+import com.luffy.test.android.ui.owner.handler.HandlerActivity;
+import com.luffy.test.android.ui.owner.provider.ProviderActivity;
+import com.luffy.test.android.ui.owner.rxjava.RxJavaActivity;
+import com.luffy.test.android.ui.owner.settings.SettingsActivity;
+import com.luffy.test.android.ui.tsm.feature.FeatureActivity;
+import com.luffy.test.android.ui.tsm.multiCard.MultiCardActivity;
 import com.luffy.utils.generallib.IntentUtils;
-
-import java.util.concurrent.Callable;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import rx.Observable;
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
 public class MainActivity extends BaseActivity {
 
@@ -35,88 +25,38 @@ public class MainActivity extends BaseActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick(R.id.btn)
-    public void onViewClicked() {
-
-    }
-
-    @OnClick({R.id.btn,
-            R.id.btn_content_provider,
-            R.id.btn_content_provider_test,
-            R.id.btn_swiping_card,
-            R.id.btn_settings
+    @OnClick({R.id.owner_activity_for_result,
+            R.id.owner_test_provider,
+            R.id.owner_handler,
+            R.id.owner_rxjava,
+            R.id.owner_settings,
+            R.id.tsm_feature,
+            R.id.tsm_multi_card
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.btn:
+            case R.id.owner_activity_for_result:
                 IntentUtils.getInstance().startActivity(this, BankCardDetailActivity.class);
-                Log.v(TAG, "versionCode = " + getVersionCode(this, "com.luffy.generalhybrid"));
-                testRxJava();
                 break;
-            case R.id.btn_content_provider:
-                IntentUtils.getInstance().startActivity(this, ContentProviderActivity.class);
+            case R.id.owner_test_provider:
+                IntentUtils.getInstance().startActivity(this, ProviderActivity.class);
                 break;
-            case R.id.btn_content_provider_test:
-                IntentUtils.getInstance().startActivity(this, TestProviderActivity.class);
+            case R.id.owner_handler:
+                IntentUtils.getInstance().startActivity(this, HandlerActivity.class);
                 break;
-            case R.id.btn_swiping_card:
-                IntentUtils.getInstance().startActivity(this, SwipingCardActivity.class);
+            case R.id.owner_rxjava:
+                IntentUtils.getInstance().startActivity(this, RxJavaActivity.class);
                 break;
-            case R.id.btn_settings:
+            case R.id.owner_settings:
                 IntentUtils.getInstance().startActivity(this, SettingsActivity.class);
                 break;
+            case R.id.tsm_multi_card:
+                IntentUtils.getInstance().startActivity(this, MultiCardActivity.class);
+                break;
+            case R.id.tsm_feature:
+                IntentUtils.getInstance().startActivity(this, FeatureActivity.class);
+                break;
         }
-    }
-
-    /**
-     * 获取应用程序-版本号-通过包名
-     *
-     * @param context     上下文
-     * @param packageName 应用包名
-     * @return 应用版本
-     */
-    private int getVersionCode(Context context, String packageName) {
-        try {
-            PackageManager packageManager = context.getPackageManager();
-            PackageInfo packageInfo = packageManager.getPackageInfo(packageName, 0);
-            return packageInfo.versionCode;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return 0;
-    }
-
-    private void testRxJava() {
-        Observable.fromCallable(new Callable<BaseResponse>() {
-            @Override
-            public BaseResponse call() throws Exception {
-                Log.v(TAG, "call");
-                return new BaseResponse(ErrorCode.SUCCESS);
-            }
-        })
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<BaseResponse>() {
-                    @Override
-                    public void onCompleted() {
-                        Log.v(TAG, "onCompleted");
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        Log.v(TAG, "onError");
-                    }
-
-                    @Override
-                    public void onNext(BaseResponse baseResponse) {
-                        Log.v(TAG, "onNext");
-                        if (baseResponse.isSuccess()) {
-                            Log.v(TAG, "buildCache onLoadSuccess");
-                        } else {
-                            Log.v(TAG, "buildCache onLoadFailed: code = " + baseResponse.mResultCode + ";msg = " + baseResponse.mMsg);
-                        }
-                    }
-                });
     }
 
 }

@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.bankCard;
+package com.luffy.test.android.ui.owner.activityForResult;
 
 import android.app.Activity;
 import android.content.Intent;

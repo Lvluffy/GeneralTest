@@ -1,4 +1,4 @@
-package com.luffy.generaltest.bean;
+package com.luffy.test.android.base;
 
 /**
  * TSMClient使用的错误码，用于向用户展示的，SP或TSM的错误码需要转一下与此错误码保持一致

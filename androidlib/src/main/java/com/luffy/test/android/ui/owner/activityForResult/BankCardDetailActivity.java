@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.bankCard;
+package com.luffy.test.android.ui.owner.activityForResult;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
