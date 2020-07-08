@@ -2,9 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.luffy.test.android">
 
-    <uses-permission android:name="com.miui.tsmclient.permission.TSM_GROUP" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
     <application>
+        <activity android:name=".ui.settings.SettingsActivity"></activity>
         <activity android:name=".ui.swipingCard.SwipingCardActivity" />
         <activity android:name=".ui.provider.TestProviderActivity" />
         <activity android:name=".ui.provider.ContentProviderActivity" />

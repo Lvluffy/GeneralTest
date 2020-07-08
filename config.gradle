@@ -14,7 +14,7 @@ ext {
             supportVersion         : "28.0.0",
             rxandroid              : '1.2.1',
             rxjava                 : '1.1.6',
-            generalUtils           : "1.2.4"
+            generalUtils           : "1.2.7"
     ]
 
     supportDepends = [

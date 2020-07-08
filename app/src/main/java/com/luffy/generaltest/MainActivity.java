@@ -13,6 +13,7 @@ import com.luffy.test.android.base.BaseActivity;
 import com.luffy.test.android.ui.bankCard.BankCardDetailActivity;
 import com.luffy.test.android.ui.provider.ContentProviderActivity;
 import com.luffy.test.android.ui.provider.TestProviderActivity;
+import com.luffy.test.android.ui.settings.SettingsActivity;
 import com.luffy.test.android.ui.swipingCard.SwipingCardActivity;
 import com.luffy.utils.generallib.IntentUtils;
 
@@ -42,7 +43,8 @@ public class MainActivity extends BaseActivity {
     @OnClick({R.id.btn,
             R.id.btn_content_provider,
             R.id.btn_content_provider_test,
-            R.id.btn_swiping_card
+            R.id.btn_swiping_card,
+            R.id.btn_settings
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -59,6 +61,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn_swiping_card:
                 IntentUtils.getInstance().startActivity(this, SwipingCardActivity.class);
+                break;
+            case R.id.btn_settings:
+                IntentUtils.getInstance().startActivity(this, SettingsActivity.class);
                 break;
         }
     }
