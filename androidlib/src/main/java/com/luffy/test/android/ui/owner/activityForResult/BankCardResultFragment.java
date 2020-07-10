@@ -11,16 +11,13 @@ import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
 import com.luffy.test.android.base.BaseFragment;
 
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class BankCardResultFragment extends BaseFragment {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_bank_card_result, container, false);
-        ButterKnife.bind(this, rootView);
-        return rootView;
+    public View doCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_bank_card_result, container, false);
     }
 
     @OnClick(R2.id.btn)

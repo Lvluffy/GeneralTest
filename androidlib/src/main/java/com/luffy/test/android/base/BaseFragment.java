@@ -2,17 +2,17 @@ package com.luffy.test.android.base;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class BaseFragment extends Fragment {
+import butterknife.ButterKnife;
 
-    private final String TAG = getClass().getSimpleName();
+public abstract class BaseFragment extends Fragment {
+
+    public final String TAG = getClass().getSimpleName();
 
     @Override
     public void onAttach(Context context) {
@@ -21,20 +21,28 @@ public class BaseFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.v(TAG, "onCreate");
     }
 
-    @Nullable
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.v(TAG, "onCreateView");
-        return super.onCreateView(inflater, container, savedInstanceState);
+        View rootView = doCreateView(inflater, container, savedInstanceState);
+        ButterKnife.bind(this, rootView);
+        return rootView;
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Log.v(TAG, "onViewCreated");
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Log.v(TAG, "onActivityCreated");
     }
@@ -80,4 +88,6 @@ public class BaseFragment extends Fragment {
         super.onDetach();
         Log.v(TAG, "onDetach");
     }
+
+    public abstract View doCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
 }

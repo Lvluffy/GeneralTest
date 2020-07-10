@@ -15,19 +15,17 @@ import com.luffy.test.android.base.BaseFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 public class BankCardDetailFragment extends BaseFragment {
 
     public static final int REQUEST_CODE = 1;
-
     @BindView(R2.id.txt_content)
     TextView txtContent;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_bank_card_detail, container, false);
-        ButterKnife.bind(this, rootView);
-        return rootView;
+    public View doCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_bank_card_detail, container, false);
     }
 
     @OnClick(R2.id.btn)
@@ -43,4 +41,5 @@ public class BankCardDetailFragment extends BaseFragment {
             txtContent.setText(data.getStringExtra("data"));
         }
     }
+
 }
