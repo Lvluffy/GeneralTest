@@ -13,9 +13,7 @@ import com.luffy.test.android.R2;
 import com.luffy.test.android.base.BaseFragment;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 public class BankCardDetailFragment extends BaseFragment {
 

@@ -80,8 +80,8 @@ public abstract class BaseFragment extends Fragment {
         super.onDestroyView();
         Log.v(TAG, "onDestroyView");
         if (mActivity != null) {
+            Log.v(TAG, "onDestroyView:mActivity != null;ActivityName = " + mActivity.getClass().getSimpleName());
             mActivity = null;
-            Log.v(TAG, "onDestroyView:mActivity != null");
         } else {
             Log.v(TAG, "onDestroyView:mActivity == null");
         }
@@ -92,8 +92,8 @@ public abstract class BaseFragment extends Fragment {
         super.onDestroy();
         Log.v(TAG, "onDestroy");
         if (mActivity != null) {
+            Log.v(TAG, "onDestroy:mActivity != null;ActivityName = " + mActivity.getClass().getSimpleName());
             mActivity = null;
-            Log.v(TAG, "onDestroy:mActivity != null");
         } else {
             Log.v(TAG, "onDestroy:mActivity == null");
         }
@@ -104,8 +104,8 @@ public abstract class BaseFragment extends Fragment {
         super.onDetach();
         Log.v(TAG, "onDetach");
         if (mActivity != null) {
+            Log.v(TAG, "onDetach:mActivity != null;ActivityName = " + mActivity.getClass().getSimpleName());
             mActivity = null;
-            Log.v(TAG, "onDetach:mActivity != null");
         } else {
             Log.v(TAG, "onDetach:mActivity == null");
         }
