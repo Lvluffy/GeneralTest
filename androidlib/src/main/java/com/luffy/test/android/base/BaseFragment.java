@@ -1,5 +1,6 @@
 package com.luffy.test.android.base;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,11 +14,14 @@ import butterknife.ButterKnife;
 public abstract class BaseFragment extends Fragment {
 
     public final String TAG = getClass().getSimpleName();
+    protected Activity mActivity;
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         Log.v(TAG, "onAttach");
+        mActivity = getActivity();
+        Log.v(TAG, "onAttach:ActivityName = " + mActivity.getClass().getSimpleName());
     }
 
     @Override
@@ -75,18 +79,36 @@ public abstract class BaseFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         Log.v(TAG, "onDestroyView");
+        if (mActivity != null) {
+            mActivity = null;
+            Log.v(TAG, "onDestroyView:mActivity != null");
+        } else {
+            Log.v(TAG, "onDestroyView:mActivity == null");
+        }
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         Log.v(TAG, "onDestroy");
+        if (mActivity != null) {
+            mActivity = null;
+            Log.v(TAG, "onDestroy:mActivity != null");
+        } else {
+            Log.v(TAG, "onDestroy:mActivity == null");
+        }
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
         Log.v(TAG, "onDetach");
+        if (mActivity != null) {
+            mActivity = null;
+            Log.v(TAG, "onDetach:mActivity != null");
+        } else {
+            Log.v(TAG, "onDetach:mActivity == null");
+        }
     }
 
     public abstract View doCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);
