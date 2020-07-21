@@ -5,7 +5,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.WindowManager;
 
-import com.luffy.test.android.R;
 import com.luffy.test.android.base.BaseActivity;
 
 /**
@@ -20,8 +19,6 @@ public class FeatureActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         //透明状态栏
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        //启动动画
-        overridePendingTransition(R.anim.in, R.anim.out);
         //绑定布局
         FeatureFragment mFeatureFragment = new FeatureFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();

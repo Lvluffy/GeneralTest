@@ -1,0 +1,22 @@
+<resources>
+
+    <!--公共主题-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/color_F6F6F6</item>
+    </style>
+
+    <style name="MapActivityLaunchAnim" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimBottomEnterBottomExit</item>
+    </style>
+
+    <style name="AnimBottomEnterBottomExit" parent="android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_bottom_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_bottom_exit</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

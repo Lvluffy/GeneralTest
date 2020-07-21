@@ -50,11 +50,11 @@ public class MainActivity extends BaseActivity {
             case R.id.owner_settings:
                 IntentUtils.getInstance().startActivity(this, SettingsActivity.class);
                 break;
-            case R.id.tsm_multi_card:
-                IntentUtils.getInstance().startActivity(this, MultiCardActivity.class);
-                break;
             case R.id.tsm_feature:
                 IntentUtils.getInstance().startActivity(this, FeatureActivity.class);
+                break;
+            case R.id.tsm_multi_card:
+                IntentUtils.getInstance().startActivity(this, MultiCardActivity.class);
                 break;
         }
     }
