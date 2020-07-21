@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.luffy.test.android.base.BaseActivity;
 import com.luffy.test.android.ui.owner.activityForResult.BankCardDetailActivity;
+import com.luffy.test.android.ui.owner.dynamicAddView.DynamicAddViewActivity;
 import com.luffy.test.android.ui.owner.handler.HandlerActivity;
 import com.luffy.test.android.ui.owner.provider.ProviderActivity;
 import com.luffy.test.android.ui.owner.rxjava.RxJavaActivity;
@@ -30,6 +31,7 @@ public class MainActivity extends BaseActivity {
             R.id.owner_handler,
             R.id.owner_rxjava,
             R.id.owner_settings,
+            R.id.owner_dynamic_add_view,
             R.id.tsm_feature,
             R.id.tsm_multi_card
     })
@@ -49,6 +51,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.owner_settings:
                 IntentUtils.getInstance().startActivity(this, SettingsActivity.class);
+                break;
+            case R.id.owner_dynamic_add_view:
+                IntentUtils.getInstance().startActivity(this, DynamicAddViewActivity.class);
                 break;
             case R.id.tsm_feature:
                 IntentUtils.getInstance().startActivity(this, FeatureActivity.class);
