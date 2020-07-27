@@ -20,14 +20,14 @@ public abstract class BaseFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         Log.v(TAG, "onAttach");
-        mActivity = getActivity();
-        Log.v(TAG, "onAttach:ActivityName = " + mActivity.getClass().getSimpleName());
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mActivity = getActivity();
         Log.v(TAG, "onCreate");
+        Log.v(TAG, "onCreate:ActivityName = " + mActivity.getClass().getSimpleName());
     }
 
 
@@ -79,12 +79,6 @@ public abstract class BaseFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         Log.v(TAG, "onDestroyView");
-        if (mActivity != null) {
-            Log.v(TAG, "onDestroyView:mActivity != null;ActivityName = " + mActivity.getClass().getSimpleName());
-            mActivity = null;
-        } else {
-            Log.v(TAG, "onDestroyView:mActivity == null");
-        }
     }
 
     @Override
@@ -103,12 +97,6 @@ public abstract class BaseFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         Log.v(TAG, "onDetach");
-        if (mActivity != null) {
-            Log.v(TAG, "onDetach:mActivity != null;ActivityName = " + mActivity.getClass().getSimpleName());
-            mActivity = null;
-        } else {
-            Log.v(TAG, "onDetach:mActivity == null");
-        }
     }
 
     public abstract View doCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState);

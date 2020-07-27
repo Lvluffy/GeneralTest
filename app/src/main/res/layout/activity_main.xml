@@ -4,52 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/owner_activity_for_result"
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="activit数据传递" />
-
-    <Button
-        android:id="@+id/owner_test_provider"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="测试内容提供者" />
-
-    <Button
-        android:id="@+id/owner_handler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Handler" />
-
-    <Button
-        android:id="@+id/owner_rxjava"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RxJava" />
-
-    <Button
-        android:id="@+id/owner_settings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="系统属性" />
-
-    <Button
-        android:id="@+id/owner_dynamic_add_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="动态添加View" />
-
-    <Button
-        android:id="@+id/tsm_feature"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TSM功能" />
-
-    <Button
-        android:id="@+id/tsm_multi_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TMS双标卡" />
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent" />
 
 </LinearLayout>

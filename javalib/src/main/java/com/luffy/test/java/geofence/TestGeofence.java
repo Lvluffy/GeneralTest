@@ -1,6 +1,5 @@
 package com.luffy.test.java.geofence;
 
-
 public class TestGeofence {
 
     private static final long[] FENCE_RADIUS_NUM_TIME = {3 * 1000, 3 * 1000, 18 * 1000};

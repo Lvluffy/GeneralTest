@@ -53,6 +53,8 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.android.support:support-v4:28.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
+    /*通用Android*/
+    api rootProject.generalAndroidDepends['listview']
     /*通用工具*/
     api rootProject.generalUtilsDepends['general']
     api rootProject.generalUtilsDepends['rx']

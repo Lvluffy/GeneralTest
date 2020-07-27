@@ -14,6 +14,7 @@ ext {
             supportVersion         : "28.0.0",
             rxandroid              : '1.2.1',
             rxjava                 : '1.1.6',
+            generalAndroid         : "1.2.2",
             generalUtils           : "1.2.7"
     ]
 
@@ -26,6 +27,12 @@ ext {
     rx = [
             rxandroid: "io.reactivex:rxandroid:${dependVersion.rxandroid}",
             rxjava   : "io.reactivex:rxjava:${dependVersion.rxjava}"
+    ]
+
+    generalAndroidDepends = [
+            "component"   : "com.github.Lvluffy.GeneralAndroid:componentlib:${dependVersion.generalAndroid}",
+            "listview"    : "com.github.Lvluffy.GeneralAndroid:listviewlib:${dependVersion.generalAndroid}",
+            "recyclerview": "com.github.Lvluffy.GeneralAndroid:recyclerviewlib:${dependVersion.generalAndroid}"
     ]
 
     generalUtilsDepends = [

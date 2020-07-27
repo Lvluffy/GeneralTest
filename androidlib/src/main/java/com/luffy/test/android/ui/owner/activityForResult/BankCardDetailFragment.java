@@ -18,6 +18,7 @@ import butterknife.OnClick;
 public class BankCardDetailFragment extends BaseFragment {
 
     public static final int REQUEST_CODE = 1;
+
     @BindView(R2.id.txt_content)
     TextView txtContent;
 
