@@ -42,9 +42,9 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.v(TAG, "onRestart");
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.v(TAG, "onSaveInstanceState");
     }
 
     @Override

@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
 import com.luffy.test.android.base.BaseFragment;
-import com.luffy.test.android.base.BaseResponse;
-import com.luffy.test.android.base.ErrorCode;
 
 import java.util.concurrent.Callable;
 
@@ -41,16 +39,16 @@ public class RxJavaFragment extends BaseFragment {
     }
 
     private void doRxJava() {
-        Observable.fromCallable(new Callable<BaseResponse>() {
+        Observable.fromCallable(new Callable<RxJavaResponse>() {
             @Override
-            public BaseResponse call() throws Exception {
+            public RxJavaResponse call() throws Exception {
                 Log.v(TAG, "call");
-                return new BaseResponse(ErrorCode.SUCCESS);
+                return new RxJavaResponse(RxJavaResponse.SUCCESS);
             }
         })
-                .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<BaseResponse>() {
+                .subscribeOn(Schedulers.io())
+                .subscribe(new Subscriber<RxJavaResponse>() {
                     @Override
                     public void onCompleted() {
                         Log.v(TAG, "onCompleted");
@@ -62,12 +60,12 @@ public class RxJavaFragment extends BaseFragment {
                     }
 
                     @Override
-                    public void onNext(BaseResponse baseResponse) {
+                    public void onNext(RxJavaResponse rxJavaResponse) {
                         Log.v(TAG, "onNext");
-                        if (baseResponse.isSuccess()) {
+                        if (rxJavaResponse.isSuccess()) {
                             Log.v(TAG, "buildCache onLoadSuccess");
                         } else {
-                            Log.v(TAG, "buildCache onLoadFailed: code = " + baseResponse.mResultCode + ";msg = " + baseResponse.mMsg);
+                            Log.v(TAG, "buildCache onLoadFailed: code = " + rxJavaResponse.mResultCode + ";msg = " + rxJavaResponse.mMsg);
                         }
                     }
                 });
