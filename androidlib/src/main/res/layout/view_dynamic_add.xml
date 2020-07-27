@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#99000000"
+    android:background="#66000000"
     android:orientation="vertical">
 
     <View
@@ -43,6 +43,5 @@
             android:text="动态添加View" />
 
     </LinearLayout>
-
 
 </LinearLayout>

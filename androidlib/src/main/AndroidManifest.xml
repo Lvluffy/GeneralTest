@@ -12,9 +12,7 @@
         <activity android:name=".ui.owner.provider.ProviderActivity" />
         <activity android:name=".ui.owner.activityForResult.BankCardResultActivity" />
         <activity android:name=".ui.owner.activityForResult.BankCardDetailActivity" />
-        <activity
-            android:name=".ui.tsm.feature.FeatureActivity"
-            android:theme="@style/MapActivityLaunchAnim" />
+        <activity android:name=".ui.tsm.feature.FeatureActivity" />
         <activity android:name=".ui.tsm.multiCard.MultiCardActivity" />
 
         <service
