@@ -5,6 +5,19 @@
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
     <application>
+        <activity android:name=".ui.owner.link.LinkTestActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.luffy.linktest"
+                    android:scheme="test" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.owner.link.LinkActivity" />
         <activity android:name=".ui.owner.dynamicAddView.DynamicAddViewActivity" />
         <activity android:name=".ui.owner.rxjava.RxJavaActivity" />
         <activity android:name=".ui.owner.handler.HandlerActivity" />
