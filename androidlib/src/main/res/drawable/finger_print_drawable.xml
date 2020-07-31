@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item android:drawable="@drawable/finger_pointer1" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer2" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer3" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer4" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer5" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer6" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer7" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer8" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer9" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer11" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer12" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer13" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer14" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer15" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer16" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer17" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer18" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer19" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer20" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer21" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer22" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer23" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer24" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer25" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer26" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer27" android:duration="40"/>
+    <item android:drawable="@drawable/finger_pointer28" android:duration="40"/>
+</animation-list>

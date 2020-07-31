@@ -1,6 +1,7 @@
 package com.luffy.generaltest;
 
 import com.luffy.test.android.ui.owner.activityForResult.BankCardDetailActivity;
+import com.luffy.test.android.ui.owner.animation.animationDrawable.AnimationDrawableActivity;
 import com.luffy.test.android.ui.owner.dynamicAddView.DynamicAddViewActivity;
 import com.luffy.test.android.ui.owner.handler.HandlerActivity;
 import com.luffy.test.android.ui.owner.link.LinkActivity;
@@ -19,6 +20,7 @@ public enum MainMode {
     OWNER_SETTINGS("系统属性", SettingsActivity.class),
     OWNER_DYNAMIC_ADD_VIEW("动态添加View", DynamicAddViewActivity.class),
     OWNER_APP_LINK("AppLink", LinkActivity.class),
+    OWNER_ANIMATION_DRAWABLE("可拉的动画", AnimationDrawableActivity.class),
     TSM_FEATURE("TSM功能", FeatureActivity.class),
     TSM_MULTI_CARD("TMS双标卡", MultiCardActivity.class);
 

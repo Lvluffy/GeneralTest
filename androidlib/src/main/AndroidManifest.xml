@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
     <application>
+        <activity android:name=".ui.owner.animation.animationDrawable.AnimationDrawableActivity"></activity>
         <activity android:name=".ui.owner.link.LinkTestActivity">
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
