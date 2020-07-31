@@ -1,8 +1,10 @@
-package com.luffy.test.android.ui.owner.animation.animationDrawable;
+package com.luffy.test.android.ui.owner.animation;
 
 
 import android.graphics.drawable.AnimationDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,7 +49,7 @@ public class AnimationDrawableFragment extends BaseFragment {
             mTapPosDrawable.stop();
             img.setImageDrawable(mAnimationDrawable);
             mAnimationDrawable.start();
-            mAnimationDrawable.addFrame(mTapPosDrawable, 10000);
+            mAnimationDrawable.addFrame(mTapPosDrawable, 100);
         }
     }
 }

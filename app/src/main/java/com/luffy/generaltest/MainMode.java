@@ -1,7 +1,7 @@
 package com.luffy.generaltest;
 
 import com.luffy.test.android.ui.owner.activityForResult.BankCardDetailActivity;
-import com.luffy.test.android.ui.owner.animation.animationDrawable.AnimationDrawableActivity;
+import com.luffy.test.android.ui.owner.animation.AnimationDrawableActivity;
 import com.luffy.test.android.ui.owner.dynamicAddView.DynamicAddViewActivity;
 import com.luffy.test.android.ui.owner.handler.HandlerActivity;
 import com.luffy.test.android.ui.owner.link.LinkActivity;

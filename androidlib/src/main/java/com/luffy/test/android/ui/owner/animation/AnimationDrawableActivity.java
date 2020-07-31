@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.owner.animation.animationDrawable;
+package com.luffy.test.android.ui.owner.animation;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
