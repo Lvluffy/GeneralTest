@@ -5,6 +5,5 @@ public class MathTest {
         System.out.println(Math.max(1, 10));
         System.out.println(Math.min(1, 10));
         System.out.println(Math.abs(-1));
-        System.out.println(Math.log10(10000));
     }
 }
