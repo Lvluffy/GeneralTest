@@ -5,9 +5,10 @@
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
     <application>
-        <activity android:name=".ui.owner.animation.entrance.AnimationActivity"></activity>
+        <activity android:name=".ui.owner.animation.tweenAnimation.TweenAnimationActivity"></activity>
+        <activity android:name=".ui.owner.animation.entrance.AnimationActivity" />
         <activity android:name=".ui.owner.animation.TransitionActivity" />
-        <activity android:name=".ui.owner.animation.AnimationDrawableActivity" />
+        <activity android:name=".ui.owner.animation.frameAnimation.AnimationDrawableActivity" />
         <activity android:name=".ui.owner.link.LinkTestActivity">
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />

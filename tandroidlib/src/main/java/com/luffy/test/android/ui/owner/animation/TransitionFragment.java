@@ -31,8 +31,6 @@ public class TransitionFragment extends BaseFragment {
     ImageView imgViewAttribute;
     @BindView(R2.id.view_root)
     FrameLayout viewRoot;
-    @BindView(R2.id.img_xml)
-    ImageView imgXml;
 
     boolean toggle = true;
 
@@ -74,5 +72,4 @@ public class TransitionFragment extends BaseFragment {
             toggle = !toggle;
         }
     }
-
 }

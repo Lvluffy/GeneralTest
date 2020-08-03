@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.owner.animation;
+package com.luffy.test.android.ui.owner.animation.frameAnimation;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -9,7 +9,7 @@ import com.luffy.test.android.base.BaseActivity;
 /**
  * Created by lvlufei on 2020-07-31
  *
- * @name 桢动画
+ * @name 帧动画
  */
 public class AnimationDrawableActivity extends BaseActivity {
 

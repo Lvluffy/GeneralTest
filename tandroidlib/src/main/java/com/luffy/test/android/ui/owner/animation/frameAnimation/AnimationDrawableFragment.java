@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.owner.animation;
+package com.luffy.test.android.ui.owner.animation.frameAnimation;
 
 
 import android.graphics.drawable.AnimationDrawable;
@@ -18,7 +18,7 @@ import butterknife.OnClick;
 /**
  * Created by lvlufei on 2020-07-31
  *
- * @name 桢动画
+ * @name 帧动画
  */
 public class AnimationDrawableFragment extends BaseFragment {
 
