@@ -9,7 +9,7 @@ import com.luffy.test.android.base.BaseActivity;
 /**
  * Created by lvlufei on 2020-07-31
  *
- * @name 可拉的动画
+ * @name 桢动画
  */
 public class AnimationDrawableActivity extends BaseActivity {
 

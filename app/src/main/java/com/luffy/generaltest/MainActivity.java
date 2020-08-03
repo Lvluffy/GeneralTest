@@ -30,7 +30,7 @@ public class MainActivity extends BaseActivity {
 
     private void initAdapter() {
         mMainAdapter = new MainAdapter(mContext);
-        mMainAdapter.updateData(Arrays.asList(MainMode.values()));
+        mMainAdapter.updateData(Arrays.asList(MainModel.values()));
         listView.setAdapter(mMainAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

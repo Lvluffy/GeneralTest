@@ -2,9 +2,7 @@ package com.luffy.test.android.ui.owner.animation;
 
 
 import android.graphics.drawable.AnimationDrawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +18,7 @@ import butterknife.OnClick;
 /**
  * Created by lvlufei on 2020-07-31
  *
- * @name 可拉的动画
+ * @name 桢动画
  */
 public class AnimationDrawableFragment extends BaseFragment {
 
