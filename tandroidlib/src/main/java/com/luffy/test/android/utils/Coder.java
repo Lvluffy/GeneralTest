@@ -1,14 +1,18 @@
 package com.luffy.test.android.utils;
 
 public class Coder {
+    /**
+     * 十六进制字符串转字节数组
+     *
+     * @param hexString
+     * @return
+     */
     public static byte[] hexStringToBytes(String hexString) {
         int length = hexString.length();
         byte[] buffer = new byte[length / 2];
-
         for (int i = 0; i < length; i += 2) {
             buffer[i / 2] = (byte) ((toByte(hexString.charAt(i)) << 4) | toByte(hexString.charAt(i + 1)));
         }
-
         return buffer;
     }
 
