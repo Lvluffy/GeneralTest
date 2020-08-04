@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
-import com.luffy.test.android.base.BaseActivity;
+import com.luffy.test.tbaselayerlib.base.BaseActivity;
 
 public class BankCardResultActivity extends BaseActivity {
 

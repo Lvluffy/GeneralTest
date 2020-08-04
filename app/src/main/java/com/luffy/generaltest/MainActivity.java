@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.luffy.test.android.base.BaseActivity;
+import com.luffy.test.tbaselayerlib.base.BaseActivity;
 import com.luffy.utils.generallib.IntentUtils;
 
 import java.util.Arrays;

@@ -1,10 +1,9 @@
 package com.luffy.test.android.ui.owner.handler;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 
-import com.luffy.test.android.base.BaseActivity;
+import com.luffy.test.tbaselayerlib.base.BaseActivity;
+import com.luffy.utils.generallib.FragmentUtils;
 
 /**
  * Created by lvlufei on 2020-07-08
@@ -16,9 +15,6 @@ public class HandlerActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        HandlerFragment handlerFragment = new HandlerFragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(android.R.id.content, handlerFragment).commitAllowingStateLoss();
+        FragmentUtils.getInstance().replaceFragment(this, new HandlerFragment());
     }
 }

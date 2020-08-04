@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
-import com.luffy.test.android.base.BaseFragment;
 import com.luffy.test.android.utils.Coder;
+import com.luffy.test.tbaselayerlib.base.BaseFragment;
 
 import butterknife.OnClick;
 

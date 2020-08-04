@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
-import com.luffy.test.android.base.BaseFragment;
+import com.luffy.test.tbaselayerlib.base.BaseFragment;
 
 import butterknife.BindView;
 import butterknife.OnClick;

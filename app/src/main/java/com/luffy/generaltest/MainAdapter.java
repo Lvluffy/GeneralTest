@@ -15,7 +15,7 @@ public class MainAdapter extends BaseArrayAdapter<MainModel> {
 
     @Override
     public View newView(Context context, MainModel data, ViewGroup parent) {
-        return LayoutInflater.from(mContext).inflate(R.layout.item_main, parent, false);
+        return LayoutInflater.from(mContext).inflate(R.layout.item_general, parent, false);
     }
 
     @Override

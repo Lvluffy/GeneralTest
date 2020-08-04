@@ -10,6 +10,7 @@ import com.luffy.test.android.ui.owner.rxjava.RxJavaActivity;
 import com.luffy.test.android.ui.owner.settings.SettingsActivity;
 import com.luffy.test.android.ui.tsm.feature.FeatureActivity;
 import com.luffy.test.android.ui.tsm.multiCard.MultiCardActivity;
+import com.luffy.test.designpatternslib.ui.DesignPatternsActivity;
 
 public enum MainModel {
 
@@ -21,6 +22,7 @@ public enum MainModel {
     OWNER_DYNAMIC_ADD_VIEW("动态添加View", DynamicAddViewActivity.class),
     OWNER_APP_LINK("AppLink", LinkActivity.class),
     OWNER_ANIMATION_DRAWABLE("动画", AnimationActivity.class),
+    OWNER_DESIGN_PATTERNS("设计模式", DesignPatternsActivity.class),
     TSM_FEATURE("TSM功能", FeatureActivity.class),
     TSM_MULTI_CARD("TMS双标卡", MultiCardActivity.class);
 

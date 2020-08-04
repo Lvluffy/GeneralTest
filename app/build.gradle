@@ -48,6 +48,8 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
 
     /*project*/
+    implementation project(path: ':tbaselayerlib')
     implementation project(path: ':tjavalib')
     implementation project(path: ':tandroidlib')
+    implementation project(path: ':tdesignpatternslib')
 }

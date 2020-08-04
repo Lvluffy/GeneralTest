@@ -1,4 +1,4 @@
-package com.luffy.test.android.base;
+package com.luffy.test.tbaselayerlib.base;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -30,6 +30,12 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Log.v(TAG, "onBackPressed");
+    }
+
+    @Override
     protected void onPause() {
         super.onPause();
         Log.v(TAG, "onPause");
@@ -51,11 +57,5 @@ public class BaseActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.v(TAG, "onDestroy");
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Log.v(TAG, "onBackPressed");
     }
 }

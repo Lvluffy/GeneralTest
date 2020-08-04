@@ -1,10 +1,9 @@
 package com.luffy.test.android.ui.owner.dynamicAddView;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 
-import com.luffy.test.android.base.BaseActivity;
+import com.luffy.test.tbaselayerlib.base.BaseActivity;
+import com.luffy.utils.generallib.FragmentUtils;
 
 /**
  * Created by lvlufei on 2020-07-21
@@ -19,9 +18,7 @@ public class DynamicAddViewActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         dynamicAddViewFragment = new DynamicAddViewFragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(android.R.id.content, dynamicAddViewFragment).commitAllowingStateLoss();
+        FragmentUtils.getInstance().replaceFragment(this, dynamicAddViewFragment);
     }
 
     @Override

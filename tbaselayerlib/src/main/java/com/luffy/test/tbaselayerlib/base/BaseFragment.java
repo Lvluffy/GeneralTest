@@ -1,4 +1,4 @@
-package com.luffy.test.android.base;
+package com.luffy.test.tbaselayerlib.base;
 
 import android.app.Activity;
 import android.content.Context;
@@ -32,7 +32,6 @@ public abstract class BaseFragment extends Fragment {
         Log.v(TAG, "onCreate");
         Log.v(TAG, "onCreate:ActivityName = " + mActivity.getClass().getSimpleName());
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -95,7 +94,7 @@ public abstract class BaseFragment extends Fragment {
         super.onDestroy();
         Log.v(TAG, "onDestroy");
         if (mActivity != null) {
-            Log.v(TAG, "onDestroy:mActivity != null;ActivityName = " + mActivity.getClass().getSimpleName());
+            Log.v(TAG, "onDestroy:mActivity == " + mActivity.getClass().getSimpleName());
             mActivity = null;
         } else {
             Log.v(TAG, "onDestroy:mActivity == null");

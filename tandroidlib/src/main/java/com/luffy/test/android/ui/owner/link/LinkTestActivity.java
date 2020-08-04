@@ -2,11 +2,10 @@ package com.luffy.test.android.ui.owner.link;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 
-import com.luffy.test.android.base.BaseActivity;
+import com.luffy.test.tbaselayerlib.base.BaseActivity;
+import com.luffy.utils.generallib.FragmentUtils;
 
 import java.util.Set;
 
@@ -39,8 +38,6 @@ public class LinkTestActivity extends BaseActivity {
         }
         LinkTestFragment linkTestFragment = new LinkTestFragment();
         linkTestFragment.setArguments(bundle);
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(android.R.id.content, linkTestFragment).commitAllowingStateLoss();
+        FragmentUtils.getInstance().replaceFragment(this, linkTestFragment);
     }
 }

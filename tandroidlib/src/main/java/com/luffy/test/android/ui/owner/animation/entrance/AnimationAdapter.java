@@ -9,6 +9,11 @@ import android.widget.TextView;
 import com.luffy.android.listviewlib.adapter.BaseArrayAdapter;
 import com.luffy.test.android.R;
 
+/**
+ * Created by lvlufei on 2020-08-03
+ *
+ * @name 动画
+ */
 public class AnimationAdapter extends BaseArrayAdapter<AnimationModel> {
     public AnimationAdapter(Context context) {
         super(context);
@@ -16,7 +21,7 @@ public class AnimationAdapter extends BaseArrayAdapter<AnimationModel> {
 
     @Override
     public View newView(Context context, AnimationModel data, ViewGroup parent) {
-        return LayoutInflater.from(context).inflate(R.layout.item_animation, parent, false);
+        return LayoutInflater.from(context).inflate(R.layout.item_general, parent, false);
     }
 
     @Override
