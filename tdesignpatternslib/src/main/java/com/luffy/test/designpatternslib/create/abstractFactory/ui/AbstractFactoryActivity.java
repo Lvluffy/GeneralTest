@@ -1,4 +1,4 @@
-package com.luffy.test.designpatternslib.behavior.chainOfResponsibility.ui;
+package com.luffy.test.designpatternslib.create.abstractFactory.ui;
 
 import android.os.Bundle;
 
@@ -8,13 +8,13 @@ import com.luffy.utils.generallib.FragmentUtils;
 /**
  * Created by lvlufei on 2020-08-04
  *
- * @name 责任链
+ * @name 抽象工厂
  */
-public class ChainOfResponsibilityActivity extends BaseActivity {
+public class AbstractFactoryActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FragmentUtils.getInstance().replaceFragment(this, new ChainOfResponsibilityFragment());
+        FragmentUtils.getInstance().replaceFragment(this, new AbstractFactoryFragment());
     }
 }
