@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">设计模式</string>
     <string name="singleton">单例</string>
+    <string name="prototype">原型</string>
     <!--单例-->
     <string name="singleton_hungry">饿汉式</string>
     <string name="singleton_hungry_describe">特点是类一旦加载就创建一个单例，保证在调用 getInstance 方法之前单例已经存在了。 饿汉式单例在类创建的同时就已经创建好一个静态的对象供系统使用，以后不再改变，所以是线程安全的，可以直接用于多线程而不会出现问题。</string>
@@ -10,4 +11,15 @@
     <string name="singleton_double_check_describe">优点是资源利用率高，第一次执行getInstance时单例对象才被实例化，效率高。 缺点是第一次加载时反应稍慢一些，在高并发环境下也有一定的缺陷，虽然发生的概率很小。 DCL虽然在一定程度解决了资源的消耗和多余的同步，线程安全等问题，但是他还是在某些情况会出现失效的问题，也就是DCL失效。</string>
     <string name="singleton_static_inner_class">静态内部类</string>
     <string name="singleton_static_inner_class_describe">类创建的时候不会初始化sInstance，只有第一次调用getInstance方法时虚拟机加载SingletonHolder并初始化sInstance，这样不仅能确保线程安全也能保证Singleton类的唯一性，所以推荐使用静态内部类单例模式。</string>
+    <!--原型-->
+    <string name="prototype_circle_hint">请输入圆的半径</string>
+    <string name="prototype_circle_describe">半径为%1$s的圆，它的面积是：%2$s</string>
+    <string name="prototype_square_hint">请输入正方形的边长</string>
+    <string name="prototype_square_describe">边长为%1$s的正方形，它的面积是：%2$s</string>
+    <string name="prototype_rectangle_long_hint">请输入长方形的长</string>
+    <string name="prototype_rectangle_wide_hint">请输入长方形的宽</string>
+    <string name="prototype_rectangle_describe">长为%1$s宽为%2$s的长方形，它的面积是：%3$s</string>
+    <string name="prototype_triangle_end_hint">请输入三角形的底</string>
+    <string name="prototype_triangle_high_hint">请输入三角形的高</string>
+    <string name="prototype_triangle_describe">底为%1$s高为%2$s的三角形，它的面积是：%3$s</string>
 </resources>

@@ -1,6 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="5dp"
+            android:text="用带原型管理器的原型模式来生成包含“圆”和“正方形”等图形的原型，并计算其面积。" />
+
+        <!--圆-->
+        <EditText
+            android:id="@+id/edit_circle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+            android:hint="@string/prototype_circle_hint"
+            android:inputType="number"
+            android:maxLength="5"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btn_count_circle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+            android:gravity="center"
+            android:text="计算圆的面积" />
+
+        <TextView
+            android:id="@+id/txt_area_circle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minHeight="40dp" />
+
+        <!--正方形-->
+        <EditText
+            android:id="@+id/edit_square"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+            android:hint="@string/prototype_square_hint"
+            android:inputType="number"
+            android:maxLength="5"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btn_count_square"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+            android:gravity="center"
+            android:text="计算正方形的面积" />
+
+        <TextView
+            android:id="@+id/txt_area_square"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minHeight="40dp" />
+
+        <!--长方形-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit_rectangle_long"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+                android:hint="@string/prototype_rectangle_long_hint"
+                android:inputType="number"
+                android:maxLength="5"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_rectangle_wide"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+                android:hint="@string/prototype_rectangle_wide_hint"
+                android:inputType="number"
+                android:maxLength="5"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_count_rectangle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+            android:gravity="center"
+            android:text="计算长方形的面积" />
+
+        <TextView
+            android:id="@+id/txt_area_rectangle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minHeight="40dp" />
+
+        <!--三角行-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit_triangle_end"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+                android:hint="@string/prototype_triangle_end_hint"
+                android:inputType="number"
+                android:maxLength="5"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_triangle_high"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+                android:hint="@string/prototype_triangle_high_hint"
+                android:inputType="number"
+                android:maxLength="5"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_count_triangle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+            android:gravity="center"
+            android:text="计算三角形的面积" />
+
+        <TextView
+            android:id="@+id/txt_area_triangle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minHeight="40dp" />
+
+    </LinearLayout>
+
+</ScrollView>
