@@ -16,6 +16,13 @@ import com.luffy.test.designpatternslib.create.builder.ui.BuilderActivity;
 import com.luffy.test.designpatternslib.create.factoryMethod.ui.FactoryMethodActivity;
 import com.luffy.test.designpatternslib.create.prototype.ui.PrototypeActivity;
 import com.luffy.test.designpatternslib.create.singleton.ui.SingletonActivity;
+import com.luffy.test.designpatternslib.structure.adapter.ui.AdapterActivity;
+import com.luffy.test.designpatternslib.structure.bridge.ui.BridgeActivity;
+import com.luffy.test.designpatternslib.structure.composite.ui.CompositeActivity;
+import com.luffy.test.designpatternslib.structure.decorator.ui.DecoratorActivity;
+import com.luffy.test.designpatternslib.structure.facade.ui.FacadeActivity;
+import com.luffy.test.designpatternslib.structure.flyweight.ui.FlyweightActivity;
+import com.luffy.test.designpatternslib.structure.proxy.ui.ProxyActivity;
 
 public enum DesignPatternsModel {
 
@@ -25,6 +32,13 @@ public enum DesignPatternsModel {
     CREATE_ABSTRACT_FACTORY("抽象工厂", AbstractFactoryActivity.class),
     CREATE_BUILDER("建造者", BuilderActivity.class),
 
+    STRUCTURE_PROXY("代理", ProxyActivity.class),
+    STRUCTURE_ADAPTER("适配器", AdapterActivity.class),
+    STRUCTURE_BRIDGE("桥接", BridgeActivity.class),
+    STRUCTURE_DECORATOR("装饰", DecoratorActivity.class),
+    STRUCTURE_FACADE("外观", FacadeActivity.class),
+    STRUCTURE_FLYWEIGHT("享元", FlyweightActivity.class),
+    STRUCTURE_COMPOSITE("组合", CompositeActivity.class),
 
     BEHAVIOR_TEMPLATE_METHOD("模版方法", TemplateMethodActivity.class),
     BEHAVIOR_STRATEGY("策略", StrategyActivity.class),

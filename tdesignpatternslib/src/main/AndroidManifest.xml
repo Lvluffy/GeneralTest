@@ -3,7 +3,14 @@
     package="com.luffy.test.designpatternslib">
 
     <application>
-        <activity android:name=".create.builder.ui.BuilderActivity"></activity>
+        <activity android:name=".structure.composite.ui.CompositeActivity"></activity>
+        <activity android:name=".structure.flyweight.ui.FlyweightActivity" />
+        <activity android:name=".structure.facade.ui.FacadeActivity" />
+        <activity android:name=".structure.decorator.ui.DecoratorActivity" />
+        <activity android:name=".structure.bridge.ui.BridgeActivity" />
+        <activity android:name=".structure.adapter.ui.AdapterActivity" />
+        <activity android:name=".structure.proxy.ui.ProxyActivity" />
+        <activity android:name=".create.builder.ui.BuilderActivity" />
         <activity android:name=".create.abstractFactory.ui.AbstractFactoryActivity" />
         <activity android:name=".create.factoryMethod.ui.FactoryMethodActivity" />
         <activity android:name=".create.prototype.ui.PrototypeActivity" />
