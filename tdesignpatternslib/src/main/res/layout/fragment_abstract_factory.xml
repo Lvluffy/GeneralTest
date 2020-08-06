@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/abstract_factory_case_analyze" />
+
+        <TextView
+            android:id="@+id/btn_no1_farm"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+            android:gravity="center"
+            android:text="@string/abstract_factory_no1_farm" />
+
+        <TextView
+            android:id="@+id/txt_no1_farm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center"
+            android:minHeight="40dp" />
+
+        <TextView
+            android:id="@+id/btn_no2_farm"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+            android:gravity="center"
+            android:text="@string/abstract_factory_no2_farm" />
+
+        <TextView
+            android:id="@+id/txt_no2_farm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center"
+            android:minHeight="40dp" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/factory_method_desc" />
+            android:text="@string/factory_method_case_analyze" />
 
         <TextView
             android:id="@+id/btn_create_horse"
@@ -28,7 +28,7 @@
             android:id="@+id/txt_display_horse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|center"
+            android:gravity="left|center"
             android:layout_marginTop="10dp"
             android:minHeight="40dp" />
 
@@ -45,7 +45,7 @@
             android:id="@+id/txt_display_cattle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|center"
+            android:gravity="left|center"
             android:layout_marginTop="10dp"
             android:minHeight="40dp" />
 
