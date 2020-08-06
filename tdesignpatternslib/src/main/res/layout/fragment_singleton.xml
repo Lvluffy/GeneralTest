@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:lineSpacingExtra="5dp"
-            android:text="@string/singleton_hungry_describe"
+            android:text="@string/singleton_hungry_desc"
             android:textSize="14sp" />
 
         <!--懒汉式-->
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:lineSpacingExtra="5dp"
-            android:text="@string/singleton_lazy_describe"
+            android:text="@string/singleton_lazy_desc"
             android:textSize="14sp" />
 
         <!--双重检查-->
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:lineSpacingExtra="5dp"
-            android:text="@string/singleton_double_check_describe"
+            android:text="@string/singleton_double_check_desc"
             android:textSize="14sp" />
 
         <!--静态内部类-->
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:lineSpacingExtra="5dp"
-            android:text="@string/singleton_static_inner_class_describe"
+            android:text="@string/singleton_static_inner_class_desc"
             android:textSize="14sp" />
 
     </LinearLayout>

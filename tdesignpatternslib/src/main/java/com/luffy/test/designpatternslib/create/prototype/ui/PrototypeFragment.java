@@ -88,7 +88,7 @@ public class PrototypeFragment extends BaseFragment {
         }
         Shape circle = mShapePrototypeManager.getShape(ShapePrototypeManager.KEY_CIRCLE);
         int radius = Integer.parseInt(editCircle.getText().toString());
-        txtAreaCircle.setText(getString(R.string.prototype_circle_describe,
+        txtAreaCircle.setText(getString(R.string.prototype_circle_desc,
                 String.valueOf(radius),
                 new DecimalFormat("#.##").format(circle.countArea(radius))));
     }
@@ -103,7 +103,7 @@ public class PrototypeFragment extends BaseFragment {
         }
         Shape square = mShapePrototypeManager.getShape(ShapePrototypeManager.KEY_SQUARE);
         int side = Integer.parseInt(editSquare.getText().toString());
-        txtAreaSquare.setText(getString(R.string.prototype_square_describe,
+        txtAreaSquare.setText(getString(R.string.prototype_square_desc,
                 String.valueOf(side),
                 new DecimalFormat("#.##").format(square.countArea(side))));
     }
@@ -123,7 +123,7 @@ public class PrototypeFragment extends BaseFragment {
         Shape rectangle = mShapePrototypeManager.getShape(ShapePrototypeManager.KEY_RECTANGLE);
         int lon = Integer.parseInt(editRectangleLong.getText().toString());
         int wide = Integer.parseInt(editRectangleWide.getText().toString());
-        txtAreaRectangle.setText(getString(R.string.prototype_rectangle_describe,
+        txtAreaRectangle.setText(getString(R.string.prototype_rectangle_desc,
                 String.valueOf(lon),
                 String.valueOf(wide),
                 new DecimalFormat("#.##").format(rectangle.countArea(lon, wide))));
@@ -144,7 +144,7 @@ public class PrototypeFragment extends BaseFragment {
         Shape triangle = mShapePrototypeManager.getShape(ShapePrototypeManager.KEY_TRIANGLE);
         int end = Integer.parseInt(editTriangleEnd.getText().toString());
         int high = Integer.parseInt(editTriangleHigh.getText().toString());
-        txtAreaTriangle.setText(getString(R.string.prototype_triangle_describe,
+        txtAreaTriangle.setText(getString(R.string.prototype_triangle_desc,
                 String.valueOf(end),
                 String.valueOf(high),
                 new DecimalFormat("#.##").format(triangle.countArea(end, high))));
