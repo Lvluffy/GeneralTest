@@ -43,6 +43,7 @@
             android:id="@+id/txt_area_circle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
             android:layout_marginTop="10dp"
             android:minHeight="40dp" />
 
@@ -73,6 +74,7 @@
             android:id="@+id/txt_area_square"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
             android:layout_marginTop="10dp"
             android:minHeight="40dp" />
 
@@ -125,6 +127,7 @@
             android:id="@+id/txt_area_rectangle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
             android:layout_marginTop="10dp"
             android:minHeight="40dp" />
 
@@ -177,6 +180,7 @@
             android:id="@+id/txt_area_triangle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
             android:layout_marginTop="10dp"
             android:minHeight="40dp" />
 
