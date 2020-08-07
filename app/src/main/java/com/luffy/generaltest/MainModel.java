@@ -10,7 +10,7 @@ import com.luffy.test.android.ui.owner.rxjava.RxJavaActivity;
 import com.luffy.test.android.ui.owner.settings.SettingsActivity;
 import com.luffy.test.android.ui.tsm.feature.FeatureActivity;
 import com.luffy.test.android.ui.tsm.multiCard.MultiCardActivity;
-import com.luffy.test.designpatternslib.ui.DesignPatternsActivity;
+import com.luffy.test.designpatternslib.DesignPatternsActivity;
 
 public enum MainModel {
 

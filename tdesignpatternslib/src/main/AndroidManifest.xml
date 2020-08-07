@@ -25,7 +25,7 @@
         <activity android:name=".behavior.iterator.ui.IteratorActivity" />
         <activity android:name=".behavior.interpreter.ui.InterpreterActivity" />
         <activity android:name=".behavior.command.ui.CommandActivity" />
-        <activity android:name=".ui.DesignPatternsActivity" />
+        <activity android:name=".DesignPatternsActivity" />
         <activity android:name=".behavior.chainOfResponsibility.ui.ChainOfResponsibilityActivity" />
     </application>
 

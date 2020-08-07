@@ -1,4 +1,4 @@
-package com.luffy.test.designpatternslib.ui;
+package com.luffy.test.designpatternslib;
 
 import android.os.Bundle;
 

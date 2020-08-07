@@ -1,4 +1,4 @@
-package com.luffy.test.designpatternslib.ui;
+package com.luffy.test.designpatternslib;
 
 
 import android.content.Intent;
@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.luffy.test.designpatternslib.R;
-import com.luffy.test.designpatternslib.R2;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
 import com.luffy.utils.generallib.IntentUtils;
 

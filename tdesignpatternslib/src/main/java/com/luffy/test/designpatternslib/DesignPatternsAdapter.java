@@ -1,4 +1,4 @@
-package com.luffy.test.designpatternslib.ui;
+package com.luffy.test.designpatternslib;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.luffy.android.listviewlib.adapter.BaseArrayAdapter;
-import com.luffy.test.designpatternslib.R;
 
 /**
  * Created by lvlufei on 2020-08-04

@@ -1,4 +1,4 @@
-package com.luffy.test.designpatternslib.ui;
+package com.luffy.test.designpatternslib;
 
 import com.luffy.test.designpatternslib.behavior.chainOfResponsibility.ui.ChainOfResponsibilityActivity;
 import com.luffy.test.designpatternslib.behavior.command.ui.CommandActivity;
