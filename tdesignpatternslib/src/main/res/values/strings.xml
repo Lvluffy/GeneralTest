@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">设计模式</string>
+    <!--创建型-->
+    <string name="design_pattern_create">创建型</string>
     <string name="singleton">单例</string>
     <string name="prototype">原型</string>
     <string name="factory_method">工厂方法</string>
     <string name="abstract_factory">抽象工厂</string>
+    <string name="builder">构建者</string>
+    <!--结构型-->
+    <string name="design_pattern_structure">结构型</string>
+    <!--行为型-->
+    <string name="design_pattern_behavior">行为型</string>
     <!--单例-->
     <string name="singleton_hungry">饿汉式</string>
     <string name="singleton_hungry_desc">特点是类一旦加载就创建一个单例，保证在调用 getInstance 方法之前单例已经存在了。 饿汉式单例在类创建的同时就已经创建好一个静态的对象供系统使用，以后不再改变，所以是线程安全的，可以直接用于多线程而不会出现问题。</string>
@@ -14,7 +21,7 @@
     <string name="singleton_static_inner_class">静态内部类</string>
     <string name="singleton_static_inner_class_desc">类创建的时候不会初始化sInstance，只有第一次调用getInstance方法时虚拟机加载SingletonHolder并初始化sInstance，这样不仅能确保线程安全也能保证Singleton类的唯一性，所以推荐使用静态内部类单例模式。</string>
     <!--原型-->
-    <string name="prototype_case_analyze">案例分析：用带原型管理器的原型模式来生成包含“圆”和“正方形”等图形的原型，并计算其面积。</string>
+    <string name="prototype_case_analyze">原型案例分析：用带原型管理器的原型模式来生成包含“圆”和“正方形”等图形的原型，并计算其面积。</string>
     <string name="prototype_circle_hint">请输入圆的半径</string>
     <string name="prototype_circle_desc">半径为%1$s的圆，它的面积是：%2$s</string>
     <string name="prototype_square_hint">请输入正方形的边长</string>
@@ -26,11 +33,16 @@
     <string name="prototype_triangle_high_hint">请输入三角形的高</string>
     <string name="prototype_triangle_desc">底为%1$s高为%2$s的三角形，它的面积是：%3$s</string>
     <!--工厂方法-->
-    <string name="factory_method_case_analyze">案例分析：有很多种类的畜牧场，如养马场用于养马，养牛场用于养牛</string>
+    <string name="factory_method_case_analyze">工厂方法案例分析：有很多种类的畜牧场，如养马场用于养马，养牛场用于养牛</string>
     <string name="factory_method_desc">工厂方法：只考虑同等级产品的生产。例如：畜牧场只养动物、电视机厂只生产电视机、计算机软件学院只培养计算机软件专业的学生等。</string>
     <!--抽象工厂-->
-    <string name="abstract_factory_case_analyze">案例分析：农场中除了像畜牧场一样可以养动物，还可以培养植物，如养马、养牛、种菜、种水果等。\n1号农场用于养牛和种菜，2号农场用于养马和种水果。</string>
+    <string name="abstract_factory_case_analyze">抽象工厂案例分析：农场中除了像畜牧场一样可以养动物，还可以培养植物，如养马、养牛、种菜、种水果等。\n1号农场用于养牛和种菜，2号农场用于养马和种水果。</string>
     <string name="abstract_factory_desc">抽象工厂：考虑多等级产品的生产。例如：农场里既养动物又种植物、电器厂既生产电视机又生产洗衣机或空调、大学既有软件专业又有生物专业等。</string>
     <string name="abstract_factory_no1_farm">1号农场</string>
     <string name="abstract_factory_no2_farm">2号农场</string>
+    <!--建造者-->
+    <string name="builder_case_analyze">建造者案例分析：客厅装修是一个复杂的过程，它包含墙体的装修、电视机的选择、沙发的购买与布局等。客户把装修要求告诉项目经理，项目经理指挥装修工人一步步装修，最后完成整个客厅的装修与布局。</string>
+    <string name="builder_no1_decorator">1号装修工</string>
+    <string name="builder_no2_decorator">2号装修工</string>
+
 </resources>
