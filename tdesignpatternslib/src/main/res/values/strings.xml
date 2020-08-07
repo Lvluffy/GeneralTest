@@ -9,6 +9,8 @@
     <string name="builder">构建者</string>
     <!--结构型-->
     <string name="design_pattern_structure">结构型</string>
+    <string name="proxy">代理</string>
+    <string name="adapter">适配器</string>
     <!--行为型-->
     <string name="design_pattern_behavior">行为型</string>
     <!--单例-->
@@ -44,5 +46,8 @@
     <string name="builder_case_analyze">建造者案例分析：客厅装修是一个复杂的过程，它包含墙体的装修、电视机的选择、沙发的购买与布局等。客户把装修要求告诉项目经理，项目经理指挥装修工人一步步装修，最后完成整个客厅的装修与布局。</string>
     <string name="builder_no1_decorator">1号装修工</string>
     <string name="builder_no2_decorator">2号装修工</string>
+    <!--代理-->
+    <string name="proxy_case_analyze">代理案例分析：“山西特产公司”经营许多山西特产，它是真实主题，提供了显示特产的 display() 方法。太原“天街e角”公司是山西特产公司特产的代理，通过调用山西特产公司的 display() 方法显示代理产品，当然它可以增加一些额外的处理，如包裝或加价等。客户可通过“天街e角”代理公司间接访问“山西特产公司”的产品</string>
+    <!--适配器-->
 
 </resources>
