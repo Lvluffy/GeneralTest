@@ -39,7 +39,7 @@ public class BankCardDetailFragment extends BaseFragment {
         super.onActivityResult(requestCode, resultCode, data);
         Bundle bundle = data.getExtras();
         for (String key : bundle.keySet()) {
-            Log.d(TAG, "key=" + key + ", content=" + bundle.getString(key));
+            Log.d(TAG, "key=" + key + ",value=" + bundle.getString(key));
         }
         if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE) {
             txtContent.setText(data.getStringExtra("data"));
