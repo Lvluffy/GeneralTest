@@ -37,14 +37,22 @@ public class BankCardDetailFragment extends BaseFragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Bundle bundle = data.getExtras();
-        if (bundle != null) {
-            for (String key : bundle.keySet()) {
-                Log.d(TAG, "key=" + key + ",value=" + bundle.get(key));
-            }
-        }
+        printBundle(data.getExtras());
         if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE) {
             txtContent.setText(data.getStringExtra("data"));
+        }
+    }
+
+    private void printBundle(Bundle bundle) {
+        if (bundle == null) {
+            return;
+        }
+        for (String key : bundle.keySet()) {
+            Object value = bundle.get(key);
+            Log.d(TAG, "key=" + key + ",value=" + bundle.get(key));
+            if (value != null && value instanceof Bundle) {
+                printBundle((Bundle) value);
+            }
         }
     }
 
