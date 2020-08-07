@@ -119,23 +119,35 @@
 
 1、单例（Singleton）模式：某个类只能生成一个实例，该类提供了一个全局访问点供外部获取该实例，其拓展是有限多例模式。
 
+![Singleton](https://user-images.githubusercontent.com/34730376/89623795-d3b27180-d8c7-11ea-989f-2f414a92cd31.jpeg)
+
 2、原型（Prototype）模式：将一个对象作为原型，通过对其进行复制而克隆出多个和原型类似的新实例。
 
+![Prototype](https://user-images.githubusercontent.com/34730376/89623805-d745f880-d8c7-11ea-8515-3db8835d79f7.jpeg)
+
 3、工厂方法（FactoryMethod）模式：定义一个用于创建产品的接口，由子类决定生产什么产品。
+
+![FactoryMethod](https://user-images.githubusercontent.com/34730376/89623807-d8772580-d8c7-11ea-8058-a13f5503dece.jpeg)
 
 工厂方法：只考虑同等级产品的生产。例如：畜牧场只养动物、电视机厂只生产电视机、计算机软件学院只培养计算机软件专业的学生等。
 
 4、抽象工厂（AbstractFactory）模式：提供一个创建产品族的接口，其每个子类可以生产一系列相关的产品。
 
+![AbstractFactory](https://user-images.githubusercontent.com/34730376/89623809-d90fbc00-d8c7-11ea-8343-cff485028e66.jpeg)
+
 抽象工厂：考虑多等级产品的生产。例如：农场里既养动物又种植物、电器厂既生产电视机又生产洗衣机或空调、大学既有软件专业又有生物专业等。
 
 5、建造者（Builder）模式：将一个复杂对象分解成多个相对简单的部分，然后根据不同需要分别创建它们，最后构建成该复杂对象。
+
+![Builder](https://user-images.githubusercontent.com/34730376/89623808-d8772580-d8c7-11ea-8e32-0d6ff79645ab.jpeg)
 
 建造者：注重零部件的组装过程，而工厂方法模式更注重零部件的创建过程，但两者可以结合使用。
 
 ## 结构型模式（7种）
 
 1、代理（Proxy）模式：为某对象提供一种代理以控制对该对象的访问。即客户端通过代理间接地访问该对象，从而限制、增强或修改该对象的一些特性。
+
+![Proxy](https://user-images.githubusercontent.com/34730376/89623801-d6ad6200-d8c7-11ea-8d4f-cc1a29322acd.jpeg)
 
 2、适配器（Adapter）模式：将一个类的接口转换成客户希望的另外一个接口，使得原本由于接口不兼容而不能一起工作的那些类能一起工作。
 
