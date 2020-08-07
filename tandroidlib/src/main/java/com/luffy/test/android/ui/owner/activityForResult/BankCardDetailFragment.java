@@ -3,6 +3,7 @@ package com.luffy.test.android.ui.owner.activityForResult;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,10 @@ public class BankCardDetailFragment extends BaseFragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Bundle bundle = data.getExtras();
+        for (String key : bundle.keySet()) {
+            Log.d(TAG, "key=" + key + ", content=" + bundle.getString(key));
+        }
         if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE) {
             txtContent.setText(data.getStringExtra("data"));
         }
