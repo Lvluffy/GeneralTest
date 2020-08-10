@@ -3,7 +3,7 @@ package com.luffy.test.designpatternslib.create.factoryMethod.patterns;
 /**
  * Created by lvlufei on 2020-08-05
  *
- * @name 牛
+ * @name 牛（具体产品角色）
  */
 public class Cattle implements Animal {
     @Override

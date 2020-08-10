@@ -3,7 +3,7 @@ package com.luffy.test.designpatternslib.create.abstractFactory.patterns;
 /**
  * Created by lvlufei on 2020-08-06
  *
- * @name 1号农场（用于养牛和种菜）
+ * @name 1号农场-用于养牛和种菜（具体工厂角色）
  */
 public class No1Farm implements Farm {
     @Override

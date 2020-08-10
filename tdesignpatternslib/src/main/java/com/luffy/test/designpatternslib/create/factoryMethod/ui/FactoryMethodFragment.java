@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.luffy.test.designpatternslib.R;
 import com.luffy.test.designpatternslib.R2;
 import com.luffy.test.designpatternslib.create.factoryMethod.patterns.Animal;
+import com.luffy.test.designpatternslib.create.factoryMethod.patterns.AnimalFarm;
 import com.luffy.test.designpatternslib.create.factoryMethod.patterns.CattleFarm;
 import com.luffy.test.designpatternslib.create.factoryMethod.patterns.HorseFarm;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
@@ -46,14 +47,14 @@ public class FactoryMethodFragment extends BaseFragment {
     }
 
     private void createHorse() {
-        HorseFarm horseFarm = new HorseFarm();
-        Animal animal = horseFarm.createAnimal();
+        AnimalFarm animalFarm = new HorseFarm();
+        Animal animal = animalFarm.createAnimal();
         txtDisplayHorse.setText(animal.show());
     }
 
     private void createCattle() {
-        CattleFarm cattleFarm = new CattleFarm();
-        Animal animal = cattleFarm.createAnimal();
+        AnimalFarm animalFarm = new CattleFarm();
+        Animal animal = animalFarm.createAnimal();
         txtDisplayCattle.setText(animal.show());
     }
 }

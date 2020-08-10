@@ -3,7 +3,7 @@ package com.luffy.test.designpatternslib.create.abstractFactory.patterns;
 /**
  * Created by lvlufei on 2020-08-06
  *
- * @name 农场
+ * @name 农场（抽象工厂角色）
  */
 public interface Farm {
 

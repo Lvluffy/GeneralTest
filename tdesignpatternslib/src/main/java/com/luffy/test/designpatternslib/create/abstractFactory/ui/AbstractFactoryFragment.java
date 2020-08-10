@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.luffy.test.designpatternslib.R;
 import com.luffy.test.designpatternslib.R2;
+import com.luffy.test.designpatternslib.create.abstractFactory.patterns.Farm;
 import com.luffy.test.designpatternslib.create.abstractFactory.patterns.No1Farm;
 import com.luffy.test.designpatternslib.create.abstractFactory.patterns.No2Farm;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
@@ -45,20 +46,20 @@ public class AbstractFactoryFragment extends BaseFragment {
     }
 
     private void no1Farm() {
-        No1Farm no1Farm = new No1Farm();
+        Farm farm = new No1Farm();
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(no1Farm.name()).append(":");
-        stringBuilder.append(no1Farm.createAnimal().show()).append(",");
-        stringBuilder.append(no1Farm.createPlant().show()).append(".");
+        stringBuilder.append(farm.name()).append(":");
+        stringBuilder.append(farm.createAnimal().show()).append(",");
+        stringBuilder.append(farm.createPlant().show()).append(".");
         txtNo1Farm.setText(stringBuilder.toString());
     }
 
     private void no2Farm() {
-        No2Farm no2Farm = new No2Farm();
+        Farm farm = new No2Farm();
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(no2Farm.name()).append(":");
-        stringBuilder.append(no2Farm.createAnimal().show()).append(",");
-        stringBuilder.append(no2Farm.createPlant().show()).append(".");
+        stringBuilder.append(farm.name()).append(":");
+        stringBuilder.append(farm.createAnimal().show()).append(",");
+        stringBuilder.append(farm.createPlant().show()).append(".");
         txtNo2Farm.setText(stringBuilder.toString());
     }
 }
