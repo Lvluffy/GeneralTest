@@ -12,6 +12,7 @@
     <string name="proxy">代理</string>
     <string name="adapter">适配器</string>
     <string name="bridge">桥接</string>
+    <string name="decorator">装饰者</string>
     <!--行为型-->
     <string name="design_pattern_behavior">行为型</string>
     <!--单例-->
@@ -57,4 +58,10 @@
     <string name="bridge_case_analyze">桥接案例分析：模式模拟女士皮包的选购。按用途分可选钱包（Wallet）和挎包（HandBag），按颜色分可选黄色（Yellow）和红色（Red）</string>
     <string name="bridge_yellow_bag">黄色包</string>
     <string name="bridge_red_bag">红色包</string>
+    <!--装饰-->
+    <string name="decorator_case_analyze">装饰案例分析：美女变身。实例中的“美女”原身有 setImage(String t)方法决定其显示方式，而其变身“都市丽人装”和“军旅装”可以用 setChanger() 方法来改变其外观，原身与变身后的效果用 display() 方法来显示</string>
+    <string name="decorator_original">原身</string>
+    <string name="decorator_city_beauty">都市丽人</string>
+    <string name="decorator_military">军旅</string>
+
 </resources>
