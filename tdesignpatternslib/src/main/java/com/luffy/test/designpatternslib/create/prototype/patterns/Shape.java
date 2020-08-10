@@ -3,7 +3,7 @@ package com.luffy.test.designpatternslib.create.prototype.patterns;
 /**
  * Created by lvlufei on 2020-08-05
  *
- * @name 形状
+ * @name 形状（抽象原型角色）
  */
 public interface Shape extends Cloneable {
     /**

@@ -3,7 +3,7 @@ package com.luffy.test.designpatternslib.create.prototype.patterns;
 /**
  * Created by lvlufei on 2020-08-05
  *
- * @name 正方形
+ * @name 正方形（具体原型角色））
  */
 public class Square implements Shape {
     @Override
