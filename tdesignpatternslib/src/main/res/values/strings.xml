@@ -63,5 +63,7 @@
     <string name="decorator_original">原身</string>
     <string name="decorator_city_beauty">都市丽人</string>
     <string name="decorator_military">军旅</string>
+    <!--外观-->
+    <string name="facade_case_analyze">外观案例分析：山西特产选购。外观角色 SxSpecialty，它拥有 10 个子系统角色Specialty1~Specialty10，它们是图标类（ImageIcon）的子类对象，用来保存该山西特产的图标</string>
 
 </resources>
