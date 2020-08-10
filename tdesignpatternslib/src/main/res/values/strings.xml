@@ -11,6 +11,7 @@
     <string name="design_pattern_structure">结构型</string>
     <string name="proxy">代理</string>
     <string name="adapter">适配器</string>
+    <string name="bridge">桥接</string>
     <!--行为型-->
     <string name="design_pattern_behavior">行为型</string>
     <!--单例-->
@@ -52,4 +53,8 @@
     <string name="adapter_case_analyze">适配器案例分析：新能源汽车的发动机有电能发动机（Electric Motor）和光能发动机（Optical Motor）等，各种发动机的驱动方法不同，例如，电能发动机的驱动方法 electricDrive() 是用电能驱动，而光能发动机的驱动方法 opticalDrive() 是用光能驱动，它们是适配器模式中被访问的适配者。</string>
     <string name="adapter_electric_adapter">电能适配器</string>
     <string name="adapter_optical_adapter">光能适配器</string>
+    <!--桥接-->
+    <string name="bridge_case_analyze">桥接案例分析：模式模拟女士皮包的选购。按用途分可选钱包（Wallet）和挎包（HandBag），按颜色分可选黄色（Yellow）和红色（Red）</string>
+    <string name="bridge_yellow_bag">黄色包</string>
+    <string name="bridge_red_bag">红色包</string>
 </resources>
