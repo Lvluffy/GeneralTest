@@ -3,7 +3,7 @@ package com.luffy.test.designpatternslib.structure.decorator.patterns;
 /**
  * Created by lvlufei on 2020-08-10
  *
- * @name 都市丽人（具体装饰）
+ * @name 都市丽人（具体装饰角色）
  */
 public class CityBeauty extends Changer {
 

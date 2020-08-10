@@ -3,11 +3,15 @@ package com.luffy.test.designpatternslib.structure.proxy.patterns;
 /**
  * Created by lvlufei on 2020-08-07
  *
- * @name 太原代理商
+ * @name 太原代理商（代理角色）
  */
 public class TyProxy implements Specialty {
 
-    private SxSpecialty realSubject = new SxSpecialty();
+    private SxSpecialty realSubject;
+
+    public TyProxy() {
+        realSubject = new SxSpecialty();
+    }
 
     @Override
     public String display() {

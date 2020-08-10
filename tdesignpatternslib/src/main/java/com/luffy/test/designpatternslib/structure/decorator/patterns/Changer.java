@@ -3,7 +3,7 @@ package com.luffy.test.designpatternslib.structure.decorator.patterns;
 /**
  * Created by lvlufei on 2020-08-10
  *
- * @name 美女变身（抽象装饰）
+ * @name 美女变身（抽象装饰角色）
  */
 public abstract class Changer implements Belle {
 

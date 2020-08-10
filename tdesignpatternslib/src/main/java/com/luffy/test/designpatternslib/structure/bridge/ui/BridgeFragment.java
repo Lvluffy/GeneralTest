@@ -47,14 +47,12 @@ public class BridgeFragment extends BaseFragment {
     }
 
     private void yellowBag() {
-        Bag bag = new Wallet();
-        bag.setColor(new Yellow());
+        Bag bag = new Wallet(new Yellow());
         txtYellowBag.setText(bag.getColor().getColor() + bag.getName());
     }
 
     private void redBag() {
-        Bag bag = new HandBag();
-        bag.setColor(new Red());
+        Bag bag = new HandBag(new Red());
         txtRedBag.setText(bag.getColor().getColor() + bag.getName());
     }
 }
