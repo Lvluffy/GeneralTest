@@ -151,15 +151,27 @@
 
 2、适配器（Adapter）模式：将一个类的接口转换成客户希望的另外一个接口，使得原本由于接口不兼容而不能一起工作的那些类能一起工作。
 
+![Adapter](https://user-images.githubusercontent.com/34730376/89777168-c69eb800-db3d-11ea-8ae8-765580b3dc17.jpeg)
+
 3、桥接（Bridge）模式：将抽象与实现分离，使它们可以独立变化。它是用组合关系代替继承关系来实现的，从而降低了抽象和实现这两个可变维度的耦合度。
+
+![bridge](https://user-images.githubusercontent.com/34730376/89777166-c6062180-db3d-11ea-8e1e-06640c02ae12.jpeg)
 
 4、装饰（Decorator）模式：动态地给对象增加一些职责，即增加其额外的功能。
 
+![decorator](https://user-images.githubusercontent.com/34730376/89777161-c4d4f480-db3d-11ea-80cd-81d18a95a7ae.jpeg)
+
 5、外观（Facade）模式：为多个复杂的子系统提供一个一致的接口，使这些子系统更加容易被访问。
+
+![facade](https://user-images.githubusercontent.com/34730376/89777160-c43c5e00-db3d-11ea-8a37-735ceb4e8ee7.jpeg)
 
 6、享元（Flyweight）模式：运用共享技术来有效地支持大量细粒度对象的复用。
 
+![flyweight](https://user-images.githubusercontent.com/34730376/89777150-c1416d80-db3d-11ea-9770-bac467e404e9.jpeg)
+
 7、组合（Composite）模式：将对象组合成树状层次结构，使用户对单个对象和组合对象具有一致的访问性。
+
+![composite](https://user-images.githubusercontent.com/34730376/89777163-c56d8b00-db3d-11ea-9047-692be760d18c.jpeg)
 
 ## 行为型模式（11种）
 
