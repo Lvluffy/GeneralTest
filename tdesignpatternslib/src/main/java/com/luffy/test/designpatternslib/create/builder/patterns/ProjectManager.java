@@ -3,7 +3,7 @@ package com.luffy.test.designpatternslib.create.builder.patterns;
 /**
  * Created by lvlufei on 2020-08-07
  *
- * @name 项目经理
+ * @name 项目经理（指挥者角色）
  */
 public class ProjectManager {
 

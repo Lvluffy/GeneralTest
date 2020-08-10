@@ -3,7 +3,7 @@ package com.luffy.test.designpatternslib.create.builder.patterns;
 /**
  * Created by lvlufei on 2020-08-07
  *
- * @name 1号装修工
+ * @name 1号装修工（具体建造者角色）
  */
 public class No1Decorator extends Decorator {
     @Override
