@@ -28,6 +28,15 @@ public class BankCardResultFragment extends BaseFragment {
     void doFinish() {
         Intent intent = new Intent();
         intent.putExtra("data", "我是传回来的数据");
+
+        Bundle bundle = new Bundle();
+        bundle.putString("name", "张三");
+        bundle.putString("age", "18");
+        bundle.putString("address", "北京");
+        intent.putExtra("bundle", bundle);
+
+        intent.putExtra("other", "别的数据");
+
         getActivity().setResult(Activity.RESULT_OK, intent);
         getActivity().finish();
     }

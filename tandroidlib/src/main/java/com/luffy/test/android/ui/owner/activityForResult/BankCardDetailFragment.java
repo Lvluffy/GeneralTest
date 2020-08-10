@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
+import com.luffy.test.android.utils.BundleUtils;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
 
 import butterknife.BindView;
@@ -37,23 +38,9 @@ public class BankCardDetailFragment extends BaseFragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        printBundle(data.getExtras());
+        Log.d(TAG, "" + BundleUtils.getInstance().printBundle(data.getExtras()));
         if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_CODE) {
             txtContent.setText(data.getStringExtra("data"));
         }
     }
-
-    private void printBundle(Bundle bundle) {
-        if (bundle == null) {
-            return;
-        }
-        for (String key : bundle.keySet()) {
-            Object value = bundle.get(key);
-            Log.d(TAG, "key=" + key + ",value=" + bundle.get(key));
-            if (value != null && value instanceof Bundle) {
-                printBundle((Bundle) value);
-            }
-        }
-    }
-
 }
