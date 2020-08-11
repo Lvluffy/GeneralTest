@@ -1,1 +1,1 @@
-include ':app', ':tandroidlib', ':tjavalib', ':tdesignpatternslib', ':tbaselayerlib'
+include ':app', ':tandroidlib', ':tjavalib', ':tbaselayerlib', ':tdesignpatternlib'

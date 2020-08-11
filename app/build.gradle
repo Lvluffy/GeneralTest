@@ -51,5 +51,5 @@ dependencies {
     implementation project(path: ':tbaselayerlib')
     implementation project(path: ':tjavalib')
     implementation project(path: ':tandroidlib')
-    implementation project(path: ':tdesignpatternslib')
+    implementation project(path: ':tdesignpatternlib')
 }
