@@ -37,14 +37,16 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
             android:gravity="center"
+            android:lineSpacingExtra="5dp"
             android:text="计算圆的面积" />
 
         <TextView
             android:id="@+id/txt_area_circle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left|center"
             android:layout_marginTop="10dp"
+            android:gravity="left|center"
+            android:lineSpacingExtra="5dp"
             android:minHeight="40dp" />
 
         <!--正方形-->
@@ -68,14 +70,16 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
             android:gravity="center"
+            android:lineSpacingExtra="5dp"
             android:text="计算正方形的面积" />
 
         <TextView
             android:id="@+id/txt_area_square"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left|center"
             android:layout_marginTop="10dp"
+            android:gravity="left|center"
+            android:lineSpacingExtra="5dp"
             android:minHeight="40dp" />
 
         <!--长方形-->
@@ -121,14 +125,16 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
             android:gravity="center"
+            android:lineSpacingExtra="5dp"
             android:text="计算长方形的面积" />
 
         <TextView
             android:id="@+id/txt_area_rectangle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left|center"
             android:layout_marginTop="10dp"
+            android:gravity="left|center"
+            android:lineSpacingExtra="5dp"
             android:minHeight="40dp" />
 
         <!--三角行-->
@@ -174,14 +180,16 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
             android:gravity="center"
+            android:lineSpacingExtra="5dp"
             android:text="计算三角形的面积" />
 
         <TextView
             android:id="@+id/txt_area_triangle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left|center"
             android:layout_marginTop="10dp"
+            android:gravity="left|center"
+            android:lineSpacingExtra="5dp"
             android:minHeight="40dp" />
 
     </LinearLayout>

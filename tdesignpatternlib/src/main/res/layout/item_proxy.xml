@@ -29,6 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left|center"
+            android:lineSpacingExtra="5dp"
             android:textSize="16sp"
             android:textStyle="bold"
             tools:text="杏花村酒" />
@@ -39,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:gravity="left|center"
+            android:lineSpacingExtra="5dp"
             android:textSize="14sp"
             tools:text="杏花村酒" />
 

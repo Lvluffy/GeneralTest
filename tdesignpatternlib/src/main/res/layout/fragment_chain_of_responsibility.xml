@@ -8,7 +8,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="请假审批：组长1天；部门主管3天；经理7天；老板30天" />
+        android:lineSpacingExtra="5dp"
+        android:text="@string/chain_of_responsibility_case_analyze" />
 
     <EditText
         android:id="@+id/edit"

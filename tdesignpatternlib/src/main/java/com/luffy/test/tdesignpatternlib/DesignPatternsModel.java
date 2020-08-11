@@ -26,41 +26,41 @@ import com.luffy.test.tdesignpatternlib.structure.proxy.ui.ProxyActivity;
 
 public enum DesignPatternsModel {
 
-    CREATE_SINGLETON("单例", SingletonActivity.class),
-    CREATE_PROTOTYPE("原型", PrototypeActivity.class),
-    CREATE_FACTORY_METHOD("工厂方法", FactoryMethodActivity.class),
-    CREATE_ABSTRACT_FACTORY("抽象工厂", AbstractFactoryActivity.class),
-    CREATE_BUILDER("建造者", BuilderActivity.class),
+    CREATE_SINGLETON(R.string.singleton, SingletonActivity.class),
+    CREATE_PROTOTYPE(R.string.prototype, PrototypeActivity.class),
+    CREATE_FACTORY_METHOD(R.string.factory_method, FactoryMethodActivity.class),
+    CREATE_ABSTRACT_FACTORY(R.string.abstract_factory, AbstractFactoryActivity.class),
+    CREATE_BUILDER(R.string.builder, BuilderActivity.class),
 
-    STRUCTURE_PROXY("代理", ProxyActivity.class),
-    STRUCTURE_ADAPTER("适配器", AdapterActivity.class),
-    STRUCTURE_BRIDGE("桥接", BridgeActivity.class),
-    STRUCTURE_DECORATOR("装饰", DecoratorActivity.class),
-    STRUCTURE_FACADE("外观", FacadeActivity.class),
-    STRUCTURE_FLYWEIGHT("享元", FlyweightActivity.class),
-    STRUCTURE_COMPOSITE("组合", CompositeActivity.class),
+    STRUCTURE_PROXY(R.string.proxy, ProxyActivity.class),
+    STRUCTURE_ADAPTER(R.string.adapter, AdapterActivity.class),
+    STRUCTURE_BRIDGE(R.string.bridge, BridgeActivity.class),
+    STRUCTURE_DECORATOR(R.string.decorator, DecoratorActivity.class),
+    STRUCTURE_FACADE(R.string.facade, FacadeActivity.class),
+    STRUCTURE_FLYWEIGHT(R.string.flyweight, FlyweightActivity.class),
+    STRUCTURE_COMPOSITE(R.string.composite, CompositeActivity.class),
 
-    BEHAVIOR_TEMPLATE_METHOD("模版方法", TemplateMethodActivity.class),
-    BEHAVIOR_STRATEGY("策略", StrategyActivity.class),
-    BEHAVIOR_COMMAND("命令", CommandActivity.class),
-    BEHAVIOR_CHAIN_OF_RESPONSIBILITY("责任链", ChainOfResponsibilityActivity.class),
-    BEHAVIOR_STATE("状态", StateActivity.class),
-    BEHAVIOR_OBSERVER("观察者", ObserverActivity.class),
-    BEHAVIOR_MEDIATOR("中介者", MediatorActivity.class),
-    BEHAVIOR_ITERATOR("迭代器", IteratorActivity.class),
-    BEHAVIOR_VISITOR("访问者", VisitorActivity.class),
-    BEHAVIOR_MEMENTO("备忘录", MementoActivity.class),
-    BEHAVIOR_INTERPRETER("解释器", InterpreterActivity.class);
+    BEHAVIOR_TEMPLATE_METHOD(R.string.template_method, TemplateMethodActivity.class),
+    BEHAVIOR_STRATEGY(R.string.strategy, StrategyActivity.class),
+    BEHAVIOR_COMMAND(R.string.command, CommandActivity.class),
+    BEHAVIOR_CHAIN_OF_RESPONSIBILITY(R.string.chain_of_responsibility, ChainOfResponsibilityActivity.class),
+    BEHAVIOR_STATE(R.string.status, StateActivity.class),
+    BEHAVIOR_OBSERVER(R.string.observer, ObserverActivity.class),
+    BEHAVIOR_MEDIATOR(R.string.mediator, MediatorActivity.class),
+    BEHAVIOR_ITERATOR(R.string.iterator, IteratorActivity.class),
+    BEHAVIOR_VISITOR(R.string.visitor, VisitorActivity.class),
+    BEHAVIOR_MEMENTO(R.string.memento, MementoActivity.class),
+    BEHAVIOR_INTERPRETER(R.string.interpreter, InterpreterActivity.class);
 
-    private String name;
+    private int name;
     private Class aClass;
 
-    DesignPatternsModel(String name, Class aClass) {
+    DesignPatternsModel(int name, Class aClass) {
         this.name = name;
         this.aClass = aClass;
     }
 
-    public String getName() {
+    public int getName() {
         return name;
     }
 

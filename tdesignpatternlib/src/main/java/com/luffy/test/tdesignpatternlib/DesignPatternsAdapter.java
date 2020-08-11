@@ -26,6 +26,6 @@ public class DesignPatternsAdapter extends BaseArrayAdapter<DesignPatternsModel>
     @Override
     public void bindData(View view, int position, DesignPatternsModel data) {
         TextView txtName = view.findViewById(R.id.txt_name);
-        txtName.setText(data.getName());
+        txtName.setText(mContext.getString(data.getName()));
     }
 }
