@@ -88,10 +88,14 @@
     <string name="template_method_study_in_america">留学美国</string>
     <!--策略-->
     <string name="strategy_case_analyze">策略案例分析：“大闸蟹”做菜。\n分析：关于大闸蟹的做法有很多种，我们以清蒸大闸蟹和红烧大闸蟹两种方法为例。\n首先，定义一个大闸蟹加工的抽象策略类（CrabCooking），里面包含了一个做菜的抽象方法 cookingMethod()；然后，定义清蒸大闸蟹（SteamedCrabs）和红烧大闸蟹（BraisedCrabs）的具体策略类，它们实现了抽象策略类中的抽象方法；最后，定义一个厨房（Kitchen）环境类，它具有设置和选择做菜策略的方法；客户类通过厨房类获取做菜策略，并把做菜结果显示出来。</string>
-
-    <!--责任链-->
-    <string name="chain_of_responsibility_case_analyze">请假审批：组长1天；部门主管3天；经理7天；老板30天</string>
     <string name="strategy_steamed">清蒸大闸蟹</string>
     <string name="strategy_braised">红烧大闸蟹</string>
+    <!--命令-->
+    <string name="command_case_analyze">命令案例分析：客户去餐馆吃早餐。\n分析：客户去餐馆可选择的早餐有肠粉、河粉和馄饨等，客户可向服务员选择以上早餐中的若干种，服务员将客户的请求交给相关的厨师去做。这里的点早餐相当于“命令”，服务员相当于“调用者”，厨师相当于“接收者”。\n定义一个早餐类（Breakfast），它是抽象命令类，有抽象方法cooking()，说明要做什么；再定义其子类肠粉类（ChangFen）、馄饨类（HunTun）和河粉类（HeFen），它们是具体命令类，实现早餐类的 cooking()方法，但它们不会具体做，而是交给具体的厨师去做；具体厨师类有肠粉厨师（ChangFenChef）、馄蚀厨师（HunTunChef）和河粉厨师（HeFenChef），他们是命令的接收者；最后，定义服务员类（Waiter），它接收客户的做菜请求，并发出做菜的命令。</string>
+    <string name="command_changfen">肠粉</string>
+    <string name="command_hundun">混沌</string>
+    <string name="command_hefen">河粉</string>
+    <!--责任链-->
+    <string name="chain_of_responsibility_case_analyze">请假审批：组长1天；部门主管3天；经理7天；老板30天</string>
 
 </resources>
