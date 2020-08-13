@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
 import com.luffy.test.android.ui.owner.handler.HandlerActivity;
-import com.luffy.test.android.utils.NotifyUtils;
+import com.luffy.test.android.utils.NotificationUtils;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
 
 import butterknife.OnClick;
@@ -21,6 +21,9 @@ import butterknife.OnClick;
  * @name 通知
  */
 public class NotificationFragment extends BaseFragment {
+
+    private static final String CHANNEL_ID = "test";
+    private static final String CHANNEL_NAME = "测试";
 
     @Override
     public View doCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -34,13 +37,13 @@ public class NotificationFragment extends BaseFragment {
     public void onViewClicked(View view) {
         int id = view.getId();
         if (id == R.id.btn_send_default_notification) {
-            NotifyUtils.getInstance(mContext).defaultNotify("标题", "内容", new Intent(mContext, HandlerActivity.class));
+            NotificationUtils.getInstance(mContext).defaultNotify("标题", "内容", CHANNEL_ID, CHANNEL_NAME, new Intent(mContext, HandlerActivity.class));
         } else if (id == R.id.btn_send_custom_notification) {
-            NotifyUtils.getInstance(mContext).customNotify("标题", "内容", R.drawable.icon_car, new Intent(mContext, HandlerActivity.class));
+            NotificationUtils.getInstance(mContext).customNotify("标题", "内容", R.drawable.icon_car, CHANNEL_ID, CHANNEL_NAME, new Intent(mContext, HandlerActivity.class));
         } else if (id == R.id.btn_send_large_view_notification) {
-            NotifyUtils.getInstance(mContext).largeViewNotify("标题", "内容", new Intent(mContext, HandlerActivity.class));
+            NotificationUtils.getInstance(mContext).largeViewNotify("标题", "内容", CHANNEL_ID, CHANNEL_NAME, new Intent(mContext, HandlerActivity.class));
         } else if (id == R.id.btn_send_large_img_notification) {
-            NotifyUtils.getInstance(mContext).largeImgNotify(BitmapFactory.decodeResource(getResources(), R.drawable.icon_car), new Intent(mContext, HandlerActivity.class));
+            NotificationUtils.getInstance(mContext).largeImgNotify(BitmapFactory.decodeResource(getResources(), R.drawable.icon_car), CHANNEL_ID, CHANNEL_NAME, new Intent(mContext, HandlerActivity.class));
         }
     }
 }
