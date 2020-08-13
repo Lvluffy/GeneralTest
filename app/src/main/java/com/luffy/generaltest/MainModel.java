@@ -5,6 +5,7 @@ import com.luffy.test.android.ui.owner.animation.entrance.AnimationActivity;
 import com.luffy.test.android.ui.owner.dynamicAddView.DynamicAddViewActivity;
 import com.luffy.test.android.ui.owner.handler.HandlerActivity;
 import com.luffy.test.android.ui.owner.link.LinkActivity;
+import com.luffy.test.android.ui.owner.notification.NotificationActivity;
 import com.luffy.test.android.ui.owner.provider.ProviderActivity;
 import com.luffy.test.android.ui.owner.rxjava.RxJavaActivity;
 import com.luffy.test.android.ui.owner.settings.SettingsActivity;
@@ -23,6 +24,7 @@ public enum MainModel {
     OWNER_APP_LINK("AppLink", LinkActivity.class),
     OWNER_ANIMATION_DRAWABLE("动画", AnimationActivity.class),
     OWNER_DESIGN_PATTERNS("设计模式", DesignPatternsActivity.class),
+    OWNER_NOTIFICATION("通知", NotificationActivity.class),
     TSM_FEATURE("TSM功能", FeatureActivity.class),
     TSM_MULTI_CARD("TMS双标卡", MultiCardActivity.class);
 

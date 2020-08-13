@@ -5,7 +5,8 @@
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
     <application>
-        <activity android:name=".ui.owner.animation.tweenAnimation.TweenAnimationActivity"></activity>
+        <activity android:name=".ui.owner.notification.NotificationActivity"></activity>
+        <activity android:name=".ui.owner.animation.tweenAnimation.TweenAnimationActivity" />
         <activity android:name=".ui.owner.animation.entrance.AnimationActivity" />
         <activity android:name=".ui.owner.animation.TransitionActivity" />
         <activity android:name=".ui.owner.animation.frameAnimation.AnimationDrawableActivity" />
