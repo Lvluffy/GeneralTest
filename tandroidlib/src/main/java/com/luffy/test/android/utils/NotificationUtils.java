@@ -1,20 +1,12 @@
 package com.luffy.test.android.utils;
 
+import android.annotation.TargetApi;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
-import android.widget.RemoteViews;
-
-import com.luffy.test.android.R;
-
-import java.lang.ref.WeakReference;
 
 /**
  * Created by lvlufei on 2020-08-13
@@ -23,285 +15,79 @@ import java.lang.ref.WeakReference;
  */
 public class NotificationUtils {
 
-    private NotificationManager notificationManager;
-    private NotificationChannel notificationChannel;
-    private PendingIntent pendingIntent;
-    private NotificationCompat.Builder builder;
-    private Notification notification;
-    private WeakReference<Context> rfContext;
-
-    private NotificationUtils(Context context) {
-        rfContext = new WeakReference<>(context);
-        notificationManager = (NotificationManager) context.getSystemService(context.NOTIFICATION_SERVICE);
+    private NotificationUtils() {
     }
 
-    public static NotificationUtils getInstance(Context context) {
-        return new NotifyUtilsHolder(context).instance;
+    public static NotificationUtils getInstance() {
+        return NotifyUtilsHolder.instance;
     }
 
     private static class NotifyUtilsHolder {
-        private NotificationUtils instance;
-
-        public NotifyUtilsHolder(Context context) {
-            instance = new NotificationUtils(context);
-        }
+        private static final NotificationUtils instance = new NotificationUtils();
     }
 
     /**
      * 发送通知
      *
-     * @param notificationFlow
+     * @param context
+     * @param channelId
+     * @param channelName
+     * @param notification
+     * @param notificationId
      */
-    public void sendNotification(NotificationFlow notificationFlow) {
-        if (notificationFlow != null) {
-            notificationChannel = notificationFlow.onCreateNotificationChannel();
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                if (notificationChannel != null) {
-                    notificationManager.createNotificationChannel(notificationChannel);
-                }
-            }
-            pendingIntent = notificationFlow.onCreatePendingIntent();
-            builder = notificationFlow.onCreateBuilder();
-            notification = builder.build();
-            notificationFlow.onNotify();
+    public void notifyNotification(Context context, String channelId, String channelName, Notification notification, int notificationId) {
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        if (notificationManager == null) {
+            return;
         }
+        setChannel(notificationManager, channelId, channelName);
+        notificationManager.notify(notificationId, notification);
     }
 
     /**
-     * 创建通知渠道
+     * 取消通知
      *
-     * @param channelId
-     * @param channelName
-     * @param importance
-     * @return
+     * @param context
+     * @param notificationId
      */
-    public NotificationChannel createNotificationChannel(String channelId, CharSequence channelName, int importance) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            return new NotificationChannel(channelId, channelName, importance);
+    public void cancelNotification(Context context, int notificationId) {
+        NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        if (manager != null) {
+            manager.cancel(notificationId);
         }
-        return null;
-    }
-
-    public NotificationChannel createNotificationChannel(String channelId, CharSequence channelName) {
-        return createNotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_DEFAULT);
-    }
-
-    /**
-     * 默认通知
-     *
-     * @param title
-     * @param content
-     * @param channelId
-     * @param channelName
-     * @param intent
-     */
-    public void defaultNotify(final String title, final String content, final String channelId, final String channelName, final Intent intent) {
-        sendNotification(new NotificationFlow() {
-            @Override
-            public NotificationChannel onCreateNotificationChannel() {
-                return createNotificationChannel(channelId, channelName);
-            }
-
-            @Override
-            public PendingIntent onCreatePendingIntent() {
-                return PendingIntent.getActivity(rfContext.get(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-            }
-
-            @Override
-            public NotificationCompat.Builder onCreateBuilder() {
-                return createBuilder()
-                        .setContentTitle(title)
-                        .setContentText(content)
-                        .setContentIntent(pendingIntent);
-            }
-
-            @Override
-            public void onNotify() {
-                notificationManager.notify(1, notification);
-            }
-        });
-    }
-
-    /**
-     * 自定义通知
-     *
-     * @param title
-     * @param content
-     * @param imgId
-     * @param channelId
-     * @param channelName
-     * @param intent
-     */
-    public void customNotify(final String title, final String content, final int imgId, final String channelId, final String channelName, final Intent intent) {
-        sendNotification(new NotificationFlow() {
-            @Override
-            public NotificationChannel onCreateNotificationChannel() {
-                return createNotificationChannel(channelId, channelName);
-            }
-
-            @Override
-            public PendingIntent onCreatePendingIntent() {
-                return PendingIntent.getActivity(rfContext.get(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-            }
-
-            @Override
-            public NotificationCompat.Builder onCreateBuilder() {
-                // 自定义通知栏布局
-                RemoteViews contentView = new RemoteViews(rfContext.get().getPackageName(), R.layout.layout_notify_custom);
-                contentView.setTextViewText(R.id.notify_title, title);
-                contentView.setTextViewText(R.id.notify_content, content);
-                contentView.setImageViewResource(R.id.notify_icon, imgId);
-                return createBuilder()
-                        .setContent(contentView)
-                        .setContentIntent(pendingIntent);
-            }
-
-            @Override
-            public void onNotify() {
-                notificationManager.notify(2, notification);
-            }
-        });
-    }
-
-    /**
-     * 大视图通知
-     *
-     * @param title
-     * @param content
-     * @param channelId
-     * @param channelName
-     * @param intent
-     */
-    public void largeViewNotify(final String title, final String content, final String channelId, final String channelName, final Intent intent) {
-        sendNotification(new NotificationFlow() {
-            @Override
-            public NotificationChannel onCreateNotificationChannel() {
-                return createNotificationChannel(channelId, channelName);
-            }
-
-            @Override
-            public PendingIntent onCreatePendingIntent() {
-                return PendingIntent.getActivity(rfContext.get(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-            }
-
-            @Override
-            public NotificationCompat.Builder onCreateBuilder() {
-                //大型图片样式
-                NotificationCompat.BigPictureStyle bigStyle = new NotificationCompat.BigPictureStyle();
-                bigStyle.bigPicture(BitmapFactory.decodeResource(rfContext.get().getResources(), R.drawable.icon_car));
-                bigStyle.setSummaryText("你好啊");
-                return createBuilder()
-                        .setContentTitle(title)
-                        .setContentText(content)
-                        .setStyle(bigStyle)
-                        .setContentIntent(pendingIntent);
-            }
-
-            @Override
-            public void onNotify() {
-                notificationManager.notify(3, notification);
-            }
-        });
-    }
-
-    /**
-     * 大图片通知
-     *
-     * @param bitmap
-     * @param channelId
-     * @param channelName
-     * @param intent
-     */
-    public void largeImgNotify(final Bitmap bitmap, final String channelId, final String channelName, final Intent intent) {
-        sendNotification(new NotificationFlow() {
-            @Override
-            public NotificationChannel onCreateNotificationChannel() {
-                return createNotificationChannel(channelId, channelName);
-            }
-
-            @Override
-            public PendingIntent onCreatePendingIntent() {
-                return PendingIntent.getActivity(rfContext.get(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-            }
-
-            @Override
-            public NotificationCompat.Builder onCreateBuilder() {
-                // 指定个性化视图
-                RemoteViews contentView = new RemoteViews(rfContext.get().getPackageName(), R.layout.layout_notify_large_photo);
-                contentView.setImageViewBitmap(R.id.notify_icon, bitmap);
-                return createBuilder()
-                        .setContent(contentView)
-                        .setContentIntent(pendingIntent);
-            }
-
-            @Override
-            public void onNotify() {
-                notificationManager.notify(4, notification);
-            }
-        });
     }
 
     /**
      * 创建Builder
      *
+     * @param context
+     * @param channelId
      * @return
      */
-    public NotificationCompat.Builder createBuilder() {
-        NotificationCompat.Builder builder;
+    @TargetApi(Build.VERSION_CODES.O)
+    public NotificationCompat.Builder createBuilder(Context context, String channelId) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            if (notificationChannel != null) {
-                builder = new NotificationCompat.Builder(rfContext.get(), notificationChannel.getId());
-            } else {
-                builder = new NotificationCompat.Builder(rfContext.get());
-            }
+            return new NotificationCompat.Builder(context, channelId).setAutoCancel(true);
         } else {
-            builder = new NotificationCompat.Builder(rfContext.get());
+            return new NotificationCompat.Builder(context).setAutoCancel(true);
         }
-        //设置通用的属性：自动消失、小图标、时间
-        builder.setAutoCancel(true)
-                .setSmallIcon(R.drawable.icon_car)
-                .setWhen(System.currentTimeMillis());
-        return builder;
     }
 
     /**
-     * 取消通知栏弹窗
+     * 设置渠道
      *
-     * @param id
+     * @param notificationManager
+     * @param channelId
+     * @param channelName
      */
-    public void cancleNotification(int id) {
-        notificationManager.cancel(id);
-    }
-
-    /**
-     * 通知流程
-     */
-    public interface NotificationFlow {
-
-        /**
-         * 创建渠道
-         *
-         * @return
-         */
-        NotificationChannel onCreateNotificationChannel();
-
-        /**
-         * 创建意图
-         *
-         * @return
-         */
-        PendingIntent onCreatePendingIntent();
-
-        /**
-         * 创建Builder
-         *
-         * @return
-         */
-        NotificationCompat.Builder onCreateBuilder();
-
-        /**
-         * 发送通知
-         */
-        void onNotify();
+    @TargetApi(Build.VERSION_CODES.O)
+    private void setChannel(NotificationManager notificationManager, String channelId, String channelName) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = notificationManager.getNotificationChannel(channelId);
+            if (channel == null) {
+                channel = new NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_HIGH);
+                notificationManager.createNotificationChannel(channel);
+            }
+        }
     }
 }
