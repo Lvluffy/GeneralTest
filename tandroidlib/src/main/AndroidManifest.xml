@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.luffy.test.android">
 
-    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
-
     <application>
-        <activity android:name=".ui.owner.notification.NotificationActivity"></activity>
+        <activity android:name=".ui.owner.thread.asyncTask.AsyncTaskActivity"></activity>
+        <activity android:name=".ui.owner.thread.entrance.ThreadActivity" />
+        <activity android:name=".ui.owner.notification.NotificationActivity" />
         <activity android:name=".ui.owner.animation.tweenAnimation.TweenAnimationActivity" />
         <activity android:name=".ui.owner.animation.entrance.AnimationActivity" />
         <activity android:name=".ui.owner.animation.TransitionActivity" />
