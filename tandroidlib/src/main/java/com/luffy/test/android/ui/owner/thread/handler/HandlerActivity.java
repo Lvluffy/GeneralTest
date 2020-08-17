@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.owner.handler;
+package com.luffy.test.android.ui.owner.thread.handler;
 
 import android.os.Bundle;
 
@@ -6,9 +6,9 @@ import com.luffy.test.tbaselayerlib.base.BaseActivity;
 import com.luffy.utils.generallib.FragmentUtils;
 
 /**
- * Created by lvlufei on 2020-07-08
+ * Created by lvlufei on 2020-08-17
  *
- * @name 处理者
+ * @name
  */
 public class HandlerActivity extends BaseActivity {
 

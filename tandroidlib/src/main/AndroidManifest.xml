@@ -3,7 +3,9 @@
     package="com.luffy.test.android">
 
     <application>
-        <activity android:name=".ui.owner.thread.asyncTask.AsyncTaskActivity"></activity>
+        <activity android:name=".ui.owner.thread.handler.HandlerActivity"></activity>
+        <activity android:name=".ui.owner.thread.executorService.ExecutorServiceActivity" />
+        <activity android:name=".ui.owner.thread.asyncTask.AsyncTaskActivity" />
         <activity android:name=".ui.owner.thread.entrance.ThreadActivity" />
         <activity android:name=".ui.owner.notification.NotificationActivity" />
         <activity android:name=".ui.owner.animation.tweenAnimation.TweenAnimationActivity" />
@@ -25,7 +27,6 @@
         <activity android:name=".ui.owner.link.LinkActivity" />
         <activity android:name=".ui.owner.dynamicAddView.DynamicAddViewActivity" />
         <activity android:name=".ui.owner.rxjava.RxJavaActivity" />
-        <activity android:name=".ui.owner.handler.HandlerActivity" />
         <activity android:name=".ui.owner.settings.SettingsActivity" />
         <activity android:name=".ui.owner.provider.ProviderActivity" />
         <activity android:name=".ui.owner.activityForResult.BankCardResultActivity" />

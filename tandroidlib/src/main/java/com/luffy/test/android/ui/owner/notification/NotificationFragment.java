@@ -13,7 +13,7 @@ import android.widget.RemoteViews;
 
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
-import com.luffy.test.android.ui.owner.handler.HandlerActivity;
+import com.luffy.test.android.ui.owner.thread.handler.HandlerActivity;
 import com.luffy.test.android.utils.NotificationUtils;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
 
