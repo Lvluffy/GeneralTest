@@ -3,7 +3,8 @@ package com.luffy.test.android.utils;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import java.io.IOException;
+import com.luffy.utils.generallib.ExceptionCloseUtils;
+
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -44,13 +45,7 @@ public class DownloadPictureUtils {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            if (inputStream != null) {
-                try {
-                    inputStream.close();
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            }
+            ExceptionCloseUtils.getInstance().close(inputStream);
         }
         return bitmap;
     }
