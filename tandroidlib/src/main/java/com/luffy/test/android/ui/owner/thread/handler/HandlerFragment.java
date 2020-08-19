@@ -78,20 +78,14 @@ public class HandlerFragment extends BaseFragment {
     public void onViewClicked(View view) {
         int id = view.getId();
         if (id == R.id.btn_main) {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.append("是否为出线程：").append(ThreadUtils.getInstance().isMainThread()).append("\n");
-            stringBuilder.append("当前线程名称：").append(ThreadUtils.getInstance().getCurrentThreadName());
-            txtContent.setText(stringBuilder.toString());
+            txtContent.setText(getContent());
         } else if (id == R.id.btn_child) {
             new Thread("child") {
                 @Override
                 public void run() {
-                    StringBuilder stringBuilder = new StringBuilder();
-                    stringBuilder.append("是否为出线程：").append(ThreadUtils.getInstance().isMainThread()).append("\n");
-                    stringBuilder.append("当前线程名称：").append(ThreadUtils.getInstance().getCurrentThreadName());
                     Message msg = new Message();
                     msg.what = CHILD_THREAD;
-                    msg.obj = stringBuilder.toString();
+                    msg.obj = getContent();
                     handler.sendMessage(msg);
                 }
             }.start();
@@ -103,4 +97,13 @@ public class HandlerFragment extends BaseFragment {
             LoadImageHandler.getInstance().DownLoadImage(handler, IMAGE5, UrlConstantManager.getInstance().getUrlList().get(15));
         }
     }
+
+    private String getContent() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("是否为主线程：").append(ThreadUtils.getInstance().isMainThread()).append("\n");
+        stringBuilder.append("当前线程名称：").append(ThreadUtils.getInstance().getCurrentThreadName());
+        return stringBuilder.toString();
+    }
 }
+
+

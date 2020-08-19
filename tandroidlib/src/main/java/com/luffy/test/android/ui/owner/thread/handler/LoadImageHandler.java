@@ -11,8 +11,16 @@ public class LoadImageHandler {
 
     Bitmap bitmap;
 
+    private LoadImageHandler() {
+
+    }
+
     public static LoadImageHandler getInstance() {
-        return new LoadImageHandler();
+        return LoadImageHandlerHolder.instance;
+    }
+
+    private static class LoadImageHandlerHolder {
+        private static final LoadImageHandler instance = new LoadImageHandler();
     }
 
     @SuppressLint("HandlerLeak")

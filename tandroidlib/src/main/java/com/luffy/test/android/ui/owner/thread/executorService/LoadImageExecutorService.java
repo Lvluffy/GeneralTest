@@ -19,8 +19,16 @@ public class LoadImageExecutorService {
     private ExecutorService executorService = Executors.newFixedThreadPool(1);// 同时最多启动1个线程
     private Bitmap bitmap;
 
+    private LoadImageExecutorService() {
+
+    }
+
     public static LoadImageExecutorService getInstance() {
-        return new LoadImageExecutorService();
+        return LoadImageExecutorServiceHolder.instance;
+    }
+
+    private static class LoadImageExecutorServiceHolder {
+        private static final LoadImageExecutorService instance = new LoadImageExecutorService();
     }
 
     public void DownLoadImage(final ImageView imageView, final String url) {
