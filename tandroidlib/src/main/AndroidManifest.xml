@@ -44,7 +44,7 @@
 
         <provider
             android:name=".provider.TestProvider"
-            android:authorities="com.luffy.test.provider.feature"
+            android:authorities="${applicationId}.provider.feature"
             android:exported="true" />
     </application>
 

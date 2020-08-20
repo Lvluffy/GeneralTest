@@ -5,7 +5,6 @@ android {
     buildToolsVersion rootProject.android.buildToolsVersion
     /**默认-选项配置*/
     defaultConfig {
-        applicationId rootProject.android.applicationId
         minSdkVersion rootProject.android.minSdkVersion
         targetSdkVersion rootProject.android.targetSdkVersion
         versionCode rootProject.android.versionCode
@@ -35,6 +34,20 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        app {
+            applicationId rootProject.android.applicationId
+        }
+    }
+
+    sourceSets {
+        app {
+            res.srcDirs = ['src/main/res']
+        }
     }
 }
 

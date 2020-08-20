@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
+import com.luffy.utils.generallib.AppUtils;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -21,7 +22,7 @@ import butterknife.OnClick;
  */
 public class ProviderFragment extends BaseFragment {
 
-    private static final String TSM_CLIENT_PROVIDER_FEATURE = "content://com.luffy.test.provider.feature";
+    private static final String TSM_CLIENT_PROVIDER_FEATURE = "content://%1$s.provider.feature";
     public static final String METHOD_KEY = "test";
     public static final String METHOD_VALUE = "test_value";
 
@@ -43,7 +44,7 @@ public class ProviderFragment extends BaseFragment {
     private void parseIntent() {
         try {
             Bundle bundle = mActivity.getContentResolver().call(
-                    Uri.parse(TSM_CLIENT_PROVIDER_FEATURE),
+                    Uri.parse(String.format(TSM_CLIENT_PROVIDER_FEATURE, AppUtils.getInstance().getAppPackName(mContext))),
                     METHOD_KEY,
                     null,
                     null);
