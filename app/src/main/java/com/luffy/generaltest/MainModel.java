@@ -7,6 +7,7 @@ import com.luffy.test.android.ui.owner.link.LinkActivity;
 import com.luffy.test.android.ui.owner.notification.NotificationActivity;
 import com.luffy.test.android.ui.owner.provider.ProviderActivity;
 import com.luffy.test.android.ui.owner.rxjava.RxJavaActivity;
+import com.luffy.test.android.ui.owner.serviceStart.ServiceStartActivity;
 import com.luffy.test.android.ui.owner.settings.SettingsActivity;
 import com.luffy.test.android.ui.owner.thread.entrance.ThreadActivity;
 import com.luffy.test.android.ui.tsm.feature.FeatureActivity;
@@ -16,7 +17,8 @@ import com.luffy.test.tdesignpatternlib.DesignPatternsActivity;
 public enum MainModel {
 
     OWNER_ACTIVITY_FOR_RESULT("activity数据传递", BankCardDetailActivity.class),
-    OWNER_PROVIDER("测试内容提供者", ProviderActivity.class),
+    OWNER_PROVIDER("访问内容提供者", ProviderActivity.class),
+    OWNER_SERVICE("启动服务", ServiceStartActivity.class),
     OWNER_RXJAVA("RxJava", RxJavaActivity.class),
     OWNER_SETTINGS("系统属性", SettingsActivity.class),
     OWNER_DYNAMIC_ADD_VIEW("动态添加View", DynamicAddViewActivity.class),

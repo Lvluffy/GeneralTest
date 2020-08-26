@@ -1,11 +1,6 @@
 package com.luffy.test.android.ui.owner.rxjava;
 
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.content.ServiceConnection;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +8,6 @@ import android.view.ViewGroup;
 
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
-import com.luffy.test.android.service.TestService;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
 
 import java.util.concurrent.Callable;
@@ -73,62 +67,8 @@ public class RxJavaFragment extends BaseFragment {
                         } else {
                             Log.v(TAG, "buildCache onLoadFailed: code = " + rxJavaResponse.mResultCode + ";msg = " + rxJavaResponse.mMsg);
                         }
-                        onStartService();
-                        new Thread(new Runnable() {
-                            @Override
-                            public void run() {
-                                try {
-                                    Thread.sleep(2000);
-                                    onBindService();
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        }).start();
                     }
                 });
     }
 
-    private void onStartService() {
-        final Intent intent = new Intent(mContext, TestService.class);
-        mActivity.startService(intent);
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(2000);
-                    mActivity.stopService(intent);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
-
-    private void onBindService() {
-        final Intent intent = new Intent(mContext, TestService.class);
-        final ServiceConnection serviceConnection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder service) {
-
-            }
-
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-
-            }
-        };
-        mActivity.bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(2000);
-                    mActivity.unbindService(serviceConnection);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
 }

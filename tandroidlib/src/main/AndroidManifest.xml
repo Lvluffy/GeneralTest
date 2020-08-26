@@ -3,7 +3,8 @@
     package="com.luffy.test.android">
 
     <application>
-        <activity android:name=".ui.owner.thread.handler.HandlerActivity"></activity>
+        <activity android:name=".ui.owner.serviceStart.ServiceStartActivity"></activity>
+        <activity android:name=".ui.owner.thread.handler.HandlerActivity" />
         <activity android:name=".ui.owner.thread.executorService.ExecutorServiceActivity" />
         <activity android:name=".ui.owner.thread.asyncTask.AsyncTaskActivity" />
         <activity android:name=".ui.owner.thread.entrance.ThreadActivity" />
@@ -36,11 +37,18 @@
 
         <service
             android:name=".service.TestIntentService"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.luffy.generaltest.action.TEST_INTENT_SERVICE" />
+            </intent-filter>
+        </service>
         <service
             android:name=".service.TestService"
-            android:enabled="true"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.luffy.generaltest.action.TEST_SERVICE" />
+            </intent-filter>
+        </service>
 
         <provider
             android:name=".provider.TestProvider"
