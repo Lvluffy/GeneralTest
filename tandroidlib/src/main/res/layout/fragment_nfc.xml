@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txt_is_support_nfc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:minHeight="40dp"
+        android:text="@string/format_nfc_is_support" />
+
+    <TextView
+        android:id="@+id/txt_has_open_nfc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:minHeight="40dp"
+        android:text="@string/format_nfc_has_open" />
+
+    <TextView
+        android:id="@+id/btn_open_nfc"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+        android:gravity="center"
+        android:text="打开NFC" />
+
+    <TextView
+        android:id="@+id/btn_close_nfc"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+        android:gravity="center"
+        android:text="关闭NFC" />
+
+</LinearLayout>

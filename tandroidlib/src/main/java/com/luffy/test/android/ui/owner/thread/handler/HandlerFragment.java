@@ -100,8 +100,8 @@ public class HandlerFragment extends BaseFragment {
 
     private String getContent() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("是否为主线程：").append(ThreadUtils.getInstance().isMainThread()).append("\n");
-        stringBuilder.append("当前线程名称：").append(ThreadUtils.getInstance().getCurrentThreadName());
+        stringBuilder.append("是否为主线程：").append(ThreadUtils.isMainThread()).append("\n");
+        stringBuilder.append("当前线程名称：").append(ThreadUtils.getCurrentThreadName());
         return stringBuilder.toString();
     }
 }

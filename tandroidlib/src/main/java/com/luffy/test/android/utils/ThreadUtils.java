@@ -2,16 +2,13 @@ package com.luffy.test.android.utils;
 
 import android.os.Looper;
 
+/**
+ * Created by lvlufei on 2020-08-26
+ *
+ * @name 线程辅助工具
+ */
 public class ThreadUtils {
     private ThreadUtils() {
-    }
-
-    public static ThreadUtils getInstance() {
-        return ThreadUtilsHolder.instance;
-    }
-
-    private static class ThreadUtilsHolder {
-        private static final ThreadUtils instance = new ThreadUtils();
     }
 
     /**
@@ -19,7 +16,7 @@ public class ThreadUtils {
      *
      * @return
      */
-    public boolean isMainThread() {
+    public static boolean isMainThread() {
         return Looper.myLooper() == Looper.getMainLooper();
     }
 
@@ -28,7 +25,7 @@ public class ThreadUtils {
      *
      * @return
      */
-    public String getCurrentThreadName() {
+    public static String getCurrentThreadName() {
         return Thread.currentThread().getName();
     }
 }
