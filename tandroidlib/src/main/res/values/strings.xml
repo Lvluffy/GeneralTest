@@ -3,4 +3,7 @@
     <string name="action_settings">Settings%1$d</string>
     <string name="format_nfc_has_open">是否打开NFC：%1$s</string>
     <string name="format_nfc_is_support">是否支持NFC：%1$s</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

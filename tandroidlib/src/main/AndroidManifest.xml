@@ -3,7 +3,8 @@
     package="com.luffy.test.android">
 
     <application>
-        <activity android:name=".ui.owner.nfc.NFCActivity"></activity>
+        <activity android:name=".ui.owner.pingNet.PingNetActivity"></activity>
+        <activity android:name=".ui.owner.nfc.NFCActivity" />
         <activity android:name=".ui.owner.serviceStart.ServiceStartActivity" />
         <activity android:name=".ui.owner.thread.handler.HandlerActivity" />
         <activity android:name=".ui.owner.thread.executorService.ExecutorServiceActivity" />
