@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.luffy.test.android">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application>
-        <activity android:name=".ui.owner.pingNet.PingNetActivity"></activity>
+        <activity android:name=".ui.owner.vibrator.VibratorActivity"></activity>
+        <activity android:name=".ui.owner.pingNet.PingNetActivity" />
         <activity android:name=".ui.owner.nfc.NFCActivity" />
         <activity android:name=".ui.owner.serviceStart.ServiceStartActivity" />
         <activity android:name=".ui.owner.thread.handler.HandlerActivity" />

@@ -12,6 +12,7 @@ import com.luffy.test.android.ui.owner.rxjava.RxJavaActivity;
 import com.luffy.test.android.ui.owner.serviceStart.ServiceStartActivity;
 import com.luffy.test.android.ui.owner.settings.SettingsActivity;
 import com.luffy.test.android.ui.owner.thread.entrance.ThreadActivity;
+import com.luffy.test.android.ui.owner.vibrator.VibratorActivity;
 import com.luffy.test.android.ui.tsm.feature.FeatureActivity;
 import com.luffy.test.android.ui.tsm.multiCard.MultiCardActivity;
 import com.luffy.test.tdesignpatternlib.DesignPatternsActivity;
@@ -30,6 +31,7 @@ public enum MainModel {
     OWNER_NOTIFICATION("通知", NotificationActivity.class),
     OWNER_THREAD("线程", ThreadActivity.class),
     OWNER_PING_NET("Ping网络检测", PingNetActivity.class),
+    OWNER_VIBRATOR("震动", VibratorActivity.class),
     OWNER_NFC("NFC", NFCActivity.class),
     TSM_FEATURE("TSM功能", FeatureActivity.class),
     TSM_MULTI_CARD("TMS双标卡", MultiCardActivity.class);
