@@ -26,37 +26,39 @@ import com.luffy.test.tdesignpatternlib.structure.proxy.ui.ProxyActivity;
 
 public enum DesignPatternsModel {
 
-    CREATE_SINGLETON(R.string.singleton, SingletonActivity.class),
-    CREATE_PROTOTYPE(R.string.prototype, PrototypeActivity.class),
-    CREATE_FACTORY_METHOD(R.string.factory_method, FactoryMethodActivity.class),
-    CREATE_ABSTRACT_FACTORY(R.string.abstract_factory, AbstractFactoryActivity.class),
-    CREATE_BUILDER(R.string.builder, BuilderActivity.class),
+    CREATE_SINGLETON(R.string.singleton, true, SingletonActivity.class),
+    CREATE_PROTOTYPE(R.string.prototype, true, PrototypeActivity.class),
+    CREATE_FACTORY_METHOD(R.string.factory_method, true, FactoryMethodActivity.class),
+    CREATE_ABSTRACT_FACTORY(R.string.abstract_factory, true, AbstractFactoryActivity.class),
+    CREATE_BUILDER(R.string.builder, true, BuilderActivity.class),
 
-    STRUCTURE_PROXY(R.string.proxy, ProxyActivity.class),
-    STRUCTURE_ADAPTER(R.string.adapter, AdapterActivity.class),
-    STRUCTURE_BRIDGE(R.string.bridge, BridgeActivity.class),
-    STRUCTURE_DECORATOR(R.string.decorator, DecoratorActivity.class),
-    STRUCTURE_FACADE(R.string.facade, FacadeActivity.class),
-    STRUCTURE_FLYWEIGHT(R.string.flyweight, FlyweightActivity.class),
-    STRUCTURE_COMPOSITE(R.string.composite, CompositeActivity.class),
+    STRUCTURE_PROXY(R.string.proxy, true, ProxyActivity.class),
+    STRUCTURE_ADAPTER(R.string.adapter, true, AdapterActivity.class),
+    STRUCTURE_BRIDGE(R.string.bridge, true, BridgeActivity.class),
+    STRUCTURE_DECORATOR(R.string.decorator, true, DecoratorActivity.class),
+    STRUCTURE_FACADE(R.string.facade, true, FacadeActivity.class),
+    STRUCTURE_FLYWEIGHT(R.string.flyweight, true, FlyweightActivity.class),
+    STRUCTURE_COMPOSITE(R.string.composite, true, CompositeActivity.class),
 
-    BEHAVIOR_TEMPLATE_METHOD(R.string.template_method, TemplateMethodActivity.class),
-    BEHAVIOR_STRATEGY(R.string.strategy, StrategyActivity.class),
-    BEHAVIOR_COMMAND(R.string.command, CommandActivity.class),
-    BEHAVIOR_CHAIN_OF_RESPONSIBILITY(R.string.chain_of_responsibility, ChainOfResponsibilityActivity.class),
-    BEHAVIOR_STATE(R.string.status, StateActivity.class),
-    BEHAVIOR_OBSERVER(R.string.observer, ObserverActivity.class),
-    BEHAVIOR_MEDIATOR(R.string.mediator, MediatorActivity.class),
-    BEHAVIOR_ITERATOR(R.string.iterator, IteratorActivity.class),
-    BEHAVIOR_VISITOR(R.string.visitor, VisitorActivity.class),
-    BEHAVIOR_MEMENTO(R.string.memento, MementoActivity.class),
-    BEHAVIOR_INTERPRETER(R.string.interpreter, InterpreterActivity.class);
+    BEHAVIOR_TEMPLATE_METHOD(R.string.template_method, true, TemplateMethodActivity.class),
+    BEHAVIOR_STRATEGY(R.string.strategy, true, StrategyActivity.class),
+    BEHAVIOR_COMMAND(R.string.command, true, CommandActivity.class),
+    BEHAVIOR_CHAIN_OF_RESPONSIBILITY(R.string.chain_of_responsibility, true, ChainOfResponsibilityActivity.class),
+    BEHAVIOR_STATE(R.string.status, false, StateActivity.class),
+    BEHAVIOR_OBSERVER(R.string.observer, false, ObserverActivity.class),
+    BEHAVIOR_MEDIATOR(R.string.mediator, false, MediatorActivity.class),
+    BEHAVIOR_ITERATOR(R.string.iterator, false, IteratorActivity.class),
+    BEHAVIOR_VISITOR(R.string.visitor, false, VisitorActivity.class),
+    BEHAVIOR_MEMENTO(R.string.memento, false, MementoActivity.class),
+    BEHAVIOR_INTERPRETER(R.string.interpreter, false, InterpreterActivity.class);
 
     private int name;
+    private boolean support;
     private Class aClass;
 
-    DesignPatternsModel(int name, Class aClass) {
+    DesignPatternsModel(int name, boolean support, Class aClass) {
         this.name = name;
+        this.support = support;
         this.aClass = aClass;
     }
 
@@ -66,5 +68,9 @@ public enum DesignPatternsModel {
 
     public Class getaClass() {
         return aClass;
+    }
+
+    public boolean isSupport() {
+        return support;
     }
 }
