@@ -97,5 +97,10 @@
     <string name="command_hefen">河粉</string>
     <!--责任链-->
     <string name="chain_of_responsibility_case_analyze">请假审批：组长1天；部门主管3天；经理7天；老板30天</string>
+    <!--状态-->
+    <string name="status_case_analyze">用“状态模式”设计一个学生成绩的状态转换程序。\n分析：本实例包含了“不及格”“中等”和“优秀” 3 种状态，当学生的分数小于 60 分时为“不及格”状态，当分数大于等于 60 分且小于 90 分时为“中等”状态，当分数大于等于 90 分时为“优秀”状态，我们用状态模式来实现这个程序。</string>
+    <string name="status_add">加</string>
+    <string name="status_subtract">减</string>
+
 
 </resources>
