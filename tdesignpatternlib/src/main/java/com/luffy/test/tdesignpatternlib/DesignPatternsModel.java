@@ -47,7 +47,7 @@ public enum DesignPatternsModel {
     BEHAVIOR_STATE(R.string.status, true, StateActivity.class),
     BEHAVIOR_OBSERVER(R.string.observer, true, ObserverActivity.class),
     BEHAVIOR_MEDIATOR(R.string.mediator, true, MediatorActivity.class),
-    BEHAVIOR_ITERATOR(R.string.iterator, false, IteratorActivity.class),
+    BEHAVIOR_ITERATOR(R.string.iterator, true, IteratorActivity.class),
     BEHAVIOR_VISITOR(R.string.visitor, false, VisitorActivity.class),
     BEHAVIOR_MEMENTO(R.string.memento, false, MementoActivity.class),
     BEHAVIOR_INTERPRETER(R.string.interpreter, false, InterpreterActivity.class);
