@@ -54,7 +54,7 @@
     <string name="factory_method_case_analyze">工厂方法案例分析：有很多种类的畜牧场，如养马场用于养马，养牛场用于养牛</string>
     <string name="factory_method_desc">工厂方法：只考虑同等级产品的生产。例如：畜牧场只养动物、电视机厂只生产电视机、计算机软件学院只培养计算机软件专业的学生等。</string>
     <!--抽象工厂-->
-    <string name="abstract_factory_case_analyze">抽象工厂案例分析：农场中除了像畜牧场一样可以养动物，还可以培养植物，如养马、养牛、种菜、种水果等。\n1号农场用于养牛和种菜，2号农场用于养马和种水果。</string>
+    <string name="abstract_factory_case_analyze">抽象工厂案例分析：农场中除了像畜牧场一样可以养动物，还可以培养植物，如养马、养牛、种菜、种水果等。\n\n1号农场用于养牛和种菜，2号农场用于养马和种水果。</string>
     <string name="abstract_factory_desc">抽象工厂：考虑多等级产品的生产。例如：农场里既养动物又种植物、电器厂既生产电视机又生产洗衣机或空调、大学既有软件专业又有生物专业等。</string>
     <string name="abstract_factory_no1_farm">1号农场</string>
     <string name="abstract_factory_no2_farm">2号农场</string>
@@ -82,27 +82,31 @@
     <!--享元-->
     <string name="flyweight_case_analyze">享元案例分析：五子棋游戏中的应用。实例中的棋子（ChessPieces）类是抽象享元角色，它包含了一个落子的 DownPieces(Graphics g,Point pt) 方法；白子（WhitePieces）和黑子（BlackPieces）类是具体享元角色，它实现了落子方法；Point 是非享元角色，它指定了落子的位置；WeiqiFactory 是享元工厂角色，它通过 ArrayList 来管理棋子，并且提供了获取白子或者黑子的 getChessPieces(String type) 方法</string>
     <!--组合-->
-    <string name="composite_case_analyze">组合案例分析：用户到生活用品店购物。\n用 1 个红色小袋子装了 2 包婺源特产（单价 7.9 元）、1 张婺源地图（单价 9.9 元）；\n用 1 个白色小袋子装了 2 包韶关香藉（单价 68 元）和 3 包韶关红茶（单价 180 元）；\n用 1 个中袋子装了前面的红色小袋子和 1 个景德镇瓷器（单价 380 元）；\n用 1 个大袋子装了前面的中袋子、白色小袋子和 1 双李宁牌运动鞋（单价 198 元）。\n要求编程显示用户放在大袋子中的所有商品信息并计算要支付的总价。</string>
+    <string name="composite_case_analyze">组合案例分析：用户到生活用品店购物。\n\n用 1 个红色小袋子装了 2 包婺源特产（单价 7.9 元）、1 张婺源地图（单价 9.9 元）；\n\n用 1 个白色小袋子装了 2 包韶关香藉（单价 68 元）和 3 包韶关红茶（单价 180 元）；\n\n用 1 个中袋子装了前面的红色小袋子和 1 个景德镇瓷器（单价 380 元）；\n\n用 1 个大袋子装了前面的中袋子、白色小袋子和 1 双李宁牌运动鞋（单价 198 元）。\n\n要求编程显示用户放在大袋子中的所有商品信息并计算要支付的总价。</string>
     <!--模版方法-->
-    <string name="template_method_case_analyze">模版方法案例分析：出国留学手续设计。\n分析：出国留学手续一般经过以下流程：索取学校资料，提出入学申请，办理因私出国护照、出境卡和公证，申请签证，体检、订机票、准备行装，抵达目标学校等，其中有些业务对各个学校是一样的，但有些业务因学校不同而不同，所以比较适合用模板方法模式来实现。\n在本实例中，我们先定义一个出国留学的抽象类 StudyAbroad，里面包含了一个模板方法 templateMethod()，该方法中包含了办理出国留学手续流程中的各个基本方法，其中有些方法的处理由于各国都一样，所以在抽象类中就可以实现，但有些方法的处理各国是不同的，必须在其具体子类（如美国留学类 StudyInAmerica）中实现。如果再增加一个国家，只要增加一个子类就可以了。</string>
+    <string name="template_method_case_analyze">模版方法案例分析：出国留学手续设计。\n\n分析：出国留学手续一般经过以下流程：索取学校资料，提出入学申请，办理因私出国护照、出境卡和公证，申请签证，体检、订机票、准备行装，抵达目标学校等，其中有些业务对各个学校是一样的，但有些业务因学校不同而不同，所以比较适合用模板方法模式来实现。\n\n在本实例中，我们先定义一个出国留学的抽象类 StudyAbroad，里面包含了一个模板方法 templateMethod()，该方法中包含了办理出国留学手续流程中的各个基本方法，其中有些方法的处理由于各国都一样，所以在抽象类中就可以实现，但有些方法的处理各国是不同的，必须在其具体子类（如美国留学类 StudyInAmerica）中实现。如果再增加一个国家，只要增加一个子类就可以了。</string>
     <string name="template_method_study_in_america">留学美国</string>
     <!--策略-->
-    <string name="strategy_case_analyze">策略案例分析：“大闸蟹”做菜。\n分析：关于大闸蟹的做法有很多种，我们以清蒸大闸蟹和红烧大闸蟹两种方法为例。\n首先，定义一个大闸蟹加工的抽象策略类（CrabCooking），里面包含了一个做菜的抽象方法 cookingMethod()；然后，定义清蒸大闸蟹（SteamedCrabs）和红烧大闸蟹（BraisedCrabs）的具体策略类，它们实现了抽象策略类中的抽象方法；最后，定义一个厨房（Kitchen）环境类，它具有设置和选择做菜策略的方法；客户类通过厨房类获取做菜策略，并把做菜结果显示出来。</string>
+    <string name="strategy_case_analyze">策略案例分析：“大闸蟹”做菜。\n\n分析：关于大闸蟹的做法有很多种，我们以清蒸大闸蟹和红烧大闸蟹两种方法为例。\n\n首先，定义一个大闸蟹加工的抽象策略类（CrabCooking），里面包含了一个做菜的抽象方法 cookingMethod()；然后，定义清蒸大闸蟹（SteamedCrabs）和红烧大闸蟹（BraisedCrabs）的具体策略类，它们实现了抽象策略类中的抽象方法；最后，定义一个厨房（Kitchen）环境类，它具有设置和选择做菜策略的方法；客户类通过厨房类获取做菜策略，并把做菜结果显示出来。</string>
     <string name="strategy_steamed">清蒸大闸蟹</string>
     <string name="strategy_braised">红烧大闸蟹</string>
     <!--命令-->
-    <string name="command_case_analyze">命令案例分析：客户去餐馆吃早餐。\n分析：客户去餐馆可选择的早餐有肠粉、河粉和馄饨等，客户可向服务员选择以上早餐中的若干种，服务员将客户的请求交给相关的厨师去做。这里的点早餐相当于“命令”，服务员相当于“调用者”，厨师相当于“接收者”。\n定义一个早餐类（Breakfast），它是抽象命令类，有抽象方法cooking()，说明要做什么；再定义其子类肠粉类（ChangFen）、馄饨类（HunTun）和河粉类（HeFen），它们是具体命令类，实现早餐类的 cooking()方法，但它们不会具体做，而是交给具体的厨师去做；具体厨师类有肠粉厨师（ChangFenChef）、馄蚀厨师（HunTunChef）和河粉厨师（HeFenChef），他们是命令的接收者；最后，定义服务员类（Waiter），它接收客户的做菜请求，并发出做菜的命令。</string>
+    <string name="command_case_analyze">命令案例分析：客户去餐馆吃早餐。\n\n分析：客户去餐馆可选择的早餐有肠粉、河粉和馄饨等，客户可向服务员选择以上早餐中的若干种，服务员将客户的请求交给相关的厨师去做。这里的点早餐相当于“命令”，服务员相当于“调用者”，厨师相当于“接收者”。\n\n定义一个早餐类（Breakfast），它是抽象命令类，有抽象方法cooking()，说明要做什么；再定义其子类肠粉类（ChangFen）、馄饨类（HunTun）和河粉类（HeFen），它们是具体命令类，实现早餐类的 cooking()方法，但它们不会具体做，而是交给具体的厨师去做；具体厨师类有肠粉厨师（ChangFenChef）、馄蚀厨师（HunTunChef）和河粉厨师（HeFenChef），他们是命令的接收者；最后，定义服务员类（Waiter），它接收客户的做菜请求，并发出做菜的命令。</string>
     <string name="command_changfen">肠粉</string>
     <string name="command_hundun">混沌</string>
     <string name="command_hefen">河粉</string>
     <!--责任链-->
     <string name="chain_of_responsibility_case_analyze">请假审批：组长1天；部门主管3天；经理7天；老板30天</string>
     <!--状态-->
-    <string name="status_case_analyze">用“状态模式”设计一个学生成绩的状态转换程序。\n分析：本实例包含了“不及格”“中等”和“优秀” 3 种状态，当学生的分数小于 60 分时为“不及格”状态，当分数大于等于 60 分且小于 90 分时为“中等”状态，当分数大于等于 90 分时为“优秀”状态，我们用状态模式来实现这个程序。</string>
+    <string name="status_case_analyze">用“状态模式”设计一个学生成绩的状态转换程序。\n\n分析：本实例包含了“不及格”“中等”和“优秀” 3 种状态，当学生的分数小于 60 分时为“不及格”状态，当分数大于等于 60 分且小于 90 分时为“中等”状态，当分数大于等于 90 分时为“优秀”状态，我们用状态模式来实现这个程序。</string>
     <string name="status_add">加</string>
     <string name="status_subtract">减</string>
     <!--观察者-->
-    <string name="observer_case_analyze">利用观察者模式设计一个程序，分析“人民币汇率”的升值或贬值对进口公司的进口产品成本或出口公司的出口产品收入以及公司的利润率的影响。\n分析：当“人民币汇率”升值时，进口公司的进口产品成本降低且利润率提升，出口公司的出口产品收入降低且利润率降低；当“人民币汇率”贬值时，进口公司的进口产品成本提升且利润率降低，出口公司的出口产品收入提升且利润率提升。\n这里的汇率（Rate）类是抽象目标类，它包含了保存观察者（Company）的 List 和增加/删除观察者的方法，以及有关汇率改变的抽象方法 change(int number)；而人民币汇率（RMBrate）类是具体目标， 它实现了父类的 change(int number) 方法，即当人民币汇率发生改变时通过相关公司；公司（Company）类是抽象观察者，它定义了一个有关汇率反应的抽象方法 response(int number)；进口公司（ImportCompany）类和出口公司（ExportCompany）类是具体观察者类，它们实现了父类的 response(int number) 方法，即当它们接收到汇率发生改变的通知时作为相应的反应。</string>
+    <string name="observer_case_analyze">利用观察者模式设计一个程序，分析“人民币汇率”的升值或贬值对进口公司的进口产品成本或出口公司的出口产品收入以及公司的利润率的影响。\n\n分析：当“人民币汇率”升值时，进口公司的进口产品成本降低且利润率提升，出口公司的出口产品收入降低且利润率降低；当“人民币汇率”贬值时，进口公司的进口产品成本提升且利润率降低，出口公司的出口产品收入提升且利润率提升。\n\n这里的汇率（Rate）类是抽象目标类，它包含了保存观察者（Company）的 List 和增加/删除观察者的方法，以及有关汇率改变的抽象方法 change(int number)；而人民币汇率（RMBrate）类是具体目标， 它实现了父类的 change(int number) 方法，即当人民币汇率发生改变时通过相关公司；公司（Company）类是抽象观察者，它定义了一个有关汇率反应的抽象方法 response(int number)；进口公司（ImportCompany）类和出口公司（ExportCompany）类是具体观察者类，它们实现了父类的 response(int number) 方法，即当它们接收到汇率发生改变的通知时作为相应的反应。</string>
     <string name="observer_appreciation">升值</string>
     <string name="observer_devaluation">贬值</string>
+    <!--中介者-->
+    <string name="mediator_case_analyze">用中介者模式编写一个“韶关房地产交流平台”程序。\n\n说明：韶关房地产交流平台是“房地产中介公司”提供给“卖方客户”与“买方客户”进行信息交流的平台，比较适合用中介者模式来实现。\n\n首先，定义一个中介公司（Medium）接口，它是抽象中介者，它包含了客户注册方法 register(Customer member) 和信息转发方法 relay(String from,String ad)；再定义一个韶关房地产中介（EstateMedium）公司，它是具体中介者类，它包含了保存客户信息的 List 对象，并实现了中介公司中的抽象方法。\n\n然后，定义一个客户（Qistomer）类，它是抽象同事类，其中包含了中介者的对象，和发送信息的 send(String ad) 方法与接收信息的 receive(String from，Stringad) 方法的接口。\n\n最后，定义卖方（Seller）类和买方（Buyer）类，它们是具体同事类，是客户（Customer）类的子类，它们实现了父类中的抽象方法，通过中介者类进行信息交流.</string>
+    <string name="mediator_seller">卖方讲话</string>
+    <string name="mediator_buyer">买方讲话</string>
 </resources>
