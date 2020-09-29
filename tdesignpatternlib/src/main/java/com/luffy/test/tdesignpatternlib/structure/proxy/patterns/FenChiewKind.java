@@ -14,25 +14,13 @@ public enum FenChiewKind {
     KIND_NO_4("青花瓷汾酒", "青花瓷汾酒，其酒液晶莹透亮，清香纯正，幽雅芳香，绵甜爽净，酒体丰满，回味悠长，是汾酒的\"特中之特\"，是清香型汾酒的顶级精品。", R.drawable.proxy_kind_no4),
     KIND_NO_5("玫瑰汾酒", "玫瑰汾酒又名玫瑰酒，系汾酒配制的系列产品，1904年试制投产，1938年日本侵华后被迫停产，1956年恢复生产，产品远销港澳地区及东南亚各国，2009年新品玫瑰汾酒上市。", R.drawable.proxy_kind_no5);
 
-    private String name;
-    private String desc;
-    private int logo;
+    public String name;
+    public String desc;
+    public int logo;
 
     FenChiewKind(String name, String desc, int logo) {
         this.name = name;
         this.desc = desc;
         this.logo = logo;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public int getLogo() {
-        return logo;
     }
 }

@@ -28,8 +28,8 @@ public class ProxyAdapter extends BaseArrayAdapter<FenChiewKind> {
         TextView txtName = view.findViewById(R.id.txt_name);
         TextView txtDesc = view.findViewById(R.id.txt_desc);
 
-        imgLogo.setImageResource(data.getLogo());
-        txtName.setText(data.getName());
-        txtDesc.setText(data.getDesc());
+        imgLogo.setImageResource(data.logo);
+        txtName.setText(data.name);
+        txtDesc.setText(data.desc);
     }
 }

@@ -14,19 +14,12 @@ public enum AnimationModel {
     ANIMATION_TWEEN("补间动画", TweenAnimationActivity.class),
     ANIMATION_TRANSITION("过渡动画", TransitionActivity.class);
 
-    private String name;
-    private Class aClass;
+    public String name;
+    public Class mClass;
 
-    AnimationModel(String name, Class aClass) {
+    AnimationModel(String name, Class mClass) {
         this.name = name;
-        this.aClass = aClass;
+        this.mClass = mClass;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public Class getaClass() {
-        return aClass;
-    }
 }

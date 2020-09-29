@@ -43,7 +43,8 @@ public class AnimationFragment extends BaseFragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                IntentUtils.getInstance().startActivity(mActivity, mAnimationAdapter.getItem(position).getaClass());
+                IntentUtils.getInstance().startActivity(mActivity,
+                        mAnimationAdapter.getItem(position).mClass);
             }
         });
     }

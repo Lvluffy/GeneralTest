@@ -47,7 +47,7 @@ public class ThreadFragment extends BaseFragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                IntentUtils.getInstance().startActivity(mActivity, mAdapter.getItem(position).getaClass());
+                IntentUtils.getInstance().startActivity(mActivity, mAdapter.getItem(position).mClass);
             }
         });
     }

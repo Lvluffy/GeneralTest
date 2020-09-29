@@ -10,19 +10,11 @@ public enum ThreadModel {
     THREAD_ASYNC_TASK("AsyncTask（异步任务）", AsyncTaskActivity.class),
     THREAD_EXECUTOR_SERVICE("ExecutorService（线程池）", ExecutorServiceActivity.class);
 
-    private String name;
-    private Class aClass;
+    public String name;
+    public Class mClass;
 
-    ThreadModel(String name, Class aClass) {
+    ThreadModel(String name, Class mClass) {
         this.name = name;
-        this.aClass = aClass;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Class getaClass() {
-        return aClass;
+        this.mClass = mClass;
     }
 }
