@@ -8,8 +8,9 @@ import com.luffy.test.android.ui.owner.nfc.NFCActivity;
 import com.luffy.test.android.ui.owner.notification.NotificationActivity;
 import com.luffy.test.android.ui.owner.pingNet.PingNetActivity;
 import com.luffy.test.android.ui.owner.provider.ProviderActivity;
+import com.luffy.test.android.ui.owner.receiver.RegisterReceiverActivity;
 import com.luffy.test.android.ui.owner.rxjava.RxJavaActivity;
-import com.luffy.test.android.ui.owner.serviceStart.ServiceStartActivity;
+import com.luffy.test.android.ui.owner.service.ServiceStartActivity;
 import com.luffy.test.android.ui.owner.settings.SettingsActivity;
 import com.luffy.test.android.ui.owner.thread.entrance.ThreadActivity;
 import com.luffy.test.android.ui.owner.vibrator.VibratorActivity;
@@ -33,6 +34,7 @@ public enum MainModel {
     OWNER_PING_NET("Ping网络检测", PingNetActivity.class),
     OWNER_VIBRATOR("震动", VibratorActivity.class),
     OWNER_NFC("NFC", NFCActivity.class),
+    OWNER_REGISTER_RECEIVER("注册广播", RegisterReceiverActivity.class),
     TSM_FEATURE("TSM功能", FeatureActivity.class),
     TSM_MULTI_CARD("TMS双标卡", MultiCardActivity.class);
 

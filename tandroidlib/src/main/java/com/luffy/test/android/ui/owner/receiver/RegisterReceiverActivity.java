@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.owner.serviceStart;
+package com.luffy.test.android.ui.owner.receiver;
 
 import android.os.Bundle;
 
@@ -6,15 +6,15 @@ import com.luffy.test.tbaselayerlib.base.BaseActivity;
 import com.luffy.utils.generallib.FragmentUtils;
 
 /**
- * Created by lvlufei on 2020-08-26
+ * Created by lvlufei on 2020-09-29
  *
- * @name 服务启动
+ * @name 注册广播
  */
-public class ServiceStartActivity extends BaseActivity {
+public class RegisterReceiverActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FragmentUtils.getInstance().replaceFragment(this, new ServiceStartFragment());
+        FragmentUtils.getInstance().replaceFragment(this, new RegisterReceiverFragment());
     }
 }

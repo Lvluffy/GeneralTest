@@ -5,10 +5,11 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application>
-        <activity android:name=".ui.owner.vibrator.VibratorActivity"></activity>
+        <activity android:name=".ui.owner.receiver.RegisterReceiverActivity"></activity>
+        <activity android:name=".ui.owner.vibrator.VibratorActivity" />
         <activity android:name=".ui.owner.pingNet.PingNetActivity" />
         <activity android:name=".ui.owner.nfc.NFCActivity" />
-        <activity android:name=".ui.owner.serviceStart.ServiceStartActivity" />
+        <activity android:name=".ui.owner.service.ServiceStartActivity" />
         <activity android:name=".ui.owner.thread.handler.HandlerActivity" />
         <activity android:name=".ui.owner.thread.executorService.ExecutorServiceActivity" />
         <activity android:name=".ui.owner.thread.asyncTask.AsyncTaskActivity" />
