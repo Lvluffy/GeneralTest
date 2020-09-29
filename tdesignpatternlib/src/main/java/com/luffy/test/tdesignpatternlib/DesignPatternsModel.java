@@ -52,25 +52,13 @@ public enum DesignPatternsModel {
     BEHAVIOR_MEMENTO(R.string.memento, false, MementoActivity.class),
     BEHAVIOR_INTERPRETER(R.string.interpreter, false, InterpreterActivity.class);
 
-    private int name;
-    private boolean support;
-    private Class aClass;
+    public int name;
+    public boolean support;
+    public Class mClass;
 
-    DesignPatternsModel(int name, boolean support, Class aClass) {
+    DesignPatternsModel(int name, boolean support, Class mClass) {
         this.name = name;
         this.support = support;
-        this.aClass = aClass;
-    }
-
-    public int getName() {
-        return name;
-    }
-
-    public Class getaClass() {
-        return aClass;
-    }
-
-    public boolean isSupport() {
-        return support;
+        this.mClass = mClass;
     }
 }

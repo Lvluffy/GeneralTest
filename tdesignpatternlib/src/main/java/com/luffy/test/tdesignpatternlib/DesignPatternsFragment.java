@@ -42,16 +42,17 @@ public class DesignPatternsFragment extends BaseFragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (!mAdapter.getItem(position).isSupport()) {
+                if (!mAdapter.getItem(position).support) {
                     return;
                 }
-                IntentUtils.getInstance().startActivity(mContext, mAdapter.getItem(position).getaClass(), new IntentUtils.IntentExtra() {
-                    @Override
-                    public Intent putExtra(Intent intent) {
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        return intent;
-                    }
-                });
+                IntentUtils.getInstance().startActivity(mContext, mAdapter.getItem(position).mClass,
+                        new IntentUtils.IntentExtra() {
+                            @Override
+                            public Intent putExtra(Intent intent) {
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                return intent;
+                            }
+                        });
             }
         });
     }

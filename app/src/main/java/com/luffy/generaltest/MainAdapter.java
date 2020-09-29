@@ -21,6 +21,6 @@ public class MainAdapter extends BaseArrayAdapter<MainModel> {
     @Override
     public void bindData(View view, int position, MainModel data) {
         TextView txtName = view.findViewById(R.id.txt_name);
-        txtName.setText(data.getName());
+        txtName.setText(data.name);
     }
 }

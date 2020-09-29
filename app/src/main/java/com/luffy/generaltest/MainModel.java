@@ -38,19 +38,12 @@ public enum MainModel {
     TSM_FEATURE("TSM功能", FeatureActivity.class),
     TSM_MULTI_CARD("TMS双标卡", MultiCardActivity.class);
 
-    private String name;
-    private Class aClass;
+    public String name;
+    public Class mClass;
 
-    MainModel(String name, Class aClass) {
+    MainModel(String name, Class mClass) {
         this.name = name;
-        this.aClass = aClass;
+        this.mClass = mClass;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public Class getaClass() {
-        return aClass;
-    }
 }

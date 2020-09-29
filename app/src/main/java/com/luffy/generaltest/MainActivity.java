@@ -35,7 +35,7 @@ public class MainActivity extends BaseActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                IntentUtils.getInstance().startActivity(mContext, mMainAdapter.getItem(position).getaClass());
+                IntentUtils.getInstance().startActivity(mContext, mMainAdapter.getItem(position).mClass);
             }
         });
     }
