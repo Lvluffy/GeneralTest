@@ -8,11 +8,11 @@ import android.widget.Toast;
 /**
  * Created by lvlufei on 2020-07-08
  *
- * @name 测试-广播接收者
+ * @name 测试-动态广播接收者
  */
-public class TestReceiver extends BroadcastReceiver {
+public class TestDynamicReceiver extends BroadcastReceiver {
 
-    public static final String ACTION = "com.luffy.test.android.receiver.TestReceiver";
+    public static final String ACTION = "com.luffy.test.android.receiver.TestDynamicReceiver";
 
     @Override
     public void onReceive(Context context, Intent intent) {

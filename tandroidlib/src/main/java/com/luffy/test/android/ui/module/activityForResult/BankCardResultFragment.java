@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.owner.activityForResult;
+package com.luffy.test.android.ui.module.activityForResult;
 
 import android.app.Activity;
 import android.content.Intent;

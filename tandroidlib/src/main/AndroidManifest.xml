@@ -5,11 +5,16 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application>
-        <activity android:name=".ui.owner.receiver.RegisterReceiverActivity"></activity>
+        <activity android:name=".ui.module.receiver.staticRegister.ReceiverStaticRegisterActivity"></activity>
+        <activity android:name=".ui.module.receiver.dynamicRegister.ReceiverDynamicRegisterActivity" />
+        <activity android:name=".ui.tsm.TSMActivity" />
+        <activity android:name=".ui.owner.OwnerActivity" />
+        <activity android:name=".ui.module.ModuleActivity" />
+        <activity android:name=".ui.module.receiver.ReceiverRegisterActivity" />
         <activity android:name=".ui.owner.vibrator.VibratorActivity" />
         <activity android:name=".ui.owner.pingNet.PingNetActivity" />
         <activity android:name=".ui.owner.nfc.NFCActivity" />
-        <activity android:name=".ui.owner.service.ServiceStartActivity" />
+        <activity android:name=".ui.module.service.ServiceStartActivity" />
         <activity android:name=".ui.owner.thread.handler.HandlerActivity" />
         <activity android:name=".ui.owner.thread.executorService.ExecutorServiceActivity" />
         <activity android:name=".ui.owner.thread.asyncTask.AsyncTaskActivity" />
@@ -35,9 +40,9 @@
         <activity android:name=".ui.owner.dynamicAddView.DynamicAddViewActivity" />
         <activity android:name=".ui.owner.rxjava.RxJavaActivity" />
         <activity android:name=".ui.owner.settings.SettingsActivity" />
-        <activity android:name=".ui.owner.provider.ProviderActivity" />
-        <activity android:name=".ui.owner.activityForResult.BankCardResultActivity" />
-        <activity android:name=".ui.owner.activityForResult.BankCardDetailActivity" />
+        <activity android:name=".ui.module.provider.ProviderActivity" />
+        <activity android:name=".ui.module.activityForResult.BankCardResultActivity" />
+        <activity android:name=".ui.module.activityForResult.BankCardDetailActivity" />
         <activity android:name=".ui.tsm.feature.FeatureActivity" />
         <activity android:name=".ui.tsm.multiCard.MultiCardActivity" />
 
@@ -60,6 +65,12 @@
             android:name=".provider.TestProvider"
             android:authorities="${applicationId}.provider.feature"
             android:exported="true" />
+
+        <receiver android:name=".receiver.TestStaticReceiver">
+            <intent-filter>
+                <action android:name="com.luffy.test.android.receiver.TestStaticReceiver" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

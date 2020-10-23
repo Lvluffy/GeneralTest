@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.owner.service;
+package com.luffy.test.android.ui.module.service;
 
 import android.content.ComponentName;
 import android.content.Context;

@@ -27,7 +27,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mContext = getActivity().getApplicationContext();
+        mContext = getActivity();
         mActivity = getActivity();
         Log.v(TAG, "onCreate");
         Log.v(TAG, "onCreate:ActivityName = " + mActivity.getClass().getSimpleName());

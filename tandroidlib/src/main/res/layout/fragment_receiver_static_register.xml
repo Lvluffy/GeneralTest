@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/btn_explicit_send"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+        android:gravity="center"
+        android:text="显式发送广播" />
+
+    <TextView
+        android:id="@+id/btn_implicit_send"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/res_bg_normal_radius_ture_stroke_true_white_selector"
+        android:gravity="center"
+        android:text="隐式发送广播" />
+
+</LinearLayout>
