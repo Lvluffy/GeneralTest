@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.module.receiver.staticRegister;
+package com.luffy.test.android.ui.module.broadCast.staticRegister;
 
 
 import android.content.Intent;
@@ -20,7 +20,7 @@ import butterknife.OnClick;
  *
  * @name 静态注册广播接收者
  */
-public class ReceiverStaticRegisterFragment extends BaseFragment {
+public class BroadCastStaticRegisterFragment extends BaseFragment {
 
     @Override
     public View doCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

@@ -5,12 +5,17 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application>
-        <activity android:name=".ui.module.receiver.staticRegister.ReceiverStaticRegisterActivity"></activity>
-        <activity android:name=".ui.module.receiver.dynamicRegister.ReceiverDynamicRegisterActivity" />
+        <activity android:name=".ui.ipc.service.IPCServiceActivity"></activity>
+        <activity android:name=".ui.ipc.contentProvider.IPCContentProviderActivity" />
+        <activity android:name=".ui.ipc.broadcast.IPCBroadCastActivity" />
+        <activity android:name=".ui.ipc.activity.IPCActivityActivity" />
+        <activity android:name=".ui.ipc.IPCActivity" />
+        <activity android:name=".ui.module.broadCast.staticRegister.BroadCastStaticRegisterActivity" />
+        <activity android:name=".ui.module.broadCast.dynamicRegister.BroadCastDynamicRegisterActivity" />
         <activity android:name=".ui.tsm.TSMActivity" />
         <activity android:name=".ui.owner.OwnerActivity" />
         <activity android:name=".ui.module.ModuleActivity" />
-        <activity android:name=".ui.module.receiver.ReceiverRegisterActivity" />
+        <activity android:name=".ui.module.broadCast.BroadCastRegisterActivity" />
         <activity android:name=".ui.owner.vibrator.VibratorActivity" />
         <activity android:name=".ui.owner.pingNet.PingNetActivity" />
         <activity android:name=".ui.owner.nfc.NFCActivity" />

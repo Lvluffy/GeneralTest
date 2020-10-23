@@ -1,4 +1,5 @@
-package com.luffy.test.android.ui.module.receiver;
+package com.luffy.test.android.ui.ipc;
+
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,34 +18,33 @@ import java.util.Arrays;
 import butterknife.BindView;
 
 /**
- * Created by lvlufei on 2020-09-29
+ * Created by lvlufei on 2020-10-23
  *
- * @name 注册广播
+ * @name 跨进程通讯
  */
-public class ReceiverRegisterFragment extends BaseFragment {
+public class IPCFragment extends BaseFragment {
 
     @BindView(R2.id.listView)
     ListView listView;
 
-    private ReceiverRegisterAdapter mReceiverRegisterAdapter;
+    private IPCAdapter mAdapter;
 
     @Override
     public View doCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_receiver_register, container, false);
+        return inflater.inflate(R.layout.fragment_ipc, container, false);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mReceiverRegisterAdapter = new ReceiverRegisterAdapter(mContext);
-        mReceiverRegisterAdapter.updateData(Arrays.asList(ReceiverRegisterModel.values()));
-        listView.setAdapter(mReceiverRegisterAdapter);
+        mAdapter = new IPCAdapter(mContext);
+        mAdapter.updateData(Arrays.asList(IPCModel.values()));
+        listView.setAdapter(mAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                IntentUtils.getInstance().startActivity(mContext, mReceiverRegisterAdapter.getItem(position).mClass);
+                IntentUtils.getInstance().startActivity(mContext, mAdapter.getItem(position).mClass);
             }
         });
     }
-
 }

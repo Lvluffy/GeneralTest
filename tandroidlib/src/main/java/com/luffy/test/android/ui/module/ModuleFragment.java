@@ -26,7 +26,7 @@ public class ModuleFragment extends BaseFragment {
     @BindView(R2.id.listView)
     ListView listView;
 
-    private ModuleAdapter mModuleAdapter;
+    private ModuleAdapter mAdapter;
 
     @Override
     public View doCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,13 +36,13 @@ public class ModuleFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mModuleAdapter = new ModuleAdapter(mContext);
-        mModuleAdapter.updateData(Arrays.asList(ModuleModel.values()));
-        listView.setAdapter(mModuleAdapter);
+        mAdapter = new ModuleAdapter(mContext);
+        mAdapter.updateData(Arrays.asList(ModuleModel.values()));
+        listView.setAdapter(mAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                IntentUtils.getInstance().startActivity(mContext, mModuleAdapter.getItem(position).mClass);
+                IntentUtils.getInstance().startActivity(mContext, mAdapter.getItem(position).mClass);
             }
         });
     }

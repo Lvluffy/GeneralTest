@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.tsm;
+package com.luffy.test.android.ui.module.broadCast;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,27 +17,27 @@ import java.util.Arrays;
 import butterknife.BindView;
 
 /**
- * Created by lvlufei on 2020-10-23
+ * Created by lvlufei on 2020-09-29
  *
- * @name TSM
+ * @name 注册广播
  */
-public class TSMFragment extends BaseFragment {
+public class BroadCastRegisterFragment extends BaseFragment {
 
     @BindView(R2.id.listView)
     ListView listView;
 
-    private TSMAdapter mAdapter;
+    private BroadCastRegisterAdapter mAdapter;
 
     @Override
     public View doCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_tsm, container, false);
+        return inflater.inflate(R.layout.fragment_receiver_register, container, false);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mAdapter = new TSMAdapter(mContext);
-        mAdapter.updateData(Arrays.asList(TSMModel.values()));
+        mAdapter = new BroadCastRegisterAdapter(mContext);
+        mAdapter.updateData(Arrays.asList(BroadCastRegisterModel.values()));
         listView.setAdapter(mAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

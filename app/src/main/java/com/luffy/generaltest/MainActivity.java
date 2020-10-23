@@ -18,7 +18,7 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.listView)
     ListView listView;
 
-    private MainAdapter mMainAdapter;
+    private MainAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +29,13 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initAdapter() {
-        mMainAdapter = new MainAdapter(mContext);
-        mMainAdapter.updateData(Arrays.asList(MainModel.values()));
-        listView.setAdapter(mMainAdapter);
+        mAdapter = new MainAdapter(mContext);
+        mAdapter.updateData(Arrays.asList(MainModel.values()));
+        listView.setAdapter(mAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                IntentUtils.getInstance().startActivity(mContext, mMainAdapter.getItem(position).mClass);
+                IntentUtils.getInstance().startActivity(mContext, mAdapter.getItem(position).mClass);
             }
         });
     }

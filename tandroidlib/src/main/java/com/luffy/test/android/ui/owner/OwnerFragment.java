@@ -27,7 +27,7 @@ public class OwnerFragment extends BaseFragment {
     @BindView(R2.id.listView)
     ListView listView;
 
-    private OwnerAdapter mOwnerAdapter;
+    private OwnerAdapter mAdapter;
 
     @Override
     public View doCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,13 +37,13 @@ public class OwnerFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mOwnerAdapter = new OwnerAdapter(mContext);
-        mOwnerAdapter.updateData(Arrays.asList(OwnerModel.values()));
-        listView.setAdapter(mOwnerAdapter);
+        mAdapter = new OwnerAdapter(mContext);
+        mAdapter.updateData(Arrays.asList(OwnerModel.values()));
+        listView.setAdapter(mAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                IntentUtils.getInstance().startActivity(mContext, mOwnerAdapter.getItem(position).mClass);
+                IntentUtils.getInstance().startActivity(mContext, mAdapter.getItem(position).mClass);
             }
         });
     }

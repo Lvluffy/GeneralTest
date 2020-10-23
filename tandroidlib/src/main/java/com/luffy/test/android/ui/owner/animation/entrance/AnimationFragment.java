@@ -27,7 +27,7 @@ public class AnimationFragment extends BaseFragment {
     @BindView(R2.id.listView)
     ListView listView;
 
-    AnimationAdapter mAnimationAdapter;
+    AnimationAdapter mAdapter;
 
     @Override
     public View doCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,14 +37,14 @@ public class AnimationFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mAnimationAdapter = new AnimationAdapter(mContext);
-        mAnimationAdapter.updateData(Arrays.asList(AnimationModel.values()));
-        listView.setAdapter(mAnimationAdapter);
+        mAdapter = new AnimationAdapter(mContext);
+        mAdapter.updateData(Arrays.asList(AnimationModel.values()));
+        listView.setAdapter(mAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 IntentUtils.getInstance().startActivity(mActivity,
-                        mAnimationAdapter.getItem(position).mClass);
+                        mAdapter.getItem(position).mClass);
             }
         });
     }

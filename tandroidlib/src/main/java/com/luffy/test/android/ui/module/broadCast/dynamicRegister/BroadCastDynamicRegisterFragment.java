@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.module.receiver.dynamicRegister;
+package com.luffy.test.android.ui.module.broadCast.dynamicRegister;
 
 
 import android.content.Intent;
@@ -20,7 +20,7 @@ import butterknife.OnClick;
  *
  * @name 动态注册广播接收者
  */
-public class ReceiverDynamicRegisterFragment extends BaseFragment {
+public class BroadCastDynamicRegisterFragment extends BaseFragment {
 
     TestDynamicReceiver testDynamicReceiver = new TestDynamicReceiver();
 
