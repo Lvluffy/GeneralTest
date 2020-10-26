@@ -10,7 +10,6 @@ import android.widget.Toast;
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
-import com.luffy.utils.generallib.AppUtils;
 
 import butterknife.OnClick;
 
@@ -38,7 +37,7 @@ public class IPCContentProviderFragment extends BaseFragment {
     private void parseIntent() {
         try {
             Bundle bundle = mActivity.getContentResolver().call(
-                    Uri.parse(String.format(URI_STRING, AppUtils.getInstance().getAppPackName(mContext))),
+                    Uri.parse(URI_STRING),
                     METHOD_KEY,
                     null,
                     null);

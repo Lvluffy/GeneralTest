@@ -35,8 +35,8 @@ public class NFCFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        txtIsSupportNfc.setText(String.format(getString(R.string.format_nfc_is_support), NfcUtils.getInstance(mContext).isSupportNfc() + ""));
-        txtHasOpenNfc.setText(String.format(getString(R.string.format_nfc_has_open), NfcUtils.getInstance(mContext).hasOpenNfc() + ""));
+        txtIsSupportNfc.setText(getString(R.string.format_nfc_is_support, NfcUtils.getInstance(mContext).isSupportNfc() + ""));
+        txtHasOpenNfc.setText(getString(R.string.format_nfc_has_open, NfcUtils.getInstance(mContext).hasOpenNfc() + ""));
     }
 
     @OnClick({R2.id.btn_open_nfc, R2.id.btn_close_nfc})
@@ -44,10 +44,10 @@ public class NFCFragment extends BaseFragment {
         int id = view.getId();
         if (id == R.id.btn_open_nfc) {
             NfcUtils.getInstance(mContext).openNfc();
-            txtHasOpenNfc.setText(String.format(getString(R.string.format_nfc_has_open), NfcUtils.getInstance(mContext).hasOpenNfc() + ""));
+            txtHasOpenNfc.setText(getString(R.string.format_nfc_has_open, NfcUtils.getInstance(mContext).hasOpenNfc() + ""));
         } else if (id == R.id.btn_close_nfc) {
             NfcUtils.getInstance(mContext).closeNfc();
-            txtHasOpenNfc.setText(String.format(getString(R.string.format_nfc_has_open), NfcUtils.getInstance(mContext).hasOpenNfc() + ""));
+            txtHasOpenNfc.setText(getString(R.string.format_nfc_has_open, NfcUtils.getInstance(mContext).hasOpenNfc() + ""));
         }
     }
 
