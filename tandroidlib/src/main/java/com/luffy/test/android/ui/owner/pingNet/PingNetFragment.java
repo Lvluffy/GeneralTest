@@ -58,10 +58,8 @@ public class PingNetFragment extends BaseFragment {
             @Override
             public void run() {
                 //stuapi.xiaoxiedu.com
-                //staging2.tsmapi.pay.xiaomi.com
                 //app.kzyanyi.com
-                //staging2.tsmapi.pay.xiaomi.com/api/login/merchantDeduct/saveUserDeductInfo
-                PingNetEntity pingNetEntity = new PingNetEntity("staging2.tsmapi.pay.xiaomi.com", 3, 5, new StringBuffer());
+                PingNetEntity pingNetEntity = new PingNetEntity("app.kzyanyi.com", 3, 5, new StringBuffer());
                 pingNetEntity = PingNet.ping(pingNetEntity);
 
                 StringBuilder stringBuilder = new StringBuilder();

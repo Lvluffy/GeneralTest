@@ -5,21 +5,21 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application>
-        <activity android:name=".ui.ipc.service.IPCServiceActivity"></activity>
+        <activity android:name=".ui.ipc.IPCActivity" />
+        <activity android:name=".ui.ipc.service.IPCServiceActivity" />
         <activity android:name=".ui.ipc.contentProvider.IPCContentProviderActivity" />
         <activity android:name=".ui.ipc.broadcast.IPCBroadCastActivity" />
         <activity android:name=".ui.ipc.activity.IPCActivityActivity" />
-        <activity android:name=".ui.ipc.IPCActivity" />
+        <activity android:name=".ui.tsm.TSMActivity" />
+        <activity android:name=".ui.module.ModuleActivity" />
+        <activity android:name=".ui.module.service.ServiceStartActivity" />
+        <activity android:name=".ui.module.broadCast.BroadCastRegisterActivity" />
         <activity android:name=".ui.module.broadCast.staticRegister.BroadCastStaticRegisterActivity" />
         <activity android:name=".ui.module.broadCast.dynamicRegister.BroadCastDynamicRegisterActivity" />
-        <activity android:name=".ui.tsm.TSMActivity" />
         <activity android:name=".ui.owner.OwnerActivity" />
-        <activity android:name=".ui.module.ModuleActivity" />
-        <activity android:name=".ui.module.broadCast.BroadCastRegisterActivity" />
         <activity android:name=".ui.owner.vibrator.VibratorActivity" />
         <activity android:name=".ui.owner.pingNet.PingNetActivity" />
         <activity android:name=".ui.owner.nfc.NFCActivity" />
-        <activity android:name=".ui.module.service.ServiceStartActivity" />
         <activity android:name=".ui.owner.thread.handler.HandlerActivity" />
         <activity android:name=".ui.owner.thread.executorService.ExecutorServiceActivity" />
         <activity android:name=".ui.owner.thread.asyncTask.AsyncTaskActivity" />
@@ -74,6 +74,14 @@
         <receiver android:name=".receiver.TestStaticReceiver">
             <intent-filter>
                 <action android:name="com.luffy.test.android.receiver.TestStaticReceiver" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".ui.ipc.broadcast.IpcBroadCast"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.luffy.test.android.ui.ipc.broadcast.IpcBroadCast" />
             </intent-filter>
         </receiver>
     </application>

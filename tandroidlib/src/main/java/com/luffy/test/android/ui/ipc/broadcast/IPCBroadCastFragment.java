@@ -1,6 +1,7 @@
 package com.luffy.test.android.ui.ipc.broadcast;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
+import com.luffy.utils.generallib.AppUtils;
 
 import butterknife.OnClick;
 
@@ -26,6 +28,9 @@ public class IPCBroadCastFragment extends BaseFragment {
 
     @OnClick(R2.id.btn_invoke)
     public void onViewClicked() {
+        Intent intent = new Intent(IpcBroadCast.ACTION);
+        intent.setPackage(AppUtils.getInstance().getAppPackName(mContext));
+        mActivity.sendBroadcast(intent);
     }
 
 }
