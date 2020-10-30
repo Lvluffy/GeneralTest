@@ -4,6 +4,7 @@ import android.app.IntentService;
 import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.widget.Toast;
 
 /**
  * Created by lvlufei on 2020-07-08
@@ -27,6 +28,7 @@ public class TestIntentService extends IntentService {
     public void onCreate() {
         super.onCreate();
         Log.d(TAG, "onCreate");
+        Toast.makeText(this, "TestIntentService onCreate", Toast.LENGTH_LONG).show();
     }
 
     @Override
