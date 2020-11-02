@@ -2,6 +2,8 @@ package com.luffy.test.android.service;
 
 import android.app.IntentService;
 import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.Toast;
@@ -41,6 +43,19 @@ public class TestIntentService extends IntentService {
     public void onStart(@Nullable Intent intent, int startId) {
         super.onStart(intent, startId);
         Log.d(TAG, "onStart");
+    }
+
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+        Log.d(TAG, "onBind");
+        return super.onBind(intent);
+    }
+
+    @Override
+    public boolean onUnbind(Intent intent) {
+        Log.d(TAG, "onUnbind");
+        return super.onUnbind(intent);
     }
 
     @Override

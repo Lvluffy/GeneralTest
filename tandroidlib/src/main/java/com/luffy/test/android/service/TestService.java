@@ -16,6 +16,12 @@ public class TestService extends Service {
 
     private final String TAG = getClass().getSimpleName();
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Log.d(TAG, "onCreate");
+    }
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -28,12 +34,6 @@ public class TestService extends Service {
     public boolean onUnbind(Intent intent) {
         Log.d(TAG, "onUnbind");
         return super.onUnbind(intent);
-    }
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        Log.d(TAG, "onCreate");
     }
 
     @Override
