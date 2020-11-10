@@ -19,6 +19,11 @@ public class LoadImageAsyncTask extends AsyncTask<String, Integer, Bitmap> {
         this.imageView = imageView;
     }
 
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+    }
+
     /**
      * 后台执行任务
      */
