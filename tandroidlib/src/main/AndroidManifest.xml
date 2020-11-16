@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application>
+        <activity android:name=".ui.owner.memory.MemoryActivity"></activity>
         <activity android:name=".ui.ipc.IPCActivity" />
         <activity android:name=".ui.ipc.service.IPCServiceActivity" />
         <activity android:name=".ui.ipc.contentProvider.IPCContentProviderActivity" />
@@ -76,7 +77,6 @@
                 <action android:name="com.luffy.test.android.receiver.TestStaticReceiver" />
             </intent-filter>
         </receiver>
-
         <receiver
             android:name=".ui.ipc.broadcast.IpcBroadCast"
             android:exported="true">
