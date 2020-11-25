@@ -29,19 +29,21 @@ public class DownloadPictureUtils {
     /**
      * 下载
      *
-     * @param parameter
+     * @param path
      * @return
      */
-    public Bitmap download(String... parameter) {
+    public Bitmap download(String path) {
         Bitmap bitmap = null;
         InputStream inputStream = null;
         try {
-            URL url = new URL(parameter[0]);
+            URL url = new URL(path);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setDoInput(true);
             connection.connect();
-            inputStream = connection.getInputStream();
-            bitmap = BitmapFactory.decodeStream(inputStream);
+            if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                inputStream = connection.getInputStream();
+                bitmap = BitmapFactory.decodeStream(inputStream);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
