@@ -90,11 +90,11 @@ public class HandlerFragment extends BaseFragment {
                 }
             }.start();
         } else if (id == R.id.btn_open) {
-            LoadImageHandler.getInstance().DownLoadImage(handler, IMAGE1, UrlConstantManager.getInstance().getUrlList().get(11));
-            LoadImageHandler.getInstance().DownLoadImage(handler, IMAGE2, UrlConstantManager.getInstance().getUrlList().get(12));
-            LoadImageHandler.getInstance().DownLoadImage(handler, IMAGE3, UrlConstantManager.getInstance().getUrlList().get(13));
-            LoadImageHandler.getInstance().DownLoadImage(handler, IMAGE4, UrlConstantManager.getInstance().getUrlList().get(14));
-            LoadImageHandler.getInstance().DownLoadImage(handler, IMAGE5, UrlConstantManager.getInstance().getUrlList().get(15));
+            LoadImageHandler.getInstance().display(handler, IMAGE1, UrlConstantManager.getInstance().getUrlList().get(11));
+            LoadImageHandler.getInstance().display(handler, IMAGE2, UrlConstantManager.getInstance().getUrlList().get(12));
+            LoadImageHandler.getInstance().display(handler, IMAGE3, UrlConstantManager.getInstance().getUrlList().get(13));
+            LoadImageHandler.getInstance().display(handler, IMAGE4, UrlConstantManager.getInstance().getUrlList().get(14));
+            LoadImageHandler.getInstance().display(handler, IMAGE5, UrlConstantManager.getInstance().getUrlList().get(15));
         }
     }
 

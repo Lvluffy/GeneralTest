@@ -40,10 +40,10 @@ public class ExecutorServiceFragment extends BaseFragment {
 
     @OnClick(R2.id.btn_open)
     public void onViewClicked() {
-        LoadImageExecutorService.getInstance().DownLoadImage(image1, UrlConstantManager.getInstance().getUrlList().get(6));
-        LoadImageExecutorService.getInstance().DownLoadImage(image2, UrlConstantManager.getInstance().getUrlList().get(7));
-        LoadImageExecutorService.getInstance().DownLoadImage(image3, UrlConstantManager.getInstance().getUrlList().get(8));
-        LoadImageExecutorService.getInstance().DownLoadImage(image4, UrlConstantManager.getInstance().getUrlList().get(9));
-        LoadImageExecutorService.getInstance().DownLoadImage(image5, UrlConstantManager.getInstance().getUrlList().get(10));
+        LoadImageExecutorService.getInstance().display(image1, UrlConstantManager.getInstance().getUrlList().get(6));
+        LoadImageExecutorService.getInstance().display(image2, UrlConstantManager.getInstance().getUrlList().get(7));
+        LoadImageExecutorService.getInstance().display(image3, UrlConstantManager.getInstance().getUrlList().get(8));
+        LoadImageExecutorService.getInstance().display(image4, UrlConstantManager.getInstance().getUrlList().get(9));
+        LoadImageExecutorService.getInstance().display(image5, UrlConstantManager.getInstance().getUrlList().get(10));
     }
 }

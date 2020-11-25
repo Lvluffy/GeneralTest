@@ -39,10 +39,10 @@ public class AsyncTaskFragment extends BaseFragment {
 
     @OnClick(R2.id.btn_open)
     public void onViewClicked() {
-        new LoadImageAsyncTask(image1).execute(UrlConstantManager.getInstance().getUrlList().get(1));
-        new LoadImageAsyncTask(image2).execute(UrlConstantManager.getInstance().getUrlList().get(2));
-        new LoadImageAsyncTask(image3).execute(UrlConstantManager.getInstance().getUrlList().get(3));
-        new LoadImageAsyncTask(image4).execute(UrlConstantManager.getInstance().getUrlList().get(4));
-        new LoadImageAsyncTask(image5).execute(UrlConstantManager.getInstance().getUrlList().get(5));
+        new LoadImageAsyncTask().display(image1, UrlConstantManager.getInstance().getUrlList().get(1));
+        new LoadImageAsyncTask().display(image2, UrlConstantManager.getInstance().getUrlList().get(2));
+        new LoadImageAsyncTask().display(image3, UrlConstantManager.getInstance().getUrlList().get(3));
+        new LoadImageAsyncTask().display(image4, UrlConstantManager.getInstance().getUrlList().get(4));
+        new LoadImageAsyncTask().display(image5, UrlConstantManager.getInstance().getUrlList().get(5));
     }
 }

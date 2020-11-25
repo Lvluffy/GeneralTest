@@ -17,7 +17,6 @@ import java.util.concurrent.Executors;
 public class LoadImageExecutorService {
 
     private ExecutorService executorService = Executors.newFixedThreadPool(1);// 同时最多启动1个线程
-    private Bitmap bitmap;
 
     private LoadImageExecutorService() {
 
@@ -31,17 +30,17 @@ public class LoadImageExecutorService {
         private static final LoadImageExecutorService instance = new LoadImageExecutorService();
     }
 
-    public void DownLoadImage(final ImageView imageView, final String url) {
+    public void display(final ImageView imageView, final String url) {
         final Handler handler = new Handler();
         executorService.submit(new Runnable() {
             @Override
             public void run() {
-                bitmap = DownloadPictureUtils.getInstance().download(url);
+                final Bitmap[] bitmap = {DownloadPictureUtils.getInstance().download(url)};
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        imageView.setImageBitmap(bitmap);
-                        bitmap = null;
+                        imageView.setImageBitmap(bitmap[0]);
+                        bitmap[0] = null;
                     }
                 });
             }

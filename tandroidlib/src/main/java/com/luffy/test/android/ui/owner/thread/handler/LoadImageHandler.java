@@ -9,8 +9,6 @@ import com.luffy.test.android.utils.DownloadPictureUtils;
 
 public class LoadImageHandler {
 
-    Bitmap bitmap;
-
     private LoadImageHandler() {
 
     }
@@ -24,12 +22,12 @@ public class LoadImageHandler {
     }
 
     @SuppressLint("HandlerLeak")
-    public void DownLoadImage(final Handler handler, final int what, final String urlStr) {
+    public void display(final Handler handler, final int what, final String urlStr) {
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    bitmap = DownloadPictureUtils.getInstance().download(urlStr);
+                    Bitmap bitmap = DownloadPictureUtils.getInstance().download(urlStr);
                     Message msg = new Message();
                     msg.what = what;
                     msg.obj = bitmap;

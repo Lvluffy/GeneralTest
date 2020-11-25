@@ -15,8 +15,9 @@ public class LoadImageAsyncTask extends AsyncTask<String, Integer, Bitmap> {
 
     private ImageView imageView;
 
-    public LoadImageAsyncTask(ImageView imageView) {
+    public void display(final ImageView imageView, final String url) {
         this.imageView = imageView;
+        execute(url);
     }
 
     @Override
