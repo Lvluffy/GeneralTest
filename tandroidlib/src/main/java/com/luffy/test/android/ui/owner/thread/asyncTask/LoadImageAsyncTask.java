@@ -30,7 +30,7 @@ public class LoadImageAsyncTask extends AsyncTask<String, Integer, Bitmap> {
      */
     @Override
     protected Bitmap doInBackground(String... params) {
-        return DownloadPictureUtils.getInstance().download(params);
+        return DownloadPictureUtils.getInstance().download(params[0]);
     }
 
     /**

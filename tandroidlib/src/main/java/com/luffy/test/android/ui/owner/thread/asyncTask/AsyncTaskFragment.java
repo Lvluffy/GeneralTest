@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
+import com.luffy.test.android.ui.owner.thread.BitmapUtils;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
 import com.luffy.test.tbaselayerlib.base.UrlConstantManager;
 
@@ -39,10 +40,10 @@ public class AsyncTaskFragment extends BaseFragment {
 
     @OnClick(R2.id.btn_open)
     public void onViewClicked() {
-        new LoadImageAsyncTask().display(image1, UrlConstantManager.getInstance().getUrlList().get(1));
-        new LoadImageAsyncTask().display(image2, UrlConstantManager.getInstance().getUrlList().get(2));
-        new LoadImageAsyncTask().display(image3, UrlConstantManager.getInstance().getUrlList().get(3));
-        new LoadImageAsyncTask().display(image4, UrlConstantManager.getInstance().getUrlList().get(4));
-        new LoadImageAsyncTask().display(image5, UrlConstantManager.getInstance().getUrlList().get(5));
+        BitmapUtils.getInstance().display(image1, UrlConstantManager.getInstance().getUrlList().get(1));
+        BitmapUtils.getInstance().display(image2, UrlConstantManager.getInstance().getUrlList().get(2));
+        BitmapUtils.getInstance().display(image3, UrlConstantManager.getInstance().getUrlList().get(3));
+        BitmapUtils.getInstance().display(image4, UrlConstantManager.getInstance().getUrlList().get(4));
+        BitmapUtils.getInstance().display(image5, UrlConstantManager.getInstance().getUrlList().get(5));
     }
 }
