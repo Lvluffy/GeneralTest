@@ -73,7 +73,6 @@ public class NetCacheUtils {
             if (url != null && url.equals(this.url)) {
                 // 从网络加载图片
                 imageView.setImageBitmap(result);
-                System.out.println("从网络加载图片啦.....");
                 // 写本地缓存
                 mLocalCacheUtil.setLocalCache(url, result);
                 //写内存缓存

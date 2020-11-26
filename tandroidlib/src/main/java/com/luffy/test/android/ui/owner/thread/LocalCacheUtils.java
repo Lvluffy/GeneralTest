@@ -2,12 +2,13 @@ package com.luffy.test.android.ui.owner.thread;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.Environment;
-import android.util.Log;
+
+import com.luffy.test.tbaselayerlib.base.BaseApplication;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
  * Created by lvlufei on 2020-11-25
@@ -16,38 +17,65 @@ import java.io.FileOutputStream;
  */
 public class LocalCacheUtils {
 
-    private static final String LOCAL_CACHE_PATH = Environment.getExternalStorageDirectory().getAbsolutePath() + "/image_cache";
+    private String LOCAL_CACHE_PATH;
+
+    public LocalCacheUtils() {
+        LOCAL_CACHE_PATH = FileStorageUtils.getInstance().getExternalCachePath(BaseApplication.getInstance()) + File.separator + "image_cache";
+    }
 
     //写本地缓存
     public void setLocalCache(String url, Bitmap bitmap) {
-        Log.d("LocalCacheUtils", LOCAL_CACHE_PATH);
-        File dir = new File(LOCAL_CACHE_PATH);
-        if (!dir.exists() || !dir.isDirectory()) {
-            dir.mkdirs();//创建文件夹
-        }
-
+        FileOutputStream fos = null;
         try {
-            File cacheFile = new File(dir, url);
-            // 参1:图片格式;参2:压缩比例0-100; 参3:输出流
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(cacheFile));
-
+            // 创建文件目录
+            File dir = new File(LOCAL_CACHE_PATH);
+            if (!dir.exists()) {
+                dir.mkdirs();
+            }
+            // 创建文件
+            File imageFile = new File(dir, MD5Utils.getInstance().md5(url) + ".png");
+            if (!imageFile.exists()) {
+                imageFile.createNewFile();
+            }
+            // 写文件
+            fos = new FileOutputStream(imageFile);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (fos != null) {
+                    fos.flush();
+                    fos.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     //读本地缓存
     public Bitmap getLocalCache(String url) {
+        FileInputStream fileInputStream = null;
         try {
-            Log.d("LocalCacheUtils", LOCAL_CACHE_PATH);
-            File cacheFile = new File(LOCAL_CACHE_PATH, url);
+            File cacheFile = new File(LOCAL_CACHE_PATH, MD5Utils.getInstance().md5(url) + ".png");
             if (cacheFile.exists()) {
-                Bitmap bitmap = BitmapFactory.decodeStream(new FileInputStream(cacheFile));
+                fileInputStream = new FileInputStream(cacheFile);
+                Bitmap bitmap = BitmapFactory.decodeStream(fileInputStream);
                 return bitmap;
             }
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            if (fileInputStream != null) {
+                try {
+                    fileInputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         return null;
     }
 }
+

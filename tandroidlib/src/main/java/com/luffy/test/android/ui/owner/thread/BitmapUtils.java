@@ -40,7 +40,7 @@ public class BitmapUtils {
         // 设置默认图片
         imageView.setImageResource(resId);
 
-        Bitmap bitmap = null;
+        Bitmap bitmap;
         // 1,从内存加载
         bitmap = mMemoryCacheUtil.getMemoryCache(url);
         if (bitmap != null) {
