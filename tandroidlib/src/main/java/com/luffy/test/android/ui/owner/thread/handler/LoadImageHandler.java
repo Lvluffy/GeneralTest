@@ -5,7 +5,8 @@ import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Message;
 
-import com.luffy.test.android.utils.DownloadPictureUtils;
+import com.luffy.utils.bitmaplib.bitmapLoad.DownloadPictureUtils;
+
 
 public class LoadImageHandler {
 

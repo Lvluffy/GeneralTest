@@ -50,10 +50,10 @@ dependencies {
     implementation 'com.jakewharton:butterknife:9.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
     /*通用Android*/
-    api rootProject.generalAndroidDepends['listview']
+    api rootProject.generalAndroidDepends.values()
     /*通用工具*/
-    api rootProject.generalUtilsDepends['general']
-    api rootProject.generalUtilsDepends['rx']
+    api rootProject.generalUtilsDepends.values()
+    api rootProject.generalUtilsDepends.values()
     /*rx*/
     api rootProject.rx.values()
 }

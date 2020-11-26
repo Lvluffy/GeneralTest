@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.widget.ImageView;
 
-import com.luffy.test.android.utils.DownloadPictureUtils;
+import com.luffy.utils.bitmaplib.bitmapLoad.DownloadPictureUtils;
 
 /**
  * Created by lvlufei on 2020-08-14

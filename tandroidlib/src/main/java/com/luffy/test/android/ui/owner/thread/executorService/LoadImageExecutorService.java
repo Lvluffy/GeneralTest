@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import android.os.Handler;
 import android.widget.ImageView;
 
-import com.luffy.test.android.utils.DownloadPictureUtils;
+import com.luffy.utils.bitmaplib.bitmapLoad.DownloadPictureUtils;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
