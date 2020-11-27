@@ -9,11 +9,11 @@ import android.widget.ImageView;
 
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
-import com.luffy.test.android.ui.owner.thread.BitmapDisplayFactory;
-import com.luffy.test.android.ui.owner.thread.BitmapDisplayMode;
-import com.luffy.test.android.ui.owner.thread.IBitmapDisplayMode;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
 import com.luffy.test.tbaselayerlib.base.UrlConstantManager;
+import com.luffy.utils.bitmaplib.bitmapLoad.display.BitmapDisplayFactory;
+import com.luffy.utils.bitmaplib.bitmapLoad.display.BitmapDisplayMode;
+import com.luffy.utils.bitmaplib.bitmapLoad.display.IBitmapDisplayMode;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -43,7 +43,7 @@ public class ExecutorServiceFragment extends BaseFragment {
 
     @OnClick(R2.id.btn_open)
     public void onViewClicked() {
-        IBitmapDisplayMode iBitmapDisplayMode = BitmapDisplayFactory.makeBitmapDisplayMode(BitmapDisplayMode.EXECUTOR);
+        IBitmapDisplayMode iBitmapDisplayMode = BitmapDisplayFactory.build(BitmapDisplayMode.EXECUTOR);
         iBitmapDisplayMode.display(image1, UrlConstantManager.getInstance().getUrlList().get(6));
         iBitmapDisplayMode.display(image2, UrlConstantManager.getInstance().getUrlList().get(7));
         iBitmapDisplayMode.display(image3, UrlConstantManager.getInstance().getUrlList().get(8));
