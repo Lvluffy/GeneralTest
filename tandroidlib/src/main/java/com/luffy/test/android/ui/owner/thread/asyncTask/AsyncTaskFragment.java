@@ -8,6 +8,9 @@ import android.widget.ImageView;
 
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
+import com.luffy.test.android.ui.owner.thread.BitmapDisplayFactory;
+import com.luffy.test.android.ui.owner.thread.BitmapDisplayMode;
+import com.luffy.test.android.ui.owner.thread.IBitmapDisplayMode;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
 import com.luffy.test.tbaselayerlib.base.UrlConstantManager;
 
@@ -39,10 +42,11 @@ public class AsyncTaskFragment extends BaseFragment {
 
     @OnClick(R2.id.btn_open)
     public void onViewClicked() {
-        new LoadImageAsyncTask().display(image1, UrlConstantManager.getInstance().getUrlList().get(1));
-        new LoadImageAsyncTask().display(image2, UrlConstantManager.getInstance().getUrlList().get(2));
-        new LoadImageAsyncTask().display(image3, UrlConstantManager.getInstance().getUrlList().get(3));
-        new LoadImageAsyncTask().display(image4, UrlConstantManager.getInstance().getUrlList().get(4));
-        new LoadImageAsyncTask().display(image5, UrlConstantManager.getInstance().getUrlList().get(5));
+        IBitmapDisplayMode iBitmapDisplayMode = BitmapDisplayFactory.makeBitmapDisplayMode(BitmapDisplayMode.ASYNC_TASK);
+        iBitmapDisplayMode.display(image1, UrlConstantManager.getInstance().getUrlList().get(1));
+        iBitmapDisplayMode.display(image2, UrlConstantManager.getInstance().getUrlList().get(2));
+        iBitmapDisplayMode.display(image3, UrlConstantManager.getInstance().getUrlList().get(3));
+        iBitmapDisplayMode.display(image4, UrlConstantManager.getInstance().getUrlList().get(4));
+        iBitmapDisplayMode.display(image5, UrlConstantManager.getInstance().getUrlList().get(5));
     }
 }

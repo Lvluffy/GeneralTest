@@ -1,4 +1,4 @@
-package com.luffy.test.android.ui.owner.thread.executorService;
+package com.luffy.test.android.ui.owner.thread;
 
 import android.graphics.Bitmap;
 import android.os.Handler;
@@ -10,26 +10,27 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Created by lvlufei on 2020-08-17
+ * Created by lvlufei on 2020-11-27
  *
- * @name 下载图片线程池
+ * @name 图片显示方式-线程池
  */
-public class LoadImageExecutorService {
+public class BitmapDisplayExecutor implements IBitmapDisplayMode {
 
     private ExecutorService executorService = Executors.newFixedThreadPool(1);// 同时最多启动1个线程
 
-    private LoadImageExecutorService() {
+    private BitmapDisplayExecutor() {
 
     }
 
-    public static LoadImageExecutorService getInstance() {
+    public static BitmapDisplayExecutor getInstance() {
         return LoadImageExecutorServiceHolder.instance;
     }
 
     private static class LoadImageExecutorServiceHolder {
-        private static final LoadImageExecutorService instance = new LoadImageExecutorService();
+        private static final BitmapDisplayExecutor instance = new BitmapDisplayExecutor();
     }
 
+    @Override
     public void display(final ImageView imageView, final String url) {
         final Handler handler = new Handler();
         executorService.submit(new Runnable() {

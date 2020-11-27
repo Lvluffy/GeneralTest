@@ -9,6 +9,9 @@ import android.widget.ImageView;
 
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
+import com.luffy.test.android.ui.owner.thread.BitmapDisplayFactory;
+import com.luffy.test.android.ui.owner.thread.BitmapDisplayMode;
+import com.luffy.test.android.ui.owner.thread.IBitmapDisplayMode;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
 import com.luffy.test.tbaselayerlib.base.UrlConstantManager;
 
@@ -40,10 +43,11 @@ public class ExecutorServiceFragment extends BaseFragment {
 
     @OnClick(R2.id.btn_open)
     public void onViewClicked() {
-        LoadImageExecutorService.getInstance().display(image1, UrlConstantManager.getInstance().getUrlList().get(6));
-        LoadImageExecutorService.getInstance().display(image2, UrlConstantManager.getInstance().getUrlList().get(7));
-        LoadImageExecutorService.getInstance().display(image3, UrlConstantManager.getInstance().getUrlList().get(8));
-        LoadImageExecutorService.getInstance().display(image4, UrlConstantManager.getInstance().getUrlList().get(9));
-        LoadImageExecutorService.getInstance().display(image5, UrlConstantManager.getInstance().getUrlList().get(10));
+        IBitmapDisplayMode iBitmapDisplayMode = BitmapDisplayFactory.makeBitmapDisplayMode(BitmapDisplayMode.EXECUTOR);
+        iBitmapDisplayMode.display(image1, UrlConstantManager.getInstance().getUrlList().get(6));
+        iBitmapDisplayMode.display(image2, UrlConstantManager.getInstance().getUrlList().get(7));
+        iBitmapDisplayMode.display(image3, UrlConstantManager.getInstance().getUrlList().get(8));
+        iBitmapDisplayMode.display(image4, UrlConstantManager.getInstance().getUrlList().get(9));
+        iBitmapDisplayMode.display(image5, UrlConstantManager.getInstance().getUrlList().get(10));
     }
 }

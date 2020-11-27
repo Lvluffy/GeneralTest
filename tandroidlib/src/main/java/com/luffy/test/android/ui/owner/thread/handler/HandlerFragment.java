@@ -1,7 +1,6 @@
 package com.luffy.test.android.ui.owner.thread.handler;
 
 
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,6 +12,9 @@ import android.widget.TextView;
 
 import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
+import com.luffy.test.android.ui.owner.thread.BitmapDisplayFactory;
+import com.luffy.test.android.ui.owner.thread.BitmapDisplayMode;
+import com.luffy.test.android.ui.owner.thread.IBitmapDisplayMode;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
 import com.luffy.test.tbaselayerlib.base.UrlConstantManager;
 import com.luffy.utils.generallib.ThreadUtils;
@@ -27,11 +29,6 @@ import butterknife.OnClick;
  */
 public class HandlerFragment extends BaseFragment {
 
-    private static final int IMAGE1 = 1;
-    private static final int IMAGE2 = 2;
-    private static final int IMAGE3 = 3;
-    private static final int IMAGE4 = 4;
-    private static final int IMAGE5 = 5;
     private static final int CHILD_THREAD = 6;
 
     @BindView(R2.id.txt_content)
@@ -52,17 +49,7 @@ public class HandlerFragment extends BaseFragment {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            if (msg.what == IMAGE1) {
-                image1.setImageBitmap((Bitmap) msg.obj);
-            } else if (msg.what == IMAGE2) {
-                image2.setImageBitmap((Bitmap) msg.obj);
-            } else if (msg.what == IMAGE3) {
-                image3.setImageBitmap((Bitmap) msg.obj);
-            } else if (msg.what == IMAGE4) {
-                image4.setImageBitmap((Bitmap) msg.obj);
-            } else if (msg.what == IMAGE5) {
-                image5.setImageBitmap((Bitmap) msg.obj);
-            } else if (msg.what == CHILD_THREAD) {
+            if (msg.what == CHILD_THREAD) {
                 txtContent.setText((String) msg.obj);
             }
         }
@@ -90,11 +77,12 @@ public class HandlerFragment extends BaseFragment {
                 }
             }.start();
         } else if (id == R.id.btn_open) {
-            LoadImageHandler.getInstance().display(handler, IMAGE1, UrlConstantManager.getInstance().getUrlList().get(11));
-            LoadImageHandler.getInstance().display(handler, IMAGE2, UrlConstantManager.getInstance().getUrlList().get(12));
-            LoadImageHandler.getInstance().display(handler, IMAGE3, UrlConstantManager.getInstance().getUrlList().get(13));
-            LoadImageHandler.getInstance().display(handler, IMAGE4, UrlConstantManager.getInstance().getUrlList().get(14));
-            LoadImageHandler.getInstance().display(handler, IMAGE5, UrlConstantManager.getInstance().getUrlList().get(15));
+            IBitmapDisplayMode iBitmapDisplayMode = BitmapDisplayFactory.makeBitmapDisplayMode(BitmapDisplayMode.HANDLER);
+            iBitmapDisplayMode.display(image1, UrlConstantManager.getInstance().getUrlList().get(11));
+            iBitmapDisplayMode.display(image2, UrlConstantManager.getInstance().getUrlList().get(12));
+            iBitmapDisplayMode.display(image3, UrlConstantManager.getInstance().getUrlList().get(13));
+            iBitmapDisplayMode.display(image4, UrlConstantManager.getInstance().getUrlList().get(14));
+            iBitmapDisplayMode.display(image5, UrlConstantManager.getInstance().getUrlList().get(15));
         }
     }
 
