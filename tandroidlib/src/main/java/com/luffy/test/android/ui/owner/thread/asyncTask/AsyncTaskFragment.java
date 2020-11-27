@@ -10,7 +10,6 @@ import com.luffy.test.android.R;
 import com.luffy.test.android.R2;
 import com.luffy.test.tbaselayerlib.base.BaseFragment;
 import com.luffy.test.tbaselayerlib.base.UrlConstantManager;
-import com.luffy.utils.bitmaplib.bitmapLoad.BitmapLoadClient;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -40,10 +39,10 @@ public class AsyncTaskFragment extends BaseFragment {
 
     @OnClick(R2.id.btn_open)
     public void onViewClicked() {
-        BitmapLoadClient.getInstance(mContext).display(image1, UrlConstantManager.getInstance().getUrlList().get(1));
-        BitmapLoadClient.getInstance(mContext).display(image2, UrlConstantManager.getInstance().getUrlList().get(2));
-        BitmapLoadClient.getInstance(mContext).display(image3, UrlConstantManager.getInstance().getUrlList().get(3));
-        BitmapLoadClient.getInstance(mContext).display(image4, UrlConstantManager.getInstance().getUrlList().get(4));
-        BitmapLoadClient.getInstance(mContext).display(image5, UrlConstantManager.getInstance().getUrlList().get(5));
+        new LoadImageAsyncTask().display(image1, UrlConstantManager.getInstance().getUrlList().get(1));
+        new LoadImageAsyncTask().display(image2, UrlConstantManager.getInstance().getUrlList().get(2));
+        new LoadImageAsyncTask().display(image3, UrlConstantManager.getInstance().getUrlList().get(3));
+        new LoadImageAsyncTask().display(image4, UrlConstantManager.getInstance().getUrlList().get(4));
+        new LoadImageAsyncTask().display(image5, UrlConstantManager.getInstance().getUrlList().get(5));
     }
 }
