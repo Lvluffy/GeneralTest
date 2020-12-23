@@ -27,6 +27,20 @@ public class ServiceStartFragment extends BaseFragment {
     public static final String TEST_INTENT_SERVICE_ACTION = "com.luffy.generaltest.action.TEST_INTENT_SERVICE";
     public static final String TEST_SERVICE_ACTION = "com.luffy.generaltest.action.TEST_SERVICE";
 
+    ServiceConnection serviceConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+
+        }
+    };
+
+    private boolean isBound = false;
+
     @Override
     public View doCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_service_start, container, false);
@@ -50,48 +64,16 @@ public class ServiceStartFragment extends BaseFragment {
     }
 
     private void onStartService() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Intent intent = new Intent(TEST_SERVICE_ACTION);
-                    intent.setPackage(AppUtils.getInstance().getAppPackName(mContext));
-                    mActivity.startService(intent);
-                    Thread.sleep(2000);
-                    mActivity.stopService(intent);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
+        Intent intent = new Intent(TEST_SERVICE_ACTION);
+        intent.setPackage(AppUtils.getInstance().getAppPackName(mContext));
+        mActivity.startService(intent);
     }
 
     private void onBindService() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Intent intent = new Intent(TEST_SERVICE_ACTION);
-                    intent.setPackage(AppUtils.getInstance().getAppPackName(mContext));
-                    ServiceConnection serviceConnection = new ServiceConnection() {
-                        @Override
-                        public void onServiceConnected(ComponentName name, IBinder service) {
-
-                        }
-
-                        @Override
-                        public void onServiceDisconnected(ComponentName name) {
-
-                        }
-                    };
-                    mActivity.bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
-                    Thread.sleep(2000);
-                    mActivity.unbindService(serviceConnection);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
+        Intent intent = new Intent(TEST_SERVICE_ACTION);
+        intent.setPackage(AppUtils.getInstance().getAppPackName(mContext));
+        mActivity.bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+        isBound = true;
     }
 
     private void onStartIntentService() {
@@ -103,28 +85,16 @@ public class ServiceStartFragment extends BaseFragment {
     private void onBindIntentService() {
         Intent intent = new Intent(TEST_INTENT_SERVICE_ACTION);
         intent.setPackage(AppUtils.getInstance().getAppPackName(mContext));
-        final ServiceConnection serviceConnection = new ServiceConnection() {
-            @Override
-            public void onServiceConnected(ComponentName name, IBinder service) {
-
-            }
-
-            @Override
-            public void onServiceDisconnected(ComponentName name) {
-
-            }
-        };
         mActivity.bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(2000);
-                    mActivity.unbindService(serviceConnection);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
+        isBound = true;
+    }
+
+    @Override
+    public void onDestroy() {
+        if (isBound) {
+            isBound = false;
+            mActivity.unbindService(serviceConnection);
+        }
+        super.onDestroy();
     }
 }

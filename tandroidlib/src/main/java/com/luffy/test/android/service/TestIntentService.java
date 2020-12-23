@@ -30,7 +30,6 @@ public class TestIntentService extends IntentService {
     public void onCreate() {
         super.onCreate();
         Log.d(TAG, "onCreate");
-        Toast.makeText(this, "TestIntentService onCreate", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -43,12 +42,24 @@ public class TestIntentService extends IntentService {
     public void onStart(@Nullable Intent intent, int startId) {
         super.onStart(intent, startId);
         Log.d(TAG, "onStart");
+        Toast.makeText(this, "TestIntentService onStart", Toast.LENGTH_LONG).show();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
         Log.d(TAG, "onBind");
+        Toast.makeText(this, "TestIntentService onBind", Toast.LENGTH_LONG).show();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return super.onBind(intent);
     }
 

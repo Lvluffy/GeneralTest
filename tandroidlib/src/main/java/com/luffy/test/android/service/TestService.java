@@ -27,6 +27,11 @@ public class TestService extends Service {
     public IBinder onBind(Intent intent) {
         Log.d(TAG, "onBind");
         Toast.makeText(this, "TestService onBind", Toast.LENGTH_LONG).show();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
@@ -47,6 +52,11 @@ public class TestService extends Service {
         super.onStart(intent, startId);
         Log.d(TAG, "onStart");
         Toast.makeText(this, "TestService onStart", Toast.LENGTH_LONG).show();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
