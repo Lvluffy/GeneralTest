@@ -7,7 +7,7 @@ package com.luffy.test.tdesignpatternlib.behavior.observer.patterns;
  */
 public class RMBRate extends Rate {
     @Override
-    public String change(int number) {
+    public String notify(int number) {
         StringBuilder sb = new StringBuilder();
         for (Company company : companys) {
             sb.append(company.response(number));

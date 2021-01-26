@@ -60,9 +60,9 @@ public class ObserverFragment extends BaseFragment {
         int basisPoints = Integer.valueOf(edit.getText().toString());
         int id = view.getId();
         if (id == R.id.appreciation) {
-            txtResult.setText(rate.change(basisPoints));
+            txtResult.setText(rate.notify(basisPoints));
         } else if (id == R.id.devaluation) {
-            txtResult.setText(rate.change(-basisPoints));
+            txtResult.setText(rate.notify(-basisPoints));
         }
     }
 

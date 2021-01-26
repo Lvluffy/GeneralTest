@@ -29,5 +29,5 @@ public abstract class Rate {
         companys.remove(company);
     }
 
-    public abstract String change(int number);
+    public abstract String notify(int number);
 }
