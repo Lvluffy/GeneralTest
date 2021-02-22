@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  *
  * @name 读写锁演示
  */
-public class ReadWriteLockMode {
+public class ReadWriteLockDemo {
 
     private static final ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock(false);
     private static final ReentrantReadWriteLock.ReadLock readLock = reentrantReadWriteLock.readLock();
