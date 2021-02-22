@@ -12,7 +12,7 @@ public class TestListRemove {
         list.add("3");
         list.add("4");
         list.add("5");
-        test1(list);
+        test3(list);
         System.out.println(list);
     }
 
@@ -25,6 +25,15 @@ public class TestListRemove {
     }
 
     private static void test2(List<String> list) {
+        for (int i = 0; i < list.size(); i++) {
+            String string = list.get(i);
+            if ("1".equals(string) || "3".equals(string) || "5".equals(string)) {
+                list.remove(string);
+            }
+        }
+    }
+
+    private static void test3(List<String> list) {
         Iterator<String> iterator = list.iterator();
         while (iterator.hasNext()) {
             String string = iterator.next();

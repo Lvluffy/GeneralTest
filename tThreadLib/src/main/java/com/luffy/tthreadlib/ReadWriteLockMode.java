@@ -1,4 +1,4 @@
-package com.luffy.test.java.thread;
+package com.luffy.tthreadlib;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
