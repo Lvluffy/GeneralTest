@@ -14,6 +14,14 @@ import java.util.concurrent.Executors;
  * 3，可回收缓存线程池(newCachedThreadPool);
  * 4，支持定时与周期性任务的线程池(newScheduledThreadPool)。
  * <p>
+ * 线程池的参数
+ * 1，corePoolSize（核心线程数）
+ * 2，maximumPoolSize（最大线程数）
+ * 3，keepAliveTime（线程保活时间）
+ * 4，workQueue（任务队列）
+ * 5，threadFactory（线程工厂)
+ * 6，handler（线程饱和策略）
+ * <p>
  * 单线程化线程池(newSingleThreadExecutor):优点，串行执行所有任务。
  * <p>
  * submit()：提交任务。
