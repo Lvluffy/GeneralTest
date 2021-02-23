@@ -65,5 +65,4 @@ dependencies {
     implementation project(path: ':tjavalib')
     implementation project(path: ':tandroidlib')
     implementation project(path: ':tdesignpatternlib')
-    implementation project(path: ':tThreadLib')
 }
